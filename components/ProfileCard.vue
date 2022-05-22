@@ -161,7 +161,7 @@
                   text-center
                 "
               >
-                2
+                1
               </h2>
               <p
                 class="
@@ -172,7 +172,7 @@
                   leading-5
                 "
               >
-                Coffees
+                Dog
               </p>
             </div>
             <div>
