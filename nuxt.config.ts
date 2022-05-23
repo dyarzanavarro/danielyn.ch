@@ -15,8 +15,5 @@ export default defineNuxtConfig({
     css: [
         "~/assets/css/tailwind.css"
     ],
-    target: 'static',
-    router: {
-        base: '/<danielyarzanavarro>/'
-    }
+    ssr: false
 })
