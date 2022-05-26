@@ -25,6 +25,7 @@
           euismod accumsan tristique.
         </div>
       </div>
+      <USPS />
       <div class="justify-center w-full px-4 pt-12">
         <div class="font-bold text-gray-600 lg:text-6xl text-3xl">
           Selected work
