@@ -88,21 +88,21 @@
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process2.jpg"
+              src="https://source.unsplash.com/random"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/fakeImg.jpg"
+              src="https://source.unsplash.com/random"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process3.jpeg"
+              src="https://source.unsplash.com/random"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
@@ -134,21 +134,21 @@
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process2.jpg"
+              src="https://source.unsplash.com/random"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/fakeImg.jpg"
+              src="https://source.unsplash.com/random"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process3.jpeg"
+              src="https://source.unsplash.com/random"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
@@ -180,21 +180,21 @@
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process2.jpg"
+              src="https://picsum.photos/400"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/fakeImg.jpg"
+              src="https://picsum.photos/400"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
             <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process3.jpeg"
+              src="https://picsum.photos/400"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>

@@ -27,8 +27,8 @@
         </div>
       </div>
     </div>
-    <AudioPlayer />
   </div>
+  <AudioPlayer />
 </template>
 
 <script setup>
