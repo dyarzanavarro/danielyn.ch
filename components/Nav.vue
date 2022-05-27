@@ -1,84 +1,44 @@
 <template>
-  <div
-    class="text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800"
-  >
-    <div
-      x-data="{ open: false }"
-      class="
-        flex flex-col
-        max-w-screen-xl max-w-screen-xl
-        px-2
-        mx-auto
-        md:items-center md:justify-between md:flex-row md:px-6
-      "
-    >
-      <div
-        class="p-4 px-4 container flex flex-row items-center justify-between"
-      >
-        <nuxt-link to="/">
-          <div
-            href="#"
-            class="
-              text-lg
-              font-semibold
-              tracking-widest
-              text-gray-900
-              rounded-lg
-              dark-mode:text-white
-              focus:outline-none focus:shadow-outline
-            "
-          >
-            daniel yarza navarro
-          </div>
-        </nuxt-link>
-
-        <button
-          class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
-          @click="open = !open"
+  <nav class="2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
+    <!-- For large and Medium-sized Screen -->
+    <div class="flex justify-between">
+      <div class="hidden sm:flex flex-row items-center space-x-6">
+        <nuxt-link
+          to="/"
+          href="#"
+          class="
+            text-lg
+            uppercase
+            font-semibold
+            tracking-widest
+            text-gray-900
+            rounded-lg
+            dark-mode:text-white
+            focus:outline-none focus:shadow-outline
+          "
         >
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-            <path
-              x-show="!open"
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-            <path
-              x-show="open"
-              fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+          dyn
+        </nuxt-link>
       </div>
-      <nav
-        :class="{ flex: open, hidden: !open }"
-        class="
-          flex-col flex-grow
-          pb-4
-          md:pb-0
-          hidden
-          md:flex md:justify-end md:flex-row
-        "
-      >
-        <nuxt-link to="/work">
-          <div
+
+      <div class="hidden sm:flex flex-row space-x-4">
+        <nuxt-link to="/work"
+          ><div
             class="
               px-4
               py-2
               mt-2
               text-lg
               font-semibold
-              text-gray-900
+              bg-transparent
               rounded-lg
-              dark-mode:bg-gray-700
+              dark-mode:bg-transparent
               dark-mode:hover:bg-gray-600
               dark-mode:focus:bg-gray-600
               dark-mode:focus:text-white
               dark-mode:hover:text-white
               dark-mode:text-gray-200
-              md:mt-0
+              md:mt-0 md:ml-4
               hover:text-gray-900
               focus:text-gray-900
               hover:bg-gray-200
@@ -86,11 +46,36 @@
             "
           >
             work
-          </div>
-        </nuxt-link>
-
-        <nuxt-link to="/fun">
-          <div
+          </div></nuxt-link
+        >
+        <nuxt-link to="/process"
+          ><div
+            class="
+              px-4
+              py-2
+              mt-2
+              text-lg
+              font-semibold
+              bg-transparent
+              rounded-lg
+              dark-mode:bg-transparent
+              dark-mode:hover:bg-gray-600
+              dark-mode:focus:bg-gray-600
+              dark-mode:focus:text-white
+              dark-mode:hover:text-white
+              dark-mode:text-gray-200
+              md:mt-0 md:ml-4
+              hover:text-gray-900
+              focus:text-gray-900
+              hover:bg-gray-200
+              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            "
+          >
+            process
+          </div></nuxt-link
+        >
+        <nuxt-link to="/fun"
+          ><div
             class="
               px-4
               py-2
@@ -113,15 +98,165 @@
             "
           >
             fun
-          </div>
-        </nuxt-link>
-      </nav>
+          </div></nuxt-link
+        >
+      </div>
+
+      <!-- Burger Icon -->
+      <div
+        id="bgIcon"
+        @click="toggleMenu()"
+        class="
+          focus:outline-none
+          focus:ring-2
+          focus:ring-offset-2
+          focus:ring-gray-800
+          flex
+          justify-center
+          items-center
+          sm:hidden
+          cursor-pointer
+          absolute
+          right-0
+          top-0
+          p-6
+        "
+      >
+        <img
+          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg6.svg"
+          alt="burger"
+        />
+        <img
+          class="hidden"
+          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg7.svg"
+          alt="cross"
+        />
+      </div>
     </div>
-  </div>
+
+    <div class="sm:hidden flex flex-row items-center space-x-6">
+      <nuxt-link
+        to="/"
+        href="#"
+        class="
+          text-lg
+          font-semibold
+          tracking-widest
+          text-gray-900
+          rounded-lg
+          dark-mode:text-white
+          focus:outline-none focus:shadow-outline
+          px-6
+        "
+      >
+        dyn
+      </nuxt-link>
+    </div>
+    <!-- Mobile and small-screen devices (toggle Menu) -->
+    <div id="MobileNavigation" class="hidden sm:hidden mt-4 mx-auto">
+      <div class="flex flex-row items-center justify-center space-x-6">
+        <nuxt-link to="/work"
+          ><div
+            class="
+              px-4
+              py-2
+              mt-2
+              text-lg
+              font-semibold
+              bg-transparent
+              rounded-lg
+              dark-mode:bg-transparent
+              dark-mode:hover:bg-gray-600
+              dark-mode:focus:bg-gray-600
+              dark-mode:focus:text-white
+              dark-mode:hover:text-white
+              dark-mode:text-gray-200
+              md:mt-0 md:ml-4
+              hover:text-gray-900
+              focus:text-gray-900
+              hover:bg-gray-200
+              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            "
+          >
+            work
+          </div></nuxt-link
+        >
+        <nuxt-link to="/process"
+          ><div
+            class="
+              px-4
+              py-2
+              mt-2
+              text-lg
+              font-semibold
+              bg-transparent
+              rounded-lg
+              dark-mode:bg-transparent
+              dark-mode:hover:bg-gray-600
+              dark-mode:focus:bg-gray-600
+              dark-mode:focus:text-white
+              dark-mode:hover:text-white
+              dark-mode:text-gray-200
+              md:mt-0 md:ml-4
+              hover:text-gray-900
+              focus:text-gray-900
+              hover:bg-gray-200
+              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            "
+          >
+            process
+          </div></nuxt-link
+        >
+        <nuxt-link to="/fun"
+          ><div
+            class="
+              px-4
+              py-2
+              mt-2
+              text-lg
+              font-semibold
+              bg-transparent
+              rounded-lg
+              dark-mode:bg-transparent
+              dark-mode:hover:bg-gray-600
+              dark-mode:focus:bg-gray-600
+              dark-mode:focus:text-white
+              dark-mode:hover:text-white
+              dark-mode:text-gray-200
+              md:mt-0 md:ml-4
+              hover:text-gray-900
+              focus:text-gray-900
+              hover:bg-gray-200
+              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            "
+          >
+            fun
+          </div></nuxt-link
+        >
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    toggleMenu() {
+      var icon = document.getElementById("bgIcon");
+      const childEle = icon.children;
+
+      childEle[0].classList.toggle("hidden");
+      childEle[1].classList.toggle("hidden");
+
+      var mobileNav = document
+        .getElementById("MobileNavigation")
+        .classList.toggle("hidden");
+    },
+  },
+};
 </script>
 
 <style>

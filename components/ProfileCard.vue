@@ -9,11 +9,17 @@
       max-w-screen-xl max-w-screen-xl
       px-4
       pt-16
+      bg-slate-100
     "
   >
     <!-- Card code block start -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded">
-      <div class="relative bg-white">
+    <div class="bg-slate-100 dark:bg-gray-800 shadow rounded">
+      <div class="relative bg-slate-100">
+        <img
+          class="h-56 shadow rounded-t w-full object-cover object-center"
+          src="/img/citypop_mood-min.png"
+          alt=""
+        />
         <div
           class="
             inset-0
@@ -90,7 +96,7 @@
                   rounded-full
                 "
               >
-                Open
+                Curious
               </div>
             </div>
             <p
@@ -134,7 +140,7 @@
                   text-center
                 "
               >
-                8
+                {{ currentDate.getFullYear() - 1992 }}
               </h2>
               <p
                 class="
@@ -145,7 +151,7 @@
                   leading-5
                 "
               >
-                Projects
+                Years
               </p>
             </div>
             <div class="mr-6 xl:mr-10">
@@ -235,3 +241,17 @@
     <!-- Card code block end -->
   </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      currentDate: new Date(),
+    };
+  },
+};
+</script>
+
+<style>
+</style>

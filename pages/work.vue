@@ -15,8 +15,9 @@
         This is a paragraph talking about past projects, apprentice, evaluating
         final project assigment of higher technical school of design zurich
       </div>
-      T SHAPED Diagram here
     </div>
+    <USPS />
+
     <work-cards />
   </div>
 </template>

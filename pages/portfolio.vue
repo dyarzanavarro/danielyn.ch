@@ -3,7 +3,7 @@
     class="justify-center w-full max-w-screen-xl max-w-screen-xl px-6 mx-auto"
   >
     <div class="justify-center w-full px-4 pt-12">
-      <div class="font-bold text-gray-600 lg:text-7xl text-4xl">Fun</div>
+      <div class="font-bold text-gray-600 lg:text-7xl text-4xl">Portfolio</div>
     </div>
 
     <div class="container px-4 lg:pt-8 pt-6">
@@ -401,29 +401,7 @@
         opacity-40
         hover:opacity-100
       "
-    >
-      <div>
-        <nuxt-link
-          to="/citypop"
-          title="City Pop Mode"
-          class="
-            block
-            w-16
-            h-16
-            rounded-full
-            transition-all
-            shadow
-            hover:shadow-lg
-            transform
-            hover:scale-110 hover:rotate-12
-            bg-pink-600
-            mx-auto
-          "
-        >
-          <div class="text-zinc-50 text-2xl text-center pt-3">使</div>
-        </nuxt-link>
-      </div>
-    </div>
+    ></div>
   </div>
 </template>
 
