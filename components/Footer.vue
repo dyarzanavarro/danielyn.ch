@@ -14,7 +14,6 @@
       <div>
         <nuxt-link
           to="/"
-          href="#"
           class="
             text-lg
             font-semibold

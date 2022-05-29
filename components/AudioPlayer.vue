@@ -2,26 +2,26 @@
   <div
     class="
       flex
+      justify-center
       items-center
-      justify-end
-      items-end
+      inset-x-0
       fixed
-      bottom-0
-      right-0
-      lg:mb-4 lg:mr-4
+      bottom-16
+      ml-4
+      mr-4
       z-10
     "
   >
-    <div class="bg-white shadow-lg rounded-lg lg:w-6/12 w-screen">
+    <div class="bg-white shadow-lg rounded-lg lg:w-3/12 w-96">
       <div class="flex">
         <div>
           <img
             class="w-full rounded hidden md:block"
-            src="/img/anri_timely.jpg"
+            src="/img/anri_timely_2.png"
             alt="Album Pic"
           />
         </div>
-        <div class="w-full p-6">
+        <div class="w-full p-4">
           <div class="flex justify-between">
             <div>
               <h3 class="text-2xl text-grey-darkest font-medium">
@@ -42,7 +42,7 @@
               </svg>
             </div>
           </div>
-          <div class="flex justify-between items-center mt-8">
+          <div class="flex justify-between items-center mt-1">
             <div class="text-grey-darker m-3">
               <svg
                 class="w-6 h-6 text-pink-600"
@@ -65,9 +65,12 @@
                 <path d="M4 5h3v10H4V5zm12 0v10l-9-5 9-5z" />
               </svg>
             </div>
-            <div class="text-white p-8 rounded-full bg-red-light shadow-lg">
+            <div
+              class="p-8 rounded-full bg-red-light shadow-lg"
+              @click="playSound"
+            >
               <svg
-                class="w-6 h-6 text-black text-pink-600"
+                class="w-6 h-6 text-pink-600"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -104,9 +107,23 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script >
+export default {
+  data() {
+    return {
+      audio: null,
+    };
+  },
+  methods: {
+    playSound() {
+      var audio = new Audio("/audio/windysummer.mp3");
+      audio.type = "audio/mp3";
+      audio.play();
+    },
+  },
+};
 </script>
 
 <style>
 </style>
+

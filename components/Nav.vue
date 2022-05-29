@@ -5,7 +5,6 @@
       <div class="hidden sm:flex flex-row items-center space-x-6">
         <nuxt-link
           to="/"
-          href="#"
           class="
             text-lg
             uppercase
@@ -137,7 +136,6 @@
     <div class="sm:hidden flex flex-row items-center space-x-6">
       <nuxt-link
         to="/"
-        href="#"
         class="
           text-lg
           font-semibold

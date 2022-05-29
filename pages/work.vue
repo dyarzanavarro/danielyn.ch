@@ -16,7 +16,6 @@
         final project assigment of higher technical school of design zurich
       </div>
     </div>
-    <USPS />
 
     <work-cards />
   </div>

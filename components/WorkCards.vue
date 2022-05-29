@@ -149,7 +149,7 @@
                 </div>
               </div>
               <h1 class="text-2xl font-semibold leading-6 my-4 text-gray-800">
-                portfolio - Time for Nuxt3 and Tailwind
+                Showcase - Time for Nuxt3 and Tailwind
               </h1>
               <p class="text-base leading-6 text-gray-600 mt-2">
                 revamp, styling, backend & cms: psychology students needed a new

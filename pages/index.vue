@@ -5,8 +5,7 @@
     >
       <div class="justify-center w-full px-4 pt-12">
         <div class="font-bold text-gray-600 lg:text-7xl text-4xl">
-          A portfolio of a Digital product designer working in B2C Ecommerce in
-          🇨🇭
+          DYN is a UX Engineer working in B2C E-commerce in 🇨🇭
         </div>
       </div>
 
