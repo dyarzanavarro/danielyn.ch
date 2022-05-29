@@ -65,9 +65,10 @@
                 <path d="M4 5h3v10H4V5zm12 0v10l-9-5 9-5z" />
               </svg>
             </div>
-            <div
+
+            <button
+              @click.prevent="toggle"
               class="p-8 rounded-full bg-red-light shadow-lg"
-              @click="playSound"
             >
               <svg
                 class="w-6 h-6 text-pink-600"
@@ -77,7 +78,8 @@
               >
                 <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z" />
               </svg>
-            </div>
+            </button>
+
             <div class="text-grey-darker m-3">
               <svg
                 class="w-6 h-6 text-pink-600"
@@ -111,14 +113,35 @@
 export default {
   data() {
     return {
-      audio: null,
+      audioLogItems: [],
+      activeAudio: null,
+      audios: [
+        {
+          id: "citypop",
+          name: "WindySummer",
+          file: new Audio("/audio/windysummer.mp3"),
+          isPlaying: false,
+        },
+      ],
     };
   },
+
   methods: {
-    playSound() {
-      var audio = new Audio("/audio/windysummer.mp3");
-      audio.type = "audio/mp3";
-      audio.play();
+    play() {
+      this.activeAudio.isPlaying = true;
+      this.activeAudio.file.play();
+      this.activeAudio.loop = true;
+    },
+
+    pause() {
+      this.activeAudio.isPlaying = false;
+      this.activeAudio.file.pause();
+    },
+
+    toggle() {
+      //needs to be set to something, like first entry of array
+      this.activeAudio = this.audios[0];
+      this.activeAudio.isPlaying ? this.pause() : this.play();
     },
   },
 };

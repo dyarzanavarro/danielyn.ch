@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-linear-pink-invert pb-12">
+  <div class="pb-6">
     <div
       class="
         mx-auto
