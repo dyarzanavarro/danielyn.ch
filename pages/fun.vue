@@ -87,7 +87,7 @@
                     bg-indigo-100
                   "
                 >
-                  #dogecoin
+                  #DnD
                 </div>
                 <div
                   class="
@@ -101,7 +101,7 @@
                     bg-indigo-100
                   "
                 >
-                  #crypto
+                  #Pen&Paper
                 </div>
               </div>
             </div>

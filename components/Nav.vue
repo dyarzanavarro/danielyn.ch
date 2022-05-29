@@ -14,6 +14,7 @@
             rounded-lg
             dark-mode:text-white
             focus:outline-none focus:shadow-outline
+            pl-4
           "
         >
           dyn
