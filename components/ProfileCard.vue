@@ -96,7 +96,7 @@
                   rounded-full
                 "
               >
-                Curious
+                Excited
               </div>
             </div>
             <p

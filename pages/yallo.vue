@@ -1,21 +1,17 @@
 <template>
   <div class="max-w-screen-xl px-6 mx-auto">
-    <nuxt-link to="/sunrise">
+    <div class="px-4 w-full flex items-center justify-between">
       <div
         class="
           flex
           items-center
           pt-3
-          text-gray-800
-          rounded-lg
-          dark-mode:text-white
-          focus:outline-none focus:shadow-outline
+          text-gray-600
+          dark:text-gray-200
+          hover:text-indigo-700
           cursor-pointer
-          justify-end
         "
       >
-        <p class="text-sm font-medium leading-none mr-3">Next</p>
-
         <svg
           width="14"
           height="8"
@@ -25,28 +21,97 @@
         >
           <path
             d="M1.1665 4H12.8332"
-            stroke="currentColor"
+            stroke="black"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1.1665 4L4.49984 7.33333"
+            stroke="black"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1.1665 4.00002L4.49984 0.666687"
+            stroke="black"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <nuxt-link to="/psych">
+          <p
+            class="
+              text-sm
+              font-medium
+              leading-none
+              ml-3
+              text-gray-600
+              hover:text-indigo-700
+            "
+          >
+            Previous
+          </p>
+        </nuxt-link>
+      </div>
+      <div
+        class="
+          flex
+          items-center
+          pt-3
+          text-gray-600
+          dark:text-gray-200
+          hover:text-indigo-700
+          cursor-pointer
+        "
+      >
+        <nuxt-link to="/sunrise">
+          <p
+            class="
+              text-sm
+              font-medium
+              leading-none
+              mr-3
+              text-gray-600
+              hover:text-indigo-700
+            "
+          >
+            Next
+          </p>
+        </nuxt-link>
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.1665 4H12.8332"
+            stroke="black"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M9.5 7.33333L12.8333 4"
-            stroke="currentColor"
+            stroke="black"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M9.5 0.666687L12.8333 4.00002"
-            stroke="currentColor"
+            stroke="black"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
         </svg>
       </div>
-    </nuxt-link>
+    </div>
     <div class="px-4 pt-6">
       <div class="font-bold text-gray-600 lg:text-7xl text-4xl">
         yallo Case Study
@@ -86,7 +151,7 @@
               tabindex="0"
               class="
                 focus:outline-none
-                text-lg
+                text-sm
                 font-medium
                 leading-5
                 text-gray-900
@@ -99,7 +164,7 @@
               tabindex="0"
               class="
                 focus:outline-none
-                text-sm
+                text-xs
                 leading-normal
                 pt-2
                 text-gray-800
@@ -132,7 +197,7 @@
               tabindex="0"
               class="
                 focus:outline-none
-                text-lg
+                text-sm
                 font-medium
                 leading-5
                 text-gray-900
@@ -145,7 +210,7 @@
               tabindex="0"
               class="
                 focus:outline-none
-                text-sm
+                text-xs
                 leading-normal
                 pt-2
                 text-gray-800
@@ -180,7 +245,7 @@
               tabindex="0"
               class="
                 focus:outline-none
-                text-lg
+                text-sm
                 font-medium
                 leading-5
                 text-gray-900
@@ -193,14 +258,14 @@
               tabindex="0"
               class="
                 focus:outline-none
-                text-sm
+                text-xs
                 leading-normal
                 pt-2
                 text-gray-800
                 dark:text-gray-800
               "
             >
-              <a href="https://yallo.ch/">Website</a>
+              <a target="_blank" href="https://yallo.ch/">Website</a>
             </p>
           </div>
         </div>
@@ -209,7 +274,7 @@
 
     <div class="px-4 lg:pt-8 pt-6">
       <img
-        class="h-96 shadow rounded-t w-full object-cover object-center"
+        class="h-96 shadow rounded-t w-full object-cover object-top"
         src="/img/yol_1-min.png"
         alt="Empathy process showing Daniel in a Group"
       />
