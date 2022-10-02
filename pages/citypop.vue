@@ -7,12 +7,15 @@
         sm:grid-cols-3
         md:grid-cols-3
         lg:grid-cols-6
-        gap-6
-        max-h-screen
+        h-4/5
         overflow-hidden
       "
     >
-      <div class="rounded bg-pink-600 col-span-1"></div>
+      <img
+        class="rounded col-span-1 h-screen object-cover object-center"
+        src="/img/design_citypop.svg"
+      />
+
       <div class="rounded lg:col-span-4 col-span-2">
         <Transition name="fade" mode="out-in" false>
           <div>
@@ -25,7 +28,7 @@
       </div>
       <div class="rounded col-span-1">
         <div class="-rotate-90 mt-96 ml-3">
-          <div class="text-9xl font-bold text-cyan-300">DANIEL</div>
+          <div class="text-9xl font-bold text-cyan-400">DANIEL</div>
         </div>
       </div>
     </div>
@@ -40,9 +43,10 @@ export default {
       imgLoad: [
         "/img/citypop_mood-min.png",
         "/img/citypop_Dan1-min.png",
-        "/img/citypop_Dan2-min.png",
         "/img/citypop_Dan3-min.png",
         "/img/citypop_Dan4-min.png",
+        "/img/citypop_Dan5-min.png",
+        "/img/citypop_Dan6-min.png",
       ],
     };
   },
