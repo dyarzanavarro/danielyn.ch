@@ -140,6 +140,7 @@
         to="/"
         class="
           text-4xl
+          uppercase
           font-semibold
           tracking-widest
           text-gray-900
