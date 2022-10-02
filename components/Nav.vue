@@ -146,7 +146,6 @@
           rounded-lg
           dark-mode:text-white
           focus:outline-none focus:shadow-outline
-          px-6
         "
       >
         dyn

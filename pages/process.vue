@@ -1,7 +1,20 @@
 <template>
   <div class="justify-center w-full max-w-screen-xl px-6 mx-auto">
     <div class="justify-center w-full px-4 pt-12">
-      <div class="font-bold text-gray-600 lg:text-7xl text-4xl">Process</div>
+      <div
+        class="
+          text-gray-600 text-4xl
+          font-bold
+          lg:text-7xl
+          tracking-tight
+          leading-none
+          md:text-5xl
+          xl:text-6xl
+          text-gray-700
+        "
+      >
+        Process
+      </div>
     </div>
 
     <div class="container px-4 lg:pt-8 pt-6">

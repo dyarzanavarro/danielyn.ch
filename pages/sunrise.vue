@@ -113,7 +113,18 @@
       </div>
     </div>
     <div class="px-4 pt-6">
-      <div class="font-bold text-gray-600 lg:text-7xl text-4xl">
+      <div
+        class="
+          text-gray-600 text-4xl
+          font-bold
+          lg:text-7xl
+          tracking-tight
+          leading-none
+          md:text-5xl
+          xl:text-6xl
+          text-gray-600
+        "
+      >
         Sunrise Case Study
       </div>
     </div>

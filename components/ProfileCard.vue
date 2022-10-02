@@ -7,8 +7,6 @@
       w-full
       py-8
       max-w-screen-xl max-w-screen-xl
-      px-4
-      pt-16
       bg-slate-100
     "
   >

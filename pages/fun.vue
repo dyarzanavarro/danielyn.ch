@@ -1,19 +1,31 @@
 <template>
   <div class="justify-center w-full max-w-screen-xl px-6 mx-auto">
     <div class="justify-center w-full px-4 pt-12">
-      <div class="font-bold text-gray-600 lg:text-7xl text-4xl">Fun</div>
+      <div
+        class="
+          text-gray-600 text-4xl
+          font-bold
+          lg:text-7xl
+          tracking-tight
+          leading-none
+          md:text-5xl
+          xl:text-6xl
+          text-gray-700
+        "
+      >
+        Fun
+      </div>
     </div>
 
-    <div class="container px-4 lg:pt-8 pt-6">
+    <div class="container px-4 lg:pt-4 pt-2">
       <div class="text-gray-400 lg:text-2xl sm:text-4">
         Life can't be just about work all the time. Here's a selection of things
         I like to do in my free time!
-      </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <br />
         Click around to learn more about me.
       </div>
     </div>
-    <div class="lg:flex items-center justify-center">
+    <div class="lg:flex items-center justify-center pt-6">
       <div
         aria-label="group of cards"
         tabindex="0"
