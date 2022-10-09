@@ -190,25 +190,18 @@
             <nuxt-link to="/work" @click="toggleMenu"
               ><div
                 class="
-                  px-6
-                  py-12
                   text-4xl
+                  uppercase
                   font-semibold
-                  bg-transparent
+                  tracking-widest
+                  text-gray-900
                   rounded-lg
-                  dark:bg-transparent
-                  dark:hover:bg-gray-600
-                  dark:focus:bg-gray-600
-                  dark:focus:text-white
-                  dark:hover:text-white
-                  dark:text-gray-200
-                  md:mt-0 md:ml-4
-                  hover:text-gray-900
-                  focus:text-gray-900
-                  hover:bg-gray-200
-                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
-                  text-indigo-700
-                  navItem
+                  dark:text-white
+                  hover:text-indigo-700
+                  focus:outline-none focus:shadow-outline
+                  pl-4
+                  px-4
+                  rounded-lg
                 "
               >
                 work
@@ -219,25 +212,17 @@
             <nuxt-link to="/process" @click="toggleMenu"
               ><div
                 class="
-                  px-6
-                  py-12
-                  text-lg
+                  text-4xl
+                  py-6
+                  uppercase
                   font-semibold
-                  bg-transparent
+                  tracking-widest
+                  text-gray-900
                   rounded-lg
-                  dark:bg-transparent
-                  dark:hover:bg-gray-600
-                  dark:focus:bg-gray-600
-                  dark:focus:text-white
-                  dark:hover:text-white
-                  dark:text-gray-200
-                  md:mt-0 md:ml-4
-                  hover:text-gray-900
-                  focus:text-gray-900
-                  hover:bg-gray-200
-                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
-                  text-indigo-700
-                  navItem
+                  dark:text-white
+                  hover:text-indigo-700
+                  focus:outline-none focus:shadow-outline
+                  pl-4
                 "
               >
                 process
@@ -248,30 +233,51 @@
             <nuxt-link to="/fun" @click="toggleMenu"
               ><div
                 class="
-                  px-6
-                  py-12
                   text-4xl
+                  uppercase
                   font-semibold
-                  bg-transparent
+                  tracking-widest
+                  text-gray-900
                   rounded-lg
-                  dark:bg-transparent
-                  dark:hover:bg-gray-600
-                  dark:focus:bg-gray-600
-                  dark:focus:text-white
-                  dark:hover:text-white
-                  dark:text-gray-200
-                  md:mt-0 md:ml-4
-                  hover:text-gray-900
-                  focus:text-gray-900
-                  hover:bg-gray-200
-                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
-                  text-indigo-700
-                  navItem
+                  dark:text-white
+                  hover:text-indigo-700
+                  focus:outline-none focus:shadow-outline
+                  pl-4
                 "
               >
                 fun
               </div></nuxt-link
             >
+          </li>
+          <li>
+            <div class="object-bottom">
+              <button @click="toggle">
+                <img
+                  v-if="$colorMode.value == 'dark'"
+                  class="
+                    h-8
+                    object-bottom
+                    hover:animate-pulse
+                    cursor-pointer
+                    my-3
+                  "
+                  src="/img/bulb-dark.svg"
+                  alt="floating robot"
+                />
+                <img
+                  v-else
+                  class="
+                    h-8
+                    object-bottom
+                    hover:animate-pulse
+                    cursor-pointer
+                    my-3
+                  "
+                  src="/img/bulb_light.svg"
+                  alt="floating robot"
+                />
+              </button>
+            </div>
           </li>
         </ul>
       </div>
