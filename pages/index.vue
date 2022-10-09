@@ -25,6 +25,7 @@
             md:text-5xl
             xl:text-6xl
             text-gray-600
+            dark:text-gray-200
           "
         >
           Daniel is a UX Engineer working in B2C E-commerce in 🇨🇭
@@ -34,11 +35,11 @@
             max-w-2xl
             mb-6
             font-light
-            text-gray-500
             lg:mb-8
-            md:text-lg
-            lg:text-xl
-            dark:text-gray-800
+            md:text-xl
+            lg:text-2xl
+            text-gray-800
+            dark:text-gray-400
           "
         >
           Dipping my toes in SCRUM product ownership & creating intuitive user
@@ -57,12 +58,14 @@
             text-base
             border border-gray-600
             font-medium
-            text-center text-white
+            text-center
+            dark:text-white
             rounded-lg
             bg-primary-700
             hover:bg-primary-800
             focus:ring-4 focus:ring-primary-300
-            dark:text-gray-800
+            text-gray-800
+            hover:animate-pulse
           "
           to="/process"
         >
@@ -107,3 +110,12 @@
     </div>
   </div>
 </template>
+
+
+
+<script>
+export default {};
+</script>
+
+<style>
+</style>

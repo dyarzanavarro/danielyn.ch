@@ -11,6 +11,7 @@
           md:text-5xl
           xl:text-6xl
           text-gray-700
+          dark:text-gray-200
         "
       >
         Work

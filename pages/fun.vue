@@ -11,6 +11,7 @@
           md:text-5xl
           xl:text-6xl
           text-gray-700
+          dark:text-gray-200
         "
       >
         Fun
@@ -43,6 +44,12 @@
               p-6
               shadow
               rounded
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-white
             "
           >
             <div class="flex items-center border-b border-gray-200 pb-2">
@@ -76,6 +83,7 @@
                       font-bold
                       leading-5
                       text-gray-800
+                      dark:text-gray-200
                     "
                   >
                     Boardgames
@@ -98,7 +106,14 @@
             <div class="px-2">
               <p
                 tabindex="0"
-                class="focus:outline-none text-md leading-2 py-2 text-gray-800"
+                class="
+                  focus:outline-none
+                  text-md
+                  leading-2
+                  py-2
+                  text-gray-800
+                  dark:text-gray-200
+                "
               >
                 A group of people interested in dogecoin, the currency and a bit
                 of side for the meme and dof that we all know and love. These
@@ -117,6 +132,12 @@
               p-6
               shadow
               rounded
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-white
             "
           >
             <div class="flex items-center border-b border-gray-200 pb-2">
@@ -150,6 +171,7 @@
                       font-bold
                       leading-5
                       text-gray-800
+                      dark:text-gray-200
                     "
                   >
                     Loved ones
@@ -172,7 +194,14 @@
             <div class="px-2">
               <p
                 tabindex="0"
-                class="focus:outline-none text-md leading-2 py-2 text-gray-800"
+                class="
+                  focus:outline-none
+                  text-md
+                  leading-2
+                  py-2
+                  text-gray-800
+                  dark:text-gray-200
+                "
               >
                 I spend most of my time with my wonderful partner and cute dog
                 Boo. He's a Ratonero Analuz, which means he'll play fletch until
@@ -192,6 +221,12 @@
               bg-white
               p-6
               shadow
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-white
               rounded
             "
           >
@@ -226,6 +261,7 @@
                       font-bold
                       leading-5
                       text-gray-800
+                      dark:text-gray-200
                     "
                   >
                     Avid reader
@@ -249,7 +285,14 @@
             <div class="px-2">
               <p
                 tabindex="0"
-                class="focus:outline-none text-md leading-2 py-2 text-gray-800"
+                class="
+                  focus:outline-none
+                  text-md
+                  leading-2
+                  py-2
+                  text-gray-800
+                  dark:text-gray-200
+                "
               >
                 A group of people interested in dogecoin, the currency and a bit
                 of side for the meme and dof that we all know and love. These
@@ -265,6 +308,12 @@
               lg:w-8/12 lg:mr-7 lg:mb-4
               mb-2
               bg-white
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-white
               p-6
               shadow
               rounded
@@ -302,6 +351,7 @@
                         font-bold
                         leading-5
                         text-gray-800
+                        dark:text-gray-200
                       "
                     >
                       Game development
@@ -331,6 +381,7 @@
                     leading-2
                     py-2
                     text-gray-800
+                    dark:text-gray-200
                   "
                 >
                   A group of people interested in dogecoin, the currency and a

@@ -12,7 +12,7 @@
             tracking-widest
             text-gray-900
             rounded-lg
-            dark-mode:text-white
+            dark:text-white
             hover:text-indigo-700
             focus:outline-none focus:shadow-outline
             pl-4
@@ -33,12 +33,12 @@
               font-semibold
               bg-transparent
               rounded-lg
-              dark-mode:bg-transparent
-              dark-mode:hover:bg-gray-600
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:bg-transparent
+              dark:hover:bg-gray-600
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-gray-200
               md:mt-0 md:ml-4
               hover:text-indigo-700
               focus:text-gray-900
@@ -59,12 +59,11 @@
               font-semibold
               bg-transparent
               rounded-lg
-              dark-mode:bg-transparent
-              dark-mode:hover:bg-gray-600
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:hover:bg-gray-600
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-gray-200
               md:mt-0 md:ml-4
               hover:text-indigo-700
               focus:text-gray-900
@@ -85,12 +84,11 @@
               font-semibold
               bg-transparent
               rounded-lg
-              dark-mode:bg-transparent
-              dark-mode:hover:bg-gray-600
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:hover:bg-gray-600
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-gray-200
               md:mt-0 md:ml-4
               hover:text-indigo-700
               focus:text-gray-900
@@ -101,6 +99,23 @@
             fun
           </div></nuxt-link
         >
+
+        <div class="object-bottom">
+          <button @click="toggle">
+            <img
+              v-if="$colorMode.value == 'dark'"
+              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+              src="/img/bulb-dark.svg"
+              alt="floating robot"
+            />
+            <img
+              v-else
+              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+              src="/img/bulb_light.svg"
+              alt="floating robot"
+            />
+          </button>
+        </div>
       </div>
 
       <!-- Burger Icon -->
@@ -145,7 +160,7 @@
           tracking-widest
           text-gray-900
           rounded-lg
-          dark-mode:text-white
+          dark:text-white
           focus:outline-none focus:shadow-outline
         "
       >
@@ -166,6 +181,7 @@
           overflow-hidden
           overscroll-none
           bg-slate-100
+          dark:bg-gray-900
           text-center
         "
       >
@@ -180,12 +196,12 @@
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  dark-mode:bg-transparent
-                  dark-mode:hover:bg-gray-600
-                  dark-mode:focus:bg-gray-600
-                  dark-mode:focus:text-white
-                  dark-mode:hover:text-white
-                  dark-mode:text-gray-200
+                  dark:bg-transparent
+                  dark:hover:bg-gray-600
+                  dark:focus:bg-gray-600
+                  dark:focus:text-white
+                  dark:hover:text-white
+                  dark:text-gray-200
                   md:mt-0 md:ml-4
                   hover:text-gray-900
                   focus:text-gray-900
@@ -209,12 +225,12 @@
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  dark-mode:bg-transparent
-                  dark-mode:hover:bg-gray-600
-                  dark-mode:focus:bg-gray-600
-                  dark-mode:focus:text-white
-                  dark-mode:hover:text-white
-                  dark-mode:text-gray-200
+                  dark:bg-transparent
+                  dark:hover:bg-gray-600
+                  dark:focus:bg-gray-600
+                  dark:focus:text-white
+                  dark:hover:text-white
+                  dark:text-gray-200
                   md:mt-0 md:ml-4
                   hover:text-gray-900
                   focus:text-gray-900
@@ -238,12 +254,12 @@
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  dark-mode:bg-transparent
-                  dark-mode:hover:bg-gray-600
-                  dark-mode:focus:bg-gray-600
-                  dark-mode:focus:text-white
-                  dark-mode:hover:text-white
-                  dark-mode:text-gray-200
+                  dark:bg-transparent
+                  dark:hover:bg-gray-600
+                  dark:focus:bg-gray-600
+                  dark:focus:text-white
+                  dark:hover:text-white
+                  dark:text-gray-200
                   md:mt-0 md:ml-4
                   hover:text-gray-900
                   focus:text-gray-900
@@ -272,13 +288,15 @@ export default {
     toggleMenu() {
       var icon = document.getElementById("bgIcon");
       const childEle = icon.children;
-
       childEle[0].classList.toggle("hidden");
       childEle[1].classList.toggle("hidden");
-
       var mobileNav = document
         .getElementById("MobileNavigation")
         .classList.toggle("hidden");
+    },
+    toggle() {
+      this.$colorMode.preference =
+        this.$colorMode.value == "light" ? "dark" : "light";
     },
   },
 };

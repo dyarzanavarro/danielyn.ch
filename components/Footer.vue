@@ -21,7 +21,7 @@
             text-gray-900
             rounded-lg
             uppercase
-            dark-mode:text-white
+            dark:text-white
             focus:outline-none focus:shadow-outline
           "
         >
@@ -32,7 +32,7 @@
         <h1 class="text-2xl font-bold text-indigo-700">Let's. build. it.</h1>
 
         <div class="my-6 text-base text-color f-f-l"></div>
-        <div class="text-sm text-color mb-10 f-f-l">
+        <div class="text-sm text-color mb-10 f-f-l dark:text-gray-200">
           <p>© 2022 - Made with ❤️</p>
         </div>
       </div>

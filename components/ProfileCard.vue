@@ -8,6 +8,7 @@
       py-8
       max-w-screen-xl max-w-screen-xl
       bg-slate-100
+      dark:bg-slate-900
     "
   >
     <!-- Card code block start -->

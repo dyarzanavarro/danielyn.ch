@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-100 h-max">
+  <div class="bg-slate-100 h-max dark:bg-slate-900">
     <Nav />
     <slot />
     <Footer />
@@ -17,4 +17,5 @@ const nuxtApp = useNuxtApp();
 nuxtApp.hook("page:finish", () => {
   window.scrollTo(0, 0);
 });
+const colorMode = useColorMode();
 </script>

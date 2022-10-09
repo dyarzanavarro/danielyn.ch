@@ -11,6 +11,7 @@
           md:text-5xl
           xl:text-6xl
           text-gray-700
+          dark:text-gray-200
         "
       >
         Process
@@ -26,7 +27,15 @@
         methodologies.
       </div>
       <div class="justify-center w-full pt-12">
-        <div class="font-bold text-gray-600 lg:text-3xl text-2xl">
+        <div
+          class="
+            font-bold
+            text-gray-600
+            lg:text-3xl
+            text-2xl
+            dark:text-gray-200
+          "
+        >
           Empathy and Understanding
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
@@ -73,7 +82,15 @@
         </div>
       </div>
       <div class="justify-center w-full pt-12">
-        <div class="font-bold text-gray-600 lg:text-3xl text-2xl">
+        <div
+          class="
+            font-bold
+            text-gray-600
+            lg:text-3xl
+            text-2xl
+            dark:text-gray-200
+          "
+        >
           Inspiration & Structured Design
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
@@ -120,7 +137,15 @@
         </div>
       </div>
       <div class="justify-center w-full pt-12">
-        <div class="font-bold text-gray-600 lg:text-3xl text-2xl">
+        <div
+          class="
+            font-bold
+            text-gray-600
+            lg:text-3xl
+            text-2xl
+            dark:text-gray-200
+          "
+        >
           UX in every detail
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
@@ -166,8 +191,16 @@
         </div>
       </div>
       <div class="justify-center w-full pt-12">
-        <div class="font-bold text-gray-600 lg:text-3xl text-2xl">
-          A good product needs of the best implementation
+        <div
+          class="
+            font-bold
+            text-gray-600
+            lg:text-3xl
+            text-2xl
+            dark:text-gray-200
+          "
+        >
+          A good product needs best implementation
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
           The most perfect design will be never good enough if there is no

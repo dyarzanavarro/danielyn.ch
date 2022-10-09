@@ -6,6 +6,7 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
 
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       keyframes: {
@@ -16,6 +17,7 @@ module.exports = {
       },
       animation: {
         bounce: 'bounce 6s ease infinite',
+
       }
     },
   },

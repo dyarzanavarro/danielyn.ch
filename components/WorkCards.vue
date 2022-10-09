@@ -24,12 +24,12 @@
               sm:ml-6
               md:w-auto
               sm:w-1/2
-              dark-mode:bg-gray-700
-              dark-mode:hover:shadow
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-white
               hover:text-gray-900
               focus:text-gray-900
               hover:shadow
@@ -43,16 +43,45 @@
             <div class="p-6">
               <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                  <p class="text-base leading-4 text-gray-500">22 may</p>
-                  <p class="text-base leading-none text-gray-500 ml-12">
+                  <p
+                    class="text-base leading-4 text-gray-500 dark:text-gray-200"
+                  >
+                    22 may
+                  </p>
+                  <p
+                    class="
+                      text-base
+                      leading-none
+                      text-gray-500
+                      ml-12
+                      dark:text-gray-200
+                    "
+                  >
                     10 min read
                   </p>
                 </div>
               </div>
-              <h1 class="text-2xl font-semibold leading-6 my-4 text-gray-800">
+              <h1
+                class="
+                  text-2xl
+                  font-semibold
+                  leading-6
+                  my-4
+                  text-gray-800
+                  dark:text-gray-100
+                "
+              >
                 yallo - Upgrading a brand to a new level
               </h1>
-              <p class="text-base leading-6 text-gray-600 mt-2">
+              <p
+                class="
+                  text-base
+                  leading-6
+                  text-gray-600
+                  mt-2
+                  dark:text-gray-300
+                "
+              >
                 Redesign & Designsysteme der Ecommerce Brands yallo, lebara &
                 swype;HTML, CSS & Javascript in Angular für kleinere oder
                 grössere «QuickFixes»; Scrum Product Owner Web Development Team;
@@ -72,12 +101,12 @@
               sm:ml-6
               md:w-auto
               sm:w-1/2
-              dark-mode:bg-gray-700
-              dark-mode:hover:shadow
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-gray-200
               hover:text-gray-900
               focus:text-gray-900
               hover:shadow
@@ -92,16 +121,45 @@
             <div class="p-6">
               <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                  <p class="text-base leading-4 text-gray-500">14 oct</p>
-                  <p class="text-base leading-none text-gray-500 ml-12">
+                  <p
+                    class="text-base leading-4 text-gray-500 dark:text-gray-200"
+                  >
+                    14 oct
+                  </p>
+                  <p
+                    class="
+                      text-base
+                      leading-none
+                      text-gray-500
+                      ml-12
+                      dark:text-gray-100
+                    "
+                  >
                     10 min read
                   </p>
                 </div>
               </div>
-              <h1 class="text-2xl font-semibold leading-6 my-4 text-gray-800">
+              <h1
+                class="
+                  text-2xl
+                  font-semibold
+                  leading-6
+                  my-4
+                  text-gray-800
+                  dark:text-gray-100
+                "
+              >
                 Sunrise eShop - Selling digital products
               </h1>
-              <p class="text-base leading-6 text-gray-600 mt-2">
+              <p
+                class="
+                  text-base
+                  leading-6
+                  text-gray-600
+                  mt-2
+                  dark:text-gray-300
+                "
+              >
                 Integriert im UX Team, Arbeit an Design / Aufbau von Projekten;
                 A/B Testing in Adobe Suite (Target), Analyse und Empfehlungen;
                 HTML, CSS & Jquery für kleinere oder grössere «QuickFixes»;
@@ -122,12 +180,12 @@
               sm:ml-6
               md:w-auto
               sm:w-1/2
-              dark-mode:bg-gray-700
-              dark-mode:hover:hover:shadow
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:bg-gray-700
+              dark:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-gray-200
               hover:text-gray-900
               focus:text-gray-900
               hover:shadow
@@ -142,16 +200,45 @@
             <div class="p-6">
               <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                  <p class="text-base leading-4 text-gray-500">04 mar</p>
-                  <p class="text-base leading-none text-gray-500 ml-12">
+                  <p
+                    class="text-base leading-4 text-gray-500 dark:text-gray-200"
+                  >
+                    04 mar
+                  </p>
+                  <p
+                    class="
+                      text-base
+                      leading-none
+                      text-gray-500
+                      ml-12
+                      dark:text-gray-200
+                    "
+                  >
                     8 min read
                   </p>
                 </div>
               </div>
-              <h1 class="text-2xl font-semibold leading-6 my-4 text-gray-800">
+              <h1
+                class="
+                  text-2xl
+                  font-semibold
+                  leading-6
+                  my-4
+                  text-gray-800
+                  dark:text-gray-100
+                "
+              >
                 Showcase - Time for Nuxt3 and Tailwind
               </h1>
-              <p class="text-base leading-6 text-gray-600 mt-2">
+              <p
+                class="
+                  text-base
+                  leading-6
+                  text-gray-600
+                  mt-2
+                  dark:text-gray-300
+                "
+              >
                 revamp, styling, backend & cms: psychology students needed a new
                 start
               </p>
@@ -168,12 +255,12 @@
               sm:ml-6
               md:w-auto
               sm:w-1/2
-              dark-mode:bg-gray-700
-              dark-mode:hover:hover:shadow
-              dark-mode:focus:bg-gray-600
-              dark-mode:focus:text-white
-              dark-mode:hover:text-white
-              dark-mode:text-gray-200
+              dark:bg-gray-700
+              dark:hover:hover:shadow
+              dark:focus:bg-gray-600
+              dark:focus:text-white
+              dark:hover:text-white
+              dark:text-gray-200
               hover:text-gray-900
               focus:text-gray-900
               hover:shadow
@@ -188,16 +275,45 @@
             <div class="p-6">
               <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                  <p class="text-base leading-4 text-gray-500">12 jan</p>
-                  <p class="text-base leading-none text-gray-500 ml-12">
+                  <p
+                    class="text-base leading-4 text-gray-500 dark:text-gray-200"
+                  >
+                    12 jan
+                  </p>
+                  <p
+                    class="
+                      text-base
+                      leading-none
+                      text-gray-500
+                      ml-12
+                      dark:text-gray-200
+                    "
+                  >
                     5 min read
                   </p>
                 </div>
               </div>
-              <h1 class="text-2xl font-semibold leading-6 my-4 text-gray-800">
+              <h1
+                class="
+                  text-2xl
+                  font-semibold
+                  leading-6
+                  my-4
+                  text-gray-800
+                  dark:text-gray-100
+                "
+              >
                 psych - a new beginning for passionate students
               </h1>
-              <p class="text-base leading-6 text-gray-600 mt-2">
+              <p
+                class="
+                  text-base
+                  leading-6
+                  text-gray-600
+                  mt-2
+                  dark:text-gray-300
+                "
+              >
                 revamp, styling, backend & cms: psychology students needed a new
                 start
               </p>
