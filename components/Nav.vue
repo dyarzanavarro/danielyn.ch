@@ -10,9 +10,9 @@
             uppercase
             font-semibold
             tracking-widest
-            text-gray-900
+            text-gray-700
+            dark:text-gray-200
             rounded-lg
-            dark:text-white
             hover:text-indigo-700
             focus:outline-none focus:shadow-outline
             pl-4
@@ -41,7 +41,8 @@
               dark:text-gray-200
               md:mt-0 md:ml-4
               hover:text-indigo-700
-              focus:text-gray-900
+              text-gray-700
+              dark:text-gray-200
               hover:bg-gray-200
               focus:bg-gray-200 focus:outline-none focus:shadow-outline
             "
@@ -63,6 +64,8 @@
               dark:focus:bg-gray-600
               dark:focus:text-white
               dark:hover:text-white
+              d
+              text-gray-700
               dark:text-gray-200
               md:mt-0 md:ml-4
               hover:text-indigo-700
@@ -88,6 +91,7 @@
               dark:focus:bg-gray-600
               dark:focus:text-white
               dark:hover:text-white
+              text-gray-700
               dark:text-gray-200
               md:mt-0 md:ml-4
               hover:text-indigo-700
@@ -127,6 +131,7 @@
           focus:ring-2
           focus:ring-offset-2
           focus:ring-gray-800
+          dark:ring-gray-800
           flex
           justify-center
           items-center
@@ -135,17 +140,46 @@
           absolute
           right-0
           top-0
-          p-6
+          m-4
         "
       >
         <img
-          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg6.svg"
-          alt="burger"
+          v-if="$colorMode.value == 'dark'"
+          class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+          src="/img/tool-front-clay.svg"
+          alt="floating robot"
         />
         <img
-          class="hidden"
-          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg7.svg"
-          alt="cross"
+          v-else
+          class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+          src="/img/tool-front-color.svg"
+          alt="floating robot"
+        />
+        <img
+          v-if="$colorMode.value == 'dark'"
+          class="
+            hidden
+            h-8
+            object-bottom
+            hover:animate-pulse
+            cursor-pointer
+            my-3
+          "
+          src="/img/scissor-front-clay.svg"
+          alt="floating robot"
+        />
+        <img
+          v-else
+          class="
+            hidden
+            h-8
+            object-bottom
+            hover:animate-pulse
+            cursor-pointer
+            my-3
+          "
+          src="/img/scissor-front-color.svg"
+          alt="floating robot"
         />
       </div>
     </div>
@@ -158,9 +192,9 @@
           uppercase
           font-semibold
           tracking-widest
-          text-gray-900
+          text-gray-700
+          dark:text-gray-200
           rounded-lg
-          dark:text-white
           focus:outline-none focus:shadow-outline
         "
       >
@@ -194,9 +228,9 @@
                   uppercase
                   font-semibold
                   tracking-widest
-                  text-gray-900
+                  text-gray-700
+                  dark:text-gray-200
                   rounded-lg
-                  dark:text-white
                   hover:text-indigo-700
                   focus:outline-none focus:shadow-outline
                   pl-4
@@ -217,9 +251,9 @@
                   uppercase
                   font-semibold
                   tracking-widest
-                  text-gray-900
                   rounded-lg
-                  dark:text-white
+                  text-gray-700
+                  dark:text-gray-200
                   hover:text-indigo-700
                   focus:outline-none focus:shadow-outline
                   pl-4
@@ -237,9 +271,9 @@
                   uppercase
                   font-semibold
                   tracking-widest
-                  text-gray-900
+                  text-gray-700
+                  dark:text-gray-200
                   rounded-lg
-                  dark:text-white
                   hover:text-indigo-700
                   focus:outline-none focus:shadow-outline
                   pl-4

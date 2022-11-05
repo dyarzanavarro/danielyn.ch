@@ -6,8 +6,8 @@
           flex
           items-center
           pt-3
-          text-gray-600
-          dark:text-gray-200
+          text-gray-700
+          dark:text-gray-200 dark:text-gray-200
           hover:text-indigo-700
           cursor-pointer
         "
@@ -15,27 +15,28 @@
         <svg
           width="14"
           height="8"
+          class="stroke-gray-700 dark:stroke-gray-200"
           viewBox="0 0 14 8"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M1.1665 4H12.8332"
-            stroke="black"
+            class="stroke-gray-700 dark:stroke-gray-200"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M1.1665 4L4.49984 7.33333"
-            stroke="black"
+            class="stroke-gray-700 dark:stroke-gray-200"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M1.1665 4.00002L4.49984 0.666687"
-            stroke="black"
+            class="stroke-gray-700 dark:stroke-gray-200"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -48,7 +49,8 @@
               font-medium
               leading-none
               ml-3
-              text-gray-600
+              text-gray-700
+              dark:text-gray-200
               hover:text-indigo-700
             "
           >
@@ -61,8 +63,8 @@
           flex
           items-center
           pt-3
-          text-gray-600
-          dark:text-gray-200
+          text-gray-700
+          dark:text-gray-200 dark:text-gray-200
           hover:text-indigo-700
           cursor-pointer
         "
@@ -74,7 +76,8 @@
               font-medium
               leading-none
               mr-3
-              text-gray-600
+              text-gray-700
+              dark:text-gray-200
               hover:text-indigo-700
             "
           >
@@ -87,24 +90,25 @@
           viewBox="0 0 14 8"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          class="stroke-gray-700 dark:stroke-gray-200"
         >
           <path
+            class="stroke-gray-700 dark:stroke-gray-200"
             d="M1.1665 4H12.8332"
-            stroke="black"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M9.5 7.33333L12.8333 4"
-            stroke="black"
+            class="stroke-gray-700 dark:stroke-gray-200"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M9.5 0.666687L12.8333 4.00002"
-            stroke="black"
+            class="stroke-gray-700 dark:stroke-gray-200"
             stroke-width="1.25"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -115,17 +119,20 @@
     <div class="px-4 pt-6">
       <div
         class="
-          text-gray-600 text-4xl
+          text-gray-700
+          dark:text-gray-200
+          text-4xl
           font-bold
           lg:text-7xl
           tracking-tight
           leading-none
           md:text-5xl
           xl:text-6xl
-          text-gray-600
+          text-gray-700
+          dark:text-gray-200
         "
       >
-        psych Case Study
+        psyCH
       </div>
     </div>
 
@@ -134,20 +141,15 @@
         Taking over an aging web presence & creating intuitive user journeys
         that drive up value and supports long-term growth.
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
-      </div>
+      <div class="text-gray-400 lg:text-2xl sm:text-4"></div>
     </div>
     <div class="px-4 lg:pt-8 pt-6 flex justify-evenly">
       <div class="flex items-center pb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-9 w-9"
+          class="h-9 w-9 stroke-gray-700 dark:text-gray-200"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
           stroke-width="2"
         >
           <path
@@ -165,8 +167,8 @@
                 text-sm
                 font-medium
                 leading-5
-                text-gray-900
-                dark:text-gray-900
+                text-gray-700
+                dark:text-gray-200
               "
             >
               Type
@@ -178,8 +180,8 @@
                 text-xs
                 leading-normal
                 pt-2
-                text-gray-800
-                dark:text-gray-800
+                text-gray-700
+                dark:text-gray-200
               "
             >
               Project
@@ -190,10 +192,9 @@
       <div class="flex items-center pb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8"
+          class="h-9 w-9 stroke-gray-700 dark:text-gray-200"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
           stroke-width="2"
         >
           <path
@@ -211,8 +212,8 @@
                 text-sm
                 font-medium
                 leading-5
-                text-gray-900
-                dark:text-gray-900
+                text-gray-700
+                dark:text-gray-200
               "
             >
               ToDos
@@ -224,8 +225,8 @@
                 text-xs
                 leading-normal
                 pt-2
-                text-gray-800
-                dark:text-gray-800
+                text-gray-700
+                dark:text-gray-200
               "
             >
               UX / UI Design | CMS Setup | Migration | Hosting | Teaching
@@ -237,10 +238,9 @@
       <div class="flex items-center pb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          class="h-9 w-9 stroke-gray-700 dark:text-gray-200"
           stroke-width="2"
         >
           <path
@@ -258,8 +258,8 @@
                 text-sm
                 font-medium
                 leading-5
-                text-gray-900
-                dark:text-gray-900
+                text-gray-700
+                dark:text-gray-200
               "
             >
               Link
@@ -271,8 +271,8 @@
                 text-xs
                 leading-normal
                 pt-2
-                text-gray-800
-                dark:text-gray-800
+                text-gray-700
+                dark:text-gray-200
               "
             >
               <a target="_blank" href="https://psychologiestudierende.ch/"
@@ -297,16 +297,24 @@
       />
     </div>
     <div class="px-4 lg:pt-8 pt-6">
-      <div class="font-bold text-gray-600 lg:text-3xl text-2xl pb-6">
+      <div
+        class="
+          font-bold
+          text-gray-700
+          dark:text-gray-200
+          lg:text-3xl
+          text-2xl
+          pb-6
+        "
+      >
         Project Purpose and Goal
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend. <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        Ensuring customer-facing teams are aligned & equipped for success.
+        Supporting and sharing best practices across the network. Being
+        accountable for end-to-end project delivery & operations, spanning from
+        start to finish. Proactively driving adoption and providing best
+        practices that drive revenue.
       </div>
     </div>
 
@@ -332,7 +340,16 @@
         />
       </div>
       <div class="rounded">
-        <div class="font-bold text-gray-600 lg:text-3xl text-2xl pb-6">
+        <div
+          class="
+            font-bold
+            text-gray-700
+            dark:text-gray-200
+            lg:text-3xl
+            text-2xl
+            pb-6
+          "
+        >
           Workflow and Decisions
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
@@ -347,7 +364,16 @@
     </div>
 
     <div class="px-4 lg:pt-8 pt-6 grid place-items-center pb-6">
-      <div class="font-bold text-gray-600 lg:text-3xl text-2xl pb-6">
+      <div
+        class="
+          font-bold
+          text-gray-700
+          dark:text-gray-200
+          lg:text-3xl
+          text-2xl
+          pb-6
+        "
+      >
         Thoughts & Hickups along the way
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">

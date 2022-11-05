@@ -60,7 +60,12 @@
               <h2>Robust workflow</h2>
             </div>
             <div
-              class="text-gray-600 dark:text-gray-300 mt-2 text-lg text-center"
+              class="
+                text-gray-700
+                dark:text-gray-200 dark:text-gray-300
+                mt-2
+                text-lg text-center
+              "
             >
               <p>
                 Workflows can help streamline and automate repeatable business
@@ -109,7 +114,12 @@
               <h2>Flexibility</h2>
             </div>
             <div
-              class="text-gray-600 dark:text-gray-300 mt-2 text-lg text-center"
+              class="
+                text-gray-700
+                dark:text-gray-200 dark:text-gray-300
+                mt-2
+                text-lg text-center
+              "
             >
               <p>
                 A flexible software architecture is able to changes in usability
@@ -158,7 +168,12 @@
               <h2>User friendly</h2>
             </div>
             <div
-              class="text-gray-600 dark:text-gray-300 mt-2 text-lg text-center"
+              class="
+                text-gray-700
+                dark:text-gray-200 dark:text-gray-300
+                mt-2
+                text-lg text-center
+              "
             >
               <p>
                 Good usability can improve a new software chances of successful

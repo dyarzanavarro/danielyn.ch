@@ -3,7 +3,9 @@
     <div class="justify-center w-full px-4 pt-12">
       <div
         class="
-          text-gray-600 text-4xl
+          text-gray-700
+          dark:text-gray-200
+          text-4xl
           font-bold
           lg:text-7xl
           tracking-tight
@@ -30,7 +32,8 @@
         <div
           class="
             font-bold
-            text-gray-600
+            text-gray-700
+            dark:text-gray-200
             lg:text-3xl
             text-2xl
             dark:text-gray-200
@@ -85,7 +88,8 @@
         <div
           class="
             font-bold
-            text-gray-600
+            text-gray-700
+            dark:text-gray-200
             lg:text-3xl
             text-2xl
             dark:text-gray-200
@@ -140,7 +144,8 @@
         <div
           class="
             font-bold
-            text-gray-600
+            text-gray-700
+            dark:text-gray-200
             lg:text-3xl
             text-2xl
             dark:text-gray-200
@@ -194,7 +199,8 @@
         <div
           class="
             font-bold
-            text-gray-600
+            text-gray-700
+            dark:text-gray-200
             lg:text-3xl
             text-2xl
             dark:text-gray-200

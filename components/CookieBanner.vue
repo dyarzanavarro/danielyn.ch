@@ -55,8 +55,8 @@
           class="
             text-sm
             sm:text-base
-            text-gray-600
-            dark:text-gray-400
+            text-gray-700
+            dark:text-gray-200 dark:text-gray-400
             pt-2
             sm:pt-0
             pb-2

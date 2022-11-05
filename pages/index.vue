@@ -24,7 +24,7 @@
             leading-none
             md:text-5xl
             xl:text-6xl
-            text-gray-600
+            text-gray-700
             dark:text-gray-200
           "
         >
@@ -94,14 +94,18 @@
     </div>
 
     <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-6">
-      <div class="font-bold text-gray-600 lg:text-3xl text-2xl">
+      <div
+        class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+      >
         Selected work
       </div>
       <work-cards />
     </div>
 
     <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-12">
-      <div class="font-bold text-gray-600 lg:text-3xl text-2xl">
+      <div
+        class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+      >
         Profile & Contact
       </div>
       <div class="bg-slate-100 inset-x-0 bottom-0">

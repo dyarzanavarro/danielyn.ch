@@ -105,8 +105,8 @@
                 mt-2
                 text-sm
                 tracking-normal
-                text-gray-600
-                dark:text-gray-400
+                text-gray-700
+                dark:text-gray-200 dark:text-gray-400
                 leading-5
               "
             >
@@ -129,8 +129,8 @@
             <div class="mr-6 xl:mr-10">
               <h2
                 class="
-                  text-gray-600
-                  dark:text-gray-400
+                  text-gray-700
+                  dark:text-gray-200 dark:text-gray-400
                   font-bold
                   text-xl
                   xl:text-2xl
@@ -156,8 +156,8 @@
             <div class="mr-6 xl:mr-10">
               <h2
                 class="
-                  text-gray-600
-                  dark:text-gray-400
+                  text-gray-700
+                  dark:text-gray-200 dark:text-gray-400
                   font-bold
                   text-xl
                   xl:text-2xl
@@ -183,8 +183,8 @@
             <div>
               <h2
                 class="
-                  text-gray-600
-                  dark:text-gray-400
+                  text-gray-700
+                  dark:text-gray-200 dark:text-gray-400
                   font-bold
                   text-xl
                   xl:text-2xl
