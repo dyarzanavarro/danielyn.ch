@@ -25,6 +25,7 @@
         Life can't be just about work all the time. Here's a selection of things
         I like to do in my free time!
         <br />
+
         Click around to learn more about me.
       </div>
     </div>
@@ -34,291 +35,339 @@
         tabindex="0"
         class="focus:outline-none w-full"
       >
-        <div class="lg:flex items-center justify-center w-full">
-          <div
-            tabindex="0"
-            aria-label="card 1"
-            class="
-              focus:outline-none
-              lg:w-8/12 lg:mr-7 lg:mb-4
-              mb-2
-              bg-white
-              p-6
-              shadow
-              rounded
-              dark:bg-gray-700
-              dark:hover:shadow
-              dark:focus:bg-gray-600
-              dark:focus:text-white
-              dark:hover:text-white
-              dark:text-white
-            "
-          >
-            <div class="flex items-center border-b border-gray-200 pb-2">
-              <div
-                class="
-                  bg-pink-600
-                  flex flex-shrink-0
-                  block
-                  w-16
-                  h-16
-                  rounded-full
-                  transition-all
-                  shadow
-                  hover:shadow-lg
-                  transform
-                  hover:scale-110 hover:rotate-12
-                  mx-auto
-                "
-              >
-                <div class="text-zinc-50 text-2xl text-center pt-3 pl-4">
-                  🎲
+        <nuxt-link to="/boardgames">
+          <div class="lg:flex items-center justify-center w-full">
+            <div
+              tabindex="0"
+              aria-label="card 1"
+              class="
+                lg:w-8/12 lg:mr-7 lg:mb-4
+                mb-2
+                p-6
+                shadow
+                rounded
+                dark:bg-gray-700
+                dark:hover:shadow
+                dark:focus:bg-gray-600
+                dark:focus:text-white
+                dark:hover:text-white
+                dark:text-gray-200
+                hover:text-gray-900
+                shadow-xl
+                rounded-xl
+                focus:text-gray-900
+                focus:bg-gray-200
+                focus:outline-none
+                focus:shadow-outline
+              "
+            >
+              <div class="flex items-center border-b border-gray-200 pb-2">
+                <div
+                  class="
+                    flex flex-shrink-0
+                    block
+                    w-16
+                    h-16
+                    rounded-full
+                    transition-all
+                    shadow
+                    hover:shadow-lg
+                    transform
+                    mx-auto
+                  "
+                >
+                  <img
+                    v-if="$colorMode.value == 'dark'"
+                    class="
+                      h-8
+                      object-bottom
+                      hover:animate-pulse
+                      cursor-pointer
+                      my-3
+                    "
+                    src="/img/bulb-dark.svg"
+                    alt="floating robot"
+                  />
+                  <img
+                    v-else
+                    class="
+                      h-8
+                      object-bottom
+                      hover:animate-pulse
+                      cursor-pointer
+                      my-3
+                    "
+                    src="/img/bulb_light.svg"
+                    alt="floating robot"
+                  />
+                </div>
+                <div class="flex items-start justify-between w-full">
+                  <div class="pl-3 w-full">
+                    <p
+                      tabindex="0"
+                      class="
+                        focus:outline-none
+                        text-xl
+                        font-bold
+                        leading-5
+                        text-gray-800
+                        dark:text-gray-200
+                      "
+                    >
+                      Boardgames
+                    </p>
+                    <p
+                      tabindex="0"
+                      class="
+                        focus:outline-none
+                        text-sm
+                        leading-normal
+                        pt-2
+                        text-gray-500
+                      "
+                    >
+                      Playing & Creating creative worlds
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="flex items-start justify-between w-full">
-                <div class="pl-3 w-full">
-                  <p
-                    tabindex="0"
-                    class="
-                      focus:outline-none
-                      text-xl
-                      font-bold
-                      leading-5
-                      text-gray-800
-                      dark:text-gray-200
-                    "
-                  >
-                    Boardgames
-                  </p>
-                  <p
-                    tabindex="0"
-                    class="
-                      focus:outline-none
-                      text-sm
-                      leading-normal
-                      pt-2
-                      text-gray-500
-                    "
-                  >
-                    Playing & Creating creative worlds
-                  </p>
-                </div>
+              <div class="px-2">
+                <p
+                  tabindex="0"
+                  class="
+                    focus:outline-none
+                    text-md
+                    leading-2
+                    py-2
+                    text-gray-800
+                    dark:text-gray-200
+                  "
+                >
+                  Boardgames are a great way to spend time with friends and
+                  family. I love playing games like Catan, Ticket to Ride, and
+                  Pandemic. I also enjoy creating my own games and have made a
+                  few games that I've played with friends.
+                </p>
               </div>
             </div>
-            <div class="px-2">
-              <p
-                tabindex="0"
-                class="
-                  focus:outline-none
-                  text-md
-                  leading-2
-                  py-2
-                  text-gray-800
-                  dark:text-gray-200
-                "
-              >
-                A group of people interested in dogecoin, the currency and a bit
-                of side for the meme and dof that we all know and love. These
-                cases are perfectly simple and easy to distinguish.
-              </p>
+            <div
+              aria-label="card 2"
+              tabindex="0"
+              class="
+                lg:w-8/12 lg:mr-7 lg:mb-4
+                mb-2
+                p-6
+                shadow
+                rounded
+                dark:bg-gray-700
+                dark:hover:shadow
+                dark:focus:bg-gray-600
+                dark:focus:text-white
+                dark:hover:text-white
+                dark:text-gray-200
+                hover:text-gray-900
+                shadow-xl
+                rounded-xl
+                focus:text-gray-900
+                focus:bg-gray-200
+                focus:outline-none
+                focus:shadow-outline
+              "
+            >
+              <div class="flex items-center border-b border-gray-200 pb-2">
+                <div
+                  class="
+                    bg-pink-600
+                    flex flex-shrink-0
+                    block
+                    w-16
+                    h-16
+                    rounded-full
+                    transition-all
+                    shadow
+                    hover:shadow-lg
+                    transform
+                    hover:scale-110 hover:rotate-12
+                    mx-auto
+                  "
+                >
+                  <div class="text-zinc-50 text-2xl text-center pt-3 pl-4">
+                    🤍
+                  </div>
+                </div>
+                <div class="flex items-start justify-between w-full">
+                  <div class="pl-3 w-full">
+                    <p
+                      tabindex="0"
+                      class="
+                        focus:outline-none
+                        text-xl
+                        font-bold
+                        leading-5
+                        text-gray-800
+                        dark:text-gray-200
+                      "
+                    >
+                      Loved ones
+                    </p>
+                    <p
+                      tabindex="0"
+                      class="
+                        focus:outline-none
+                        text-sm
+                        leading-normal
+                        pt-2
+                        text-gray-500
+                      "
+                    >
+                      What is life if you can't share it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="px-2">
+                <p
+                  tabindex="0"
+                  class="
+                    focus:outline-none
+                    text-md
+                    leading-2
+                    py-2
+                    text-gray-800
+                    dark:text-gray-200
+                  "
+                >
+                  I spend most of my time with my wonderful partner and cute dog
+                  Boo. He's a Ratonero Analuz, which means he'll play fletch
+                  until he dies. I'll pay the dog tax over here with cute images
+                  ->
+                </p>
+              </div>
             </div>
           </div>
-          <div
-            aria-label="card 2"
-            tabindex="0"
-            class="
-              focus:outline-none
-              lg:w-8/12 lg:mr-7 lg:mb-4
-              mb-2
-              bg-white
-              p-6
-              shadow
-              rounded
-              dark:bg-gray-700
-              dark:hover:shadow
-              dark:focus:bg-gray-600
-              dark:focus:text-white
-              dark:hover:text-white
-              dark:text-white
-            "
-          >
-            <div class="flex items-center border-b border-gray-200 pb-2">
-              <div
-                class="
-                  bg-pink-600
-                  flex flex-shrink-0
-                  block
-                  w-16
-                  h-16
-                  rounded-full
-                  transition-all
-                  shadow
-                  hover:shadow-lg
-                  transform
-                  hover:scale-110 hover:rotate-12
-                  mx-auto
-                "
-              >
-                <div class="text-zinc-50 text-2xl text-center pt-3 pl-4">
-                  🤍
+        </nuxt-link>
+        <nuxt-link to="/reading">
+          <div class="lg:flex items-center justify-center w-full mt-7">
+            <div
+              aria-label="card 3"
+              tabindex="0"
+              class="
+                lg:w-8/12 lg:mr-7 lg:mb-4
+                mb-2
+                p-6
+                shadow
+                rounded
+                dark:bg-gray-700
+                dark:hover:shadow
+                dark:focus:bg-gray-600
+                dark:focus:text-white
+                dark:hover:text-white
+                dark:text-gray-200
+                hover:text-gray-900
+                shadow-xl
+                rounded-xl
+                focus:text-gray-900
+                focus:bg-gray-200
+                focus:outline-none
+                focus:shadow-outline
+              "
+            >
+              <div class="flex items-center pb-2">
+                <div
+                  class="
+                    bg-pink-600
+                    flex flex-shrink-0
+                    block
+                    w-16
+                    h-16
+                    rounded-full
+                    transition-all
+                    shadow
+                    hover:shadow-lg
+                    transform
+                    hover:scale-110 hover:rotate-12
+                    mx-auto
+                  "
+                >
+                  <div class="text-zinc-50 text-2xl text-center pt-3 pl-4">
+                    📖
+                  </div>
+                </div>
+                <div class="flex items-start justify-between w-full">
+                  <div class="pl-3 w-full">
+                    <p
+                      tabindex="0"
+                      class="
+                        focus:outline-none
+                        text-xl
+                        font-bold
+                        leading-5
+                        text-gray-800
+                        dark:text-gray-200
+                      "
+                    >
+                      Avid reader
+                    </p>
+                    <p
+                      tabindex="0"
+                      class="
+                        focus:outline-none
+                        text-sm
+                        leading-normal
+                        pt-2
+                        text-gray-500
+                      "
+                    >
+                      I switched to a Kindle a couple of years ago and won't go
+                      back
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="flex items-start justify-between w-full">
-                <div class="pl-3 w-full">
-                  <p
-                    tabindex="0"
-                    class="
-                      focus:outline-none
-                      text-xl
-                      font-bold
-                      leading-5
-                      text-gray-800
-                      dark:text-gray-200
-                    "
-                  >
-                    Loved ones
-                  </p>
-                  <p
-                    tabindex="0"
-                    class="
-                      focus:outline-none
-                      text-sm
-                      leading-normal
-                      pt-2
-                      text-gray-500
-                    "
-                  >
-                    What is life if you can't share it.
-                  </p>
-                </div>
+              <div class="px-2">
+                <p
+                  tabindex="0"
+                  class="
+                    focus:outline-none
+                    text-md
+                    leading-2
+                    py-2
+                    text-gray-800
+                    dark:text-gray-200
+                  "
+                >
+                  I love devouring mostly science fiction and fantasy books. Now
+                  and again I pick up a psychology textbook to keep up to date
+                  with interesting topics!
+                </p>
               </div>
-            </div>
-            <div class="px-2">
-              <p
-                tabindex="0"
-                class="
-                  focus:outline-none
-                  text-md
-                  leading-2
-                  py-2
-                  text-gray-800
-                  dark:text-gray-200
-                "
-              >
-                I spend most of my time with my wonderful partner and cute dog
-                Boo. He's a Ratonero Analuz, which means he'll play fletch until
-                he dies. I'll pay the dog tax over here with cute images ->
-              </p>
             </div>
           </div>
-        </div>
-        <div class="lg:flex items-center justify-center w-full mt-7">
-          <div
-            aria-label="card 3"
-            tabindex="0"
-            class="
-              focus:outline-none
-              lg:w-8/12 lg:mr-7 lg:mb-4
-              mb-2
-              bg-white
-              p-6
-              shadow
-              dark:bg-gray-700
-              dark:hover:shadow
-              dark:focus:bg-gray-600
-              dark:focus:text-white
-              dark:hover:text-white
-              dark:text-white
-              rounded
-            "
-          >
-            <div class="flex items-center pb-2">
-              <div
-                class="
-                  bg-pink-600
-                  flex flex-shrink-0
-                  block
-                  w-16
-                  h-16
-                  rounded-full
-                  transition-all
-                  shadow
-                  hover:shadow-lg
-                  transform
-                  hover:scale-110 hover:rotate-12
-                  mx-auto
-                "
-              >
-                <div class="text-zinc-50 text-2xl text-center pt-3 pl-4">
-                  📖
-                </div>
-              </div>
-              <div class="flex items-start justify-between w-full">
-                <div class="pl-3 w-full">
-                  <p
-                    tabindex="0"
-                    class="
-                      focus:outline-none
-                      text-xl
-                      font-bold
-                      leading-5
-                      text-gray-800
-                      dark:text-gray-200
-                    "
-                  >
-                    Avid reader
-                  </p>
-                  <p
-                    tabindex="0"
-                    class="
-                      focus:outline-none
-                      text-sm
-                      leading-normal
-                      pt-2
-                      text-gray-500
-                    "
-                  >
-                    I switched to a Kindle a couple of years ago and won't go
-                    back
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="px-2">
-              <p
-                tabindex="0"
-                class="
-                  focus:outline-none
-                  text-md
-                  leading-2
-                  py-2
-                  text-gray-800
-                  dark:text-gray-200
-                "
-              >
-                A group of people interested in dogecoin, the currency and a bit
-                of side for the meme and dof that we all know and love. These
-                cases are perfectly simple and easy to distinguish.
-              </p>
-            </div>
-          </div>
+        </nuxt-link>
+
+        <nuxt-link to="/reading">
           <div
             aria-label="card 4"
             tabindex="0"
             class="
-              focus:outline-none
               lg:w-8/12 lg:mr-7 lg:mb-4
               mb-2
-              bg-white
+              p-6
+              shadow
+              rounded
               dark:bg-gray-700
               dark:hover:shadow
               dark:focus:bg-gray-600
               dark:focus:text-white
               dark:hover:text-white
-              dark:text-white
-              p-6
-              shadow
-              rounded
+              dark:text-gray-200
+              hover:text-gray-900
+              shadow-xl
+              rounded-xl
+              focus:text-gray-900
+              focus:bg-gray-200
+              focus:outline-none
+              focus:shadow-outline
             "
           >
             <nuxt-link to="/citypop" title="City Pop Mode">
@@ -386,14 +435,14 @@
                     dark:text-gray-200
                   "
                 >
-                  A group of people interested in dogecoin, the currency and a
-                  bit of side for the meme and dof that we all know and love.
-                  These cases are perfectly simple and easy to distinguish.
+                  I have a passion for the game industry and have used Unity in
+                  the past to spin up small games and prototypes. Additionally,
+                  I've been fascinated with XR these last few years.
                 </p>
               </div>
             </nuxt-link>
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>

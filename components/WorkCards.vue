@@ -30,15 +30,16 @@
               dark:focus:text-white
               dark:hover:text-white
               dark:text-white
+              shadow-xl
+              rounded-xl
               hover:text-gray-900
               focus:text-gray-900
-              hover:shadow
             "
           >
             <img
               src="/img/yol_1-min.png"
               alt="Intro image for project yallo"
-              class="w-full h-96 object-cover object-top"
+              class="w-full h-96 object-cover object-top rounded-xl"
             />
             <div class="p-6">
               <div class="flex items-center justify-between">
@@ -83,11 +84,12 @@
                   dark:text-gray-300
                 "
               >
-                Redesign & Designsysteme der Ecommerce Brands yallo, lebara &
-                swype;HTML, CSS & Javascript in Angular für kleinere oder
-                grössere «QuickFixes»; Scrum Product Owner Web Development Team;
-                Design Thinking Workshops, User Research (qualitative &
-                quantitative)
+                Full migration of Legacy System, from moving to a new Design
+                System to replatforming on new tech stack. Co-Design, strategy &
+                implementation for new web representation. Establishing a
+                holistic approach to product and user journey decisions & design
+                Close Work with development team as SCRUM Product Owner of the
+                Frontend of several applications
               </p>
             </div>
           </div>
@@ -109,15 +111,18 @@
               dark:hover:text-white
               dark:text-gray-200
               hover:text-gray-900
+              shadow-xl
+              rounded-xl
               focus:text-gray-900
-              hover:shadow
-              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+              focus:bg-gray-200
+              focus:outline-none
+              focus:shadow-outline
             "
           >
             <img
               src="/img/sunrise_1-min.png"
               alt="Intro image for project Sunrise eShop"
-              class="w-full w-full h-96 object-cover object-top"
+              class="w-full w-full h-96 object-cover object-top rounded-xl"
             />
             <div class="p-6">
               <div class="flex items-center justify-between">
@@ -162,11 +167,12 @@
                   dark:text-gray-300
                 "
               >
-                Integriert im UX Team, Arbeit an Design / Aufbau von Projekten;
-                A/B Testing in Adobe Suite (Target), Analyse und Empfehlungen;
-                HTML, CSS & Jquery für kleinere oder grössere «QuickFixes»;
-                Design Thinking Workshops, User Research (qualitative &
-                quantitative)
+                Part of a small and new UX team, Cowork in establishing a new
+                Design System and establishing a Data first approach to
+                requirements gathering. Setting up a an A/B Testing pipeline
+                (Target), designing and developing ad-hoc for Sales related
+                projects. Close interaction with the eCommerce Team in Design
+                Thinking Workshops and qualitative User Research.
               </p>
             </div>
           </div>
@@ -190,14 +196,15 @@
               dark:text-gray-200
               hover:text-gray-900
               focus:text-gray-900
-              hover:shadow
+              shadow-xl
+              rounded-xl
               focus:bg-gray-200 focus:outline-none focus:shadow-outline
             "
           >
             <img
               src="/img/citypop_Dan3-min.png"
               alt="Intro image for project psych"
-              class="w-full w-full h-96 object-cover object-top"
+              class="w-full w-full h-96 object-cover object-top rounded-xl"
             />
             <div class="p-6">
               <div class="flex items-center justify-between">
@@ -266,14 +273,15 @@
               dark:text-gray-200
               hover:text-gray-900
               focus:text-gray-900
-              hover:shadow
+              shadow-xl
+              rounded-xl
               focus:bg-gray-200 focus:outline-none focus:shadow-outline
             "
           >
             <img
               src="/img/psych_isometric-min.png"
               alt="Intro image for project psych"
-              class="w-full w-full h-96 object-cover object-top"
+              class="w-full w-full h-96 object-cover object-top rounded-xl"
             />
             <div class="p-6">
               <div class="flex items-center justify-between">

@@ -13,28 +13,31 @@
       "
     >
       <div class="mr-auto place-self-center lg:col-span-7">
-        <h1
+        <span
           class="
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r
+            from-pink-500
+            to-violet-500
             max-w-2xl
             mb-4
             text-4xl
             font-bold
             lg:text-7xl
-            tracking-tight
             leading-none
+            tracking-wide
             md:text-5xl
             xl:text-6xl
-            text-gray-700
-            dark:text-gray-200
           "
         >
-          Daniel is a UX Engineer working in B2C E-commerce in 🇨🇭
-        </h1>
+          Daniel is a UX Advocate working in B2C E-commerce in Zurich
+        </span>
         <p
           class="
             max-w-2xl
-            mb-6
-            font-light
+            my-6
+            font-normal
             lg:mb-8
             md:text-xl
             lg:text-2xl
@@ -65,6 +68,7 @@
             hover:bg-primary-800
             focus:ring-4 focus:ring-primary-300
             text-gray-800
+            shadow-xl
             hover:animate-pulse
           "
           to="/process"

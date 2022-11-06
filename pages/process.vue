@@ -104,41 +104,6 @@
           product research workshop followed by ideation and brainstorming
           sessions which will help us define the design solution.
         </div>
-        <div
-          class="
-            container
-            mx-auto
-            grid
-            sm:grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-3
-            xl:grid-cols-3
-            pt-6
-            gap-8
-          "
-        >
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://source.unsplash.com/random"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://source.unsplash.com/random"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://source.unsplash.com/random"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-        </div>
       </div>
       <div class="justify-center w-full pt-12">
         <div
@@ -159,41 +124,6 @@
           development, improving/designing user journeys and mentoring an
           apprentice.
         </div>
-        <div
-          class="
-            container
-            mx-auto
-            grid
-            sm:grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-3
-            xl:grid-cols-3
-            pt-6
-            gap-8
-          "
-        >
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://source.unsplash.com/random"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://source.unsplash.com/random"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://source.unsplash.com/random"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-        </div>
       </div>
       <div class="justify-center w-full pt-12">
         <div
@@ -206,48 +136,13 @@
             dark:text-gray-200
           "
         >
-          A good product needs best implementation
+          A good product needs the best implementation
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
           The most perfect design will be never good enough if there is no
           alignment between design and implementation. As part of the process, I
           have always worked in constant interaction with the devs team in order
           to verify and help with the best implementation of the solution.
-        </div>
-        <div
-          class="
-            container
-            mx-auto
-            grid
-            sm:grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-3
-            xl:grid-cols-3
-            pt-6
-            gap-8
-          "
-        >
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://picsum.photos/400"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://picsum.photos/400"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
-          <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="https://picsum.photos/400"
-              alt="Empathy process showing Daniel in a Group"
-            />
-          </div>
         </div>
       </div>
     </div>

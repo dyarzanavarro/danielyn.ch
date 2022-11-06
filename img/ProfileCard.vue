@@ -209,55 +209,37 @@
               </p>
             </div>
           </div>
-          <div
-            class="
-              xl:px-10 xl:border-l xl:border-r
-              w-full
-              py-5
-              flex
-              items-start
-              justify-center
-              xl:w-1/3
-            "
-          >
-            <div class="mr-6 xl:mr-10">
-              <a
-                :href="`mailto:'danielyarza1@gmail.com?subject=I found your website and I'd love to get to know you better!`"
+          <div class="items-center justify-between lg:ml-5 mx-auto">
+            <a
+              :href="`mailto:'danielyarza1@gmail.com?subject=I found your website and I'd love to get to know you better!`"
+            >
+              <button
+                class="
+                  transition
+                  duration-150
+                  ease-in-out
+                  font-medium
+                  text-center
+                  dark:text-white
+                  rounded-lg
+                  bg-primary-700
+                  hover:bg-primary-800
+                  focus:ring-4 focus:ring-primary-300
+                  text-gray-800
+                  shadow-xl
+                  hover:animate-pulse
+                  rounded
+                  px-3
+                  dark:bg-gray-600
+                  bg-gray-200
+                  md:px-6
+                  py-2
+                  text-sm
+                "
               >
-                <img
-                  v-if="$colorMode.value == 'dark'"
-                  class="
-                    h-10
-                    object-bottom
-                    hover:animate-pulse
-                    cursor-pointer
-                    leading-6
-                    mb-2
-                    text-center
-                    mx-auto
-                  "
-                  src="/img/chat-bubble-front-clay.svg"
-                  alt="floating robot"
-                />
-                <img
-                  v-else
-                  class="
-                    h-10
-                    object-bottom
-                    hover:animate-pulse
-                    cursor-pointer
-                    leading-6
-                    mb-2
-                    text-center
-                  "
-                  src="/img/chat-bubble-front-color.svg"
-                  alt="floating robot"
-                />
-              </a>
-              <p class="text-gray-800 dark:text-gray-100 text-sm xl:text-xl">
-                Give me a shout!
-              </p>
-            </div>
+                Message
+              </button>
+            </a>
           </div>
         </div>
       </div>

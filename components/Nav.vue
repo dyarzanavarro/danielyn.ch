@@ -13,7 +13,7 @@
             text-gray-700
             dark:text-gray-200
             rounded-lg
-            hover:text-indigo-700
+            hover:text-indigo-700 hover:animate-pulse
             focus:outline-none focus:shadow-outline
             pl-4
           "
@@ -34,17 +34,15 @@
               bg-transparent
               rounded-lg
               dark:bg-transparent
-              dark:hover:bg-gray-600
               dark:focus:bg-gray-600
               dark:focus:text-white
               dark:hover:text-white
               dark:text-gray-200
               md:mt-0 md:ml-4
-              hover:text-indigo-700
+              hover:animate-pulse
               text-gray-700
               dark:text-gray-200
-              hover:bg-gray-200
-              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+              focus:outline-none focus:shadow-outline
             "
           >
             work
@@ -60,18 +58,13 @@
               font-semibold
               bg-transparent
               rounded-lg
-              dark:hover:bg-gray-600
-              dark:focus:bg-gray-600
-              dark:focus:text-white
-              dark:hover:text-white
+              dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white
               d
               text-gray-700
               dark:text-gray-200
               md:mt-0 md:ml-4
-              hover:text-indigo-700
-              focus:text-gray-900
-              hover:bg-gray-200
-              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+              hover:animate-pulse
+              focus:text-gray-900 focus:outline-none focus:shadow-outline
             "
           >
             process
@@ -87,17 +80,12 @@
               font-semibold
               bg-transparent
               rounded-lg
-              dark:hover:bg-gray-600
-              dark:focus:bg-gray-600
-              dark:focus:text-white
-              dark:hover:text-white
+              dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white
               text-gray-700
               dark:text-gray-200
               md:mt-0 md:ml-4
-              hover:text-indigo-700
-              focus:text-gray-900
-              hover:bg-gray-200
-              focus:bg-gray-200 focus:outline-none focus:shadow-outline
+              hover:animate-pulse
+              focus:text-gray-900 focus:outline-none focus:shadow-outline
             "
           >
             fun
@@ -231,8 +219,8 @@
                   text-gray-700
                   dark:text-gray-200
                   rounded-lg
-                  hover:text-indigo-700
                   focus:outline-none focus:shadow-outline
+                  hover:animate-pulse
                   pl-4
                   px-4
                   rounded-lg
@@ -254,7 +242,7 @@
                   rounded-lg
                   text-gray-700
                   dark:text-gray-200
-                  hover:text-indigo-700
+                  hover:animate-pulse
                   focus:outline-none focus:shadow-outline
                   pl-4
                 "
@@ -274,7 +262,7 @@
                   text-gray-700
                   dark:text-gray-200
                   rounded-lg
-                  hover:text-indigo-700
+                  hover:animate-pulse
                   focus:outline-none focus:shadow-outline
                   pl-4
                 "

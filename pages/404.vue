@@ -32,34 +32,37 @@
         </h1>
         <p class="py-4 text-base text-gray-800">
           The content you’re looking for doesn’t exist. Either it was removed,
-          or you mistyped the link.
+          or you something mysterious happend.
         </p>
         <p class="py-2 text-base text-gray-800">
-          Sorry about that! Please visit our hompage to get where you need to
-          go.
+          Sorry about that! Please visit home to get where you need to go.
         </p>
         <nuxt-link to="/">
-          <button
+          <div
             class="
-              w-full
-              lg:w-auto
-              my-4
-              border
-              rounded-md
-              px-1
-              sm:px-16
-              py-5
-              bg-indigo-600
-              text-white
-              hover:bg-indigo-700
-              focus:outline-none
-              focus:ring-2
-              focus:ring-indigo-700
-              focus:ring-opacity-50
+              inline-flex
+              items-center
+              justify-center
+              px-5
+              py-2
+              mr-3
+              text-base
+              border border-gray-600
+              font-medium
+              text-center
+              dark:text-white
+              rounded-lg
+              bg-primary-700
+              hover:bg-primary-800
+              focus:ring-4 focus:ring-primary-300
+              text-gray-800
+              shadow-xl
+              hover:animate-pulse
             "
+            to="/process"
           >
-            Go back to Homepage
-          </button>
+            Go back!
+          </div>
         </nuxt-link>
       </div>
     </div>
