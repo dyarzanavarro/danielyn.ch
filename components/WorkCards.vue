@@ -34,6 +34,10 @@
               rounded-xl
               hover:text-gray-900
               focus:text-gray-900
+              bg-primary-700
+              hover:bg-primary-800
+              focus:ring-4 focus:ring-primary-300
+              hover:animate-pulse
             "
           >
             <img
@@ -117,6 +121,10 @@
               focus:bg-gray-200
               focus:outline-none
               focus:shadow-outline
+              bg-primary-700
+              hover:bg-primary-800
+              focus:ring-4 focus:ring-primary-300
+              hover:animate-pulse
             "
           >
             <img
@@ -199,6 +207,10 @@
               shadow-xl
               rounded-xl
               focus:bg-gray-200 focus:outline-none focus:shadow-outline
+              bg-primary-700
+              hover:bg-primary-800
+              focus:ring-4 focus:ring-primary-300
+              hover:animate-pulse
             "
           >
             <img
@@ -276,6 +288,10 @@
               shadow-xl
               rounded-xl
               focus:bg-gray-200 focus:outline-none focus:shadow-outline
+              bg-primary-700
+              hover:bg-primary-800
+              focus:ring-4 focus:ring-primary-300
+              hover:animate-pulse
             "
           >
             <img

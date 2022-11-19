@@ -249,6 +249,7 @@
                     leading-6
                     mb-2
                     text-center
+                    mx-auto
                   "
                   src="/img/chat-bubble-front-color.svg"
                   alt="floating robot"

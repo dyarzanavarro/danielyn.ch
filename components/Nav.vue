@@ -7,7 +7,6 @@
           to="/"
           class="
             text-4xl
-            uppercase
             font-semibold
             tracking-widest
             text-gray-700
@@ -18,11 +17,28 @@
             pl-4
           "
         >
-          dyn
+          DyN
         </nuxt-link>
       </div>
 
       <div class="hidden sm:flex flex-row space-x-4">
+        <div class="object-bottom px-4 mt-1">
+          <button @click="toggle">
+            <img
+              v-if="$colorMode.value == 'dark'"
+              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+              src="/img/bulb-dark.svg"
+              alt="floating robot"
+            />
+            <img
+              v-else
+              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+              src="/img/bulb_light.svg"
+              alt="floating robot"
+            />
+          </button>
+        </div>
+
         <nuxt-link to="/work"
           ><div
             class="
@@ -91,23 +107,39 @@
             fun
           </div></nuxt-link
         >
+      </div>
 
-        <div class="object-bottom">
-          <button @click="toggle">
-            <img
-              v-if="$colorMode.value == 'dark'"
-              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
-              src="/img/bulb-dark.svg"
-              alt="floating robot"
-            />
-            <img
-              v-else
-              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
-              src="/img/bulb_light.svg"
-              alt="floating robot"
-            />
-          </button>
-        </div>
+      <!-- For Small Screen -->
+
+      <div
+        class="
+          mt-4
+          mx-auto
+          flex
+          justify-center
+          items-center
+          sm:hidden
+          cursor-pointer
+          absolute
+          right-16
+          top-0
+          m-4
+        "
+      >
+        <button @click="toggle">
+          <img
+            v-if="$colorMode.value == 'dark'"
+            class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+            src="/img/bulb-dark.svg"
+            alt="floating robot"
+          />
+          <img
+            v-else
+            class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
+            src="/img/bulb_light.svg"
+            alt="floating robot"
+          />
+        </button>
       </div>
 
       <!-- Burger Icon -->
@@ -172,24 +204,25 @@
       </div>
     </div>
 
-    <div class="sm:hidden flex flex-row items-center space-x-6">
+    <div class="sm:hidden flex flex-row justify-between items-center space-x-6">
       <nuxt-link
         to="/"
         class="
           text-4xl
-          uppercase
           font-semibold
           tracking-widest
           text-gray-700
           dark:text-gray-200
           rounded-lg
+          hover:text-indigo-700 hover:animate-pulse
           focus:outline-none focus:shadow-outline
         "
       >
-        dyn
+        DyN
       </nuxt-link>
     </div>
     <!-- Mobile and small-screen devices (toggle Menu) -->
+
     <div
       id="MobileNavigation"
       class="hidden sm:hidden mt-4 mx-auto fixed overscroll-none"
@@ -270,36 +303,6 @@
                 fun
               </div></nuxt-link
             >
-          </li>
-          <li>
-            <div class="object-bottom">
-              <button @click="toggle">
-                <img
-                  v-if="$colorMode.value == 'dark'"
-                  class="
-                    h-8
-                    object-bottom
-                    hover:animate-pulse
-                    cursor-pointer
-                    my-3
-                  "
-                  src="/img/bulb-dark.svg"
-                  alt="floating robot"
-                />
-                <img
-                  v-else
-                  class="
-                    h-8
-                    object-bottom
-                    hover:animate-pulse
-                    cursor-pointer
-                    my-3
-                  "
-                  src="/img/bulb_light.svg"
-                  alt="floating robot"
-                />
-              </button>
-            </div>
           </li>
         </ul>
       </div>
