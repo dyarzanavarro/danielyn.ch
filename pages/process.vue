@@ -33,7 +33,6 @@
           class="
             font-bold
             text-gray-700
-            dark:text-gray-200
             lg:text-3xl
             text-2xl
             dark:text-gray-200

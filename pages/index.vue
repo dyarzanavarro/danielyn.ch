@@ -39,7 +39,6 @@
             max-w-2xl
             my-6
             font-normal
-            lg:mb-8
             md:text-xl
             lg:text-2xl
             text-gray-800
@@ -52,7 +51,7 @@
           about the process I use to improve any business.
         </p>
         <nuxt-link
-          class="relative inline-flex mt-9 group"
+          class="relative inline-flex mt-2 group"
           to="/alternativeLanding"
         >
           <div
@@ -77,13 +76,10 @@
               inline-flex
               items-center
               justify-center
-              px-5
-              py-2
               mr-3
               text-base
               font-medium
               text-center
-              dark:text-white
               rounded-lg
               bg-primary-700
               focus:ring-4 focus:ring-primary-300
@@ -96,6 +92,7 @@
               focus:ring-2
               focus:ring-offset-2
               focus:ring-indigo-600
+              dark:text-gray-200
             "
           >
             Learn more about me

@@ -1,10 +1,19 @@
 <template>
-  <div class="bg-gradient-to-b from-green-50 to-green-100">
+  <div class="">
     <section class="py-10 sm:py-16 lg:py-24">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
-            <h1 class="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
+            <h1
+              class="
+                text-4xl
+                font-bold
+                text-black
+                sm:text-6xl
+                lg:text-7xl
+                dark:text-gray-200
+              "
+            >
               Collaborate remotely, with
               <div class="relative inline-flex">
                 <span
@@ -23,6 +32,7 @@
                     text-black
                     sm:text-6xl
                     lg:text-7xl
+                    dark:text-gray-200
                   "
                 >
                   Postcrafts.
@@ -30,7 +40,7 @@
               </div>
             </h1>
 
-            <p class="mt-8 text-base text-black sm:text-xl">
+            <p class="mt-8 text-base text-black sm:text-xl dark:text-gray-400">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat.
@@ -73,6 +83,7 @@
                   duration-200
                   sm:mt-0
                   hover:opacity-80
+                  dark:text-gray-400
                 "
               >
                 <svg
