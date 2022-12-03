@@ -14,7 +14,7 @@
     <!-- Card code block start -->
     <div class="bg-slate-100 dark:bg-gray-800 shadow rounded">
       <div class="relative bg-slate-100 dark:bg-gray-800">
-        <img
+        <nuxt-img
           class="h-56 shadow rounded-xl w-full object-cover object-center"
           src="/img/citypop_mood-min.png"
           alt=""
@@ -36,7 +36,7 @@
             border-white
           "
         >
-          <img
+          <nuxt-img
             class="w-full h-full overflow-hidden object-cover rounded"
             src="/img/citypop_Dan4-min.png"
             alt="Daniel profile image"

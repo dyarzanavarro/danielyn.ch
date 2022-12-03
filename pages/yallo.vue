@@ -293,7 +293,7 @@
     </div>
 
     <div class="px-4 lg:pt-8 pt-6">
-      <img
+      <nuxt-img
         class="h-96 shadow rounded-t w-full object-cover object-top"
         src="/img/yol_1-min.png"
         alt="Empathy process showing Daniel in a Group"
@@ -337,7 +337,7 @@
       "
     >
       <div class="rounded pb-6">
-        <img
+        <nuxt-img
           class="h-96 shadow rounded-t w-full object-cover object-center"
           src="/img/process2.jpg"
           alt="Empathy process showing Daniel in a Group"

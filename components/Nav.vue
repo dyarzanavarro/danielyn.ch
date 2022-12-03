@@ -24,13 +24,15 @@
       <div class="hidden sm:flex flex-row space-x-4">
         <div class="object-bottom px-4 mt-1">
           <button @click="toggle">
-            <img
+            <nuxt-img
               v-if="$colorMode.value == 'dark'"
               class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
               src="/img/bulb-dark.svg"
               alt="floating robot"
+              placeholder
             />
-            <img
+
+            <nuxt-img
               v-else
               class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
               src="/img/bulb_light.svg"
@@ -127,13 +129,13 @@
         "
       >
         <button @click="toggle">
-          <img
+          <nuxt-img
             v-if="$colorMode.value == 'dark'"
             class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
             src="/img/bulb-dark.svg"
             alt="floating robot"
           />
-          <img
+          <nuxt-img
             v-else
             class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
             src="/img/bulb_light.svg"
@@ -163,19 +165,19 @@
           m-4
         "
       >
-        <img
+        <nuxt-img
           v-if="$colorMode.value == 'dark'"
           class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
           src="/img/tool-front-clay.svg"
           alt="floating robot"
         />
-        <img
+        <nuxt-img
           v-else
           class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
           src="/img/tool-front-color.svg"
           alt="floating robot"
         />
-        <img
+        <nuxt-img
           v-if="$colorMode.value == 'dark'"
           class="
             hidden
@@ -188,8 +190,7 @@
           src="/img/scissor-front-clay.svg"
           alt="floating robot"
         />
-        <img
-          v-else
+        <nuxt-img
           class="
             hidden
             h-8

@@ -108,7 +108,7 @@
         </nuxt-link>
       </div>
       <div class="lg:mt-0 lg:col-span-5 lg:flex pt-12 relative z-100">
-        <img
+        <nuxt-img
           class="motion-safe:animate-bounce w-12/12"
           src="/img/floating_robot.svg"
           alt="floating robot"

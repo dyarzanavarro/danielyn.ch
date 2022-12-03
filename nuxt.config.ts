@@ -10,8 +10,11 @@ export default defineNuxtConfig({
 
         }
     },
-    modules: ['@nuxtjs/color-mode'],
+
+    modules: ['@nuxtjs/color-mode', '@nuxt/image-edge'],
     colorMode: { classSuffix: '', preference: 'dark' },
+    image: { screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536, '2xl': 1536 }, },
+
     build: {
 
         postcss: {

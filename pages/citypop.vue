@@ -11,7 +11,7 @@
         overflow-hidden
       "
     >
-      <img
+      <nuxt-img
         class="rounded col-span-1 h-screen object-cover object-center"
         src="/img/design_citypop.svg"
       />
@@ -19,7 +19,7 @@
       <div class="rounded lg:col-span-4 col-span-2">
         <Transition name="fade" mode="out-in" false>
           <div>
-            <img
+            <nuxt-img
               class="w-full h-screen object-cover object-center rounded"
               :src="imgLoad[0]"
               alt="Daniel profile image"
