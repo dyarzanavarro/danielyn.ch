@@ -40,7 +40,7 @@
               hover:animate-pulse
             "
           >
-            <nuxt-img
+            <img
               src="/img/yol_1-min.png"
               alt="Intro image for project yallo"
               class="w-full h-96 object-cover object-top rounded-xl"
@@ -127,7 +127,7 @@
               hover:animate-pulse
             "
           >
-            <nuxt-img
+            <img
               src="/img/sunrise_1-min.png"
               alt="Intro image for project Sunrise eShop"
               class="w-full w-full h-96 object-cover object-top rounded-xl"
@@ -213,7 +213,7 @@
               hover:animate-pulse
             "
           >
-            <nuxt-img
+            <img
               src="/img/citypop_Dan3-min.png"
               alt="Intro image for project psych"
               class="w-full w-full h-96 object-cover object-top rounded-xl"
@@ -294,7 +294,7 @@
               hover:animate-pulse
             "
           >
-            <nuxt-img
+            <img
               src="/img/psych_isometric-min.png"
               alt="Intro image for project psych"
               class="w-full w-full h-96 object-cover object-top rounded-xl"

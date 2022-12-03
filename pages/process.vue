@@ -66,21 +66,21 @@
           "
         >
           <div class="rounded">
-            <nuxt-img
+            <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
               src="/img/process2.jpg"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
-            <nuxt-img
+            <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
               src="/img/fakeImg.jpg"
               alt="Empathy process showing Daniel in a Group"
             />
           </div>
           <div class="rounded">
-            <nuxt-img
+            <img
               class="h-64 shadow rounded-t w-full object-cover object-center"
               src="/img/process3.jpeg"
               alt="Empathy process showing Daniel in a Group"
