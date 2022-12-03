@@ -28,8 +28,29 @@
           dyn
         </nuxt-link>
       </div>
-      <div class="text-black flex flex-col md:items-center f-f-l pt-3">
-        <h1 class="text-2xl font-bold text-indigo-700">Let's. build. it.</h1>
+      <div class="flex flex-col md:items-center f-f-l pt-3">
+        <h1
+          class="
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r
+            from-[#44BCFF]
+            via-[#FF44EC]
+            to-[#FF675E]
+            max-w-2xl
+            mb-4
+            text-4xl
+            font-bold
+            lg:text-7xl
+            leading-none
+            tracking-wide
+            md:text-5xl
+            xl:text-6xl
+            py-4
+          "
+        >
+          Let's. build. it.
+        </h1>
 
         <div class="my-6 text-base text-color f-f-l"></div>
         <div class="text-sm text-color mb-10 f-f-l dark:text-gray-200">
