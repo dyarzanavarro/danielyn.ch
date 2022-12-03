@@ -134,6 +134,7 @@
           tracking-wide
           md:text-5xl
           xl:text-6xl
+          py-4
         "
       >
         yallo

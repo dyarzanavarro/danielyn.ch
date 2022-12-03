@@ -2,9 +2,13 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    meta: {
-        title: 'Daniel Y.N. - a human being',
-        description: 'The personal page of Daniel Y.Navarro - Welcome!',
+    app: {
+        head: {
+            charset: 'utf-16',
+            title: 'Daniel is a human being',
+            meta: [{ name: 'description', content: 'The personal page of Daniel Y.Navarro - Welcome' }],
+
+        }
     },
     modules: ['@nuxtjs/color-mode'],
     colorMode: { classSuffix: '', preference: 'dark' },

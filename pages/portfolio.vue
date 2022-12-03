@@ -120,17 +120,22 @@
     <div class="px-4 pt-6">
       <div
         class="
-          text-gray-700
-          dark:text-gray-200
+          bg-clip-text
+          text-transparent
+          bg-gradient-to-r
+          from-[#44BCFF]
+          via-[#FF44EC]
+          to-[#FF675E]
+          max-w-2xl
+          mb-4
           text-4xl
           font-bold
           lg:text-7xl
-          tracking-tight
           leading-none
+          tracking-wide
           md:text-5xl
           xl:text-6xl
-          text-gray-700
-          dark:text-gray-200
+          py-4
         "
       >
         Portfolio

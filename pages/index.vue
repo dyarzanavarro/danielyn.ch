@@ -50,10 +50,7 @@
           know me better by browsing my past work, what I do for fun or learn
           about the process I use to improve any business.
         </p>
-        <nuxt-link
-          class="relative inline-flex mt-2 group"
-          to="/alternativeLanding"
-        >
+        <nuxt-link class="relative inline-flex mt-2 group" to="/process">
           <div
             class="
               absolute
