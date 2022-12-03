@@ -3,7 +3,6 @@ import { defineNuxtConfig } from 'nuxt'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     target: 'static',
-    ssr: true,
     app: {
         head: {
             charset: 'utf-16',
@@ -14,7 +13,7 @@ export default defineNuxtConfig({
     },
     modules: ['@nuxtjs/color-mode', '@nuxt/image-edge'],
     colorMode: { classSuffix: '', preference: 'dark' },
-    image: { screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536, '2xl': 1536 }, },
+    image: { dir: 'assets/img', screens: { xs: 320, sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1536, '2xl': 1536 }, },
 
     build: {
 
@@ -41,4 +40,5 @@ export default defineNuxtConfig({
         "~/assets/css/tailwind.css"
     ],
 
+    ssr: false
 })
