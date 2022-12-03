@@ -123,11 +123,28 @@
         </div>
       </div>
     </section>
+    <div>
+      <div>
+        <h1>{{ message }}</h1>
+        <p>This is Nuxt + Python.</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  async asyncData() {
+    let { data } = await axios.get("/");
+    console.log(data.data);
+    return data.data;
+  },
+  head() {
+    return {
+      title: "Nuxt + Python",
+    };
+  },
+};
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <body class="overflow-hidden">
+  <body class="overflow-hidden bg-slate-100 h-max dark:bg-slate-900">
     <div
       class="
         flex
@@ -27,39 +27,97 @@
         <img class="md:hidden" src="https://i.ibb.co/8gTVH2Y/Group-198.png" />
       </div>
       <div class="w-full lg:w-1/2">
-        <h1 class="py-4 text-3xl lg:text-4xl font-extrabold text-gray-800">
+        <h1
+          class="
+            py-4
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r
+            from-[#44BCFF]
+            via-[#FF44EC]
+            to-[#FF675E]
+            max-w-2xl
+            mb-4
+            text-4xl
+            font-bold
+            lg:text-7xl
+            leading-none
+            tracking-wide
+            md:text-5xl
+            xl:text-6xl
+          "
+        >
           Looks like you've found the doorway to the great nothing
         </h1>
-        <p class="py-4 text-base text-gray-800">
+        <p
+          class="
+            py-4
+            text-base
+            md:text-xl
+            lg:text-2xl
+            text-gray-800
+            dark:text-gray-400
+          "
+        >
           The content you’re looking for doesn’t exist. Either it was removed,
           or you something mysterious happend.
         </p>
-        <p class="py-2 text-base text-gray-800">
+        <p
+          class="
+            py-2
+            text-base
+            md:text-xl
+            lg:text-2xl
+            text-gray-800
+            dark:text-gray-400
+          "
+        >
           Sorry about that! Please visit home to get where you need to go.
         </p>
-        <nuxt-link to="/">
+        <nuxt-link
+          class="relative inline-flex mt-6 group"
+          to="/alternativeLanding"
+        >
+          <div
+            class="
+              absolute
+              transition-all
+              duration-1000
+              opacity-30
+              inset-0
+              bg-gradient-to-r
+              from-[#44BCFF]
+              via-[#FF44EC]
+              to-[#FF675E]
+              rounded-xl
+              blur-lg
+              filter
+              group-hover:opacity-100 group-hover:duration-300
+            "
+          ></div>
           <div
             class="
               inline-flex
               items-center
               justify-center
-              px-5
-              py-2
               mr-3
               text-base
-              border border-gray-600
               font-medium
               text-center
-              dark:text-white
               rounded-lg
               bg-primary-700
-              hover:bg-primary-800
               focus:ring-4 focus:ring-primary-300
               text-gray-800
               shadow-xl
-              hover:animate-pulse
+              border border-transparent
+              rounded-lg
+              hover:bg-indigo-700
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-indigo-600
+              dark:text-gray-200
             "
-            to="/process"
           >
             Go back!
           </div>

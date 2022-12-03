@@ -84,7 +84,6 @@
               bg-primary-700
               focus:ring-4 focus:ring-primary-300
               text-gray-800
-              shadow-xl
               border border-transparent
               rounded-lg
               hover:bg-indigo-700
