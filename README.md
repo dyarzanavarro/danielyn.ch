@@ -67,9 +67,9 @@ This current iteration is built with Nuxt3, Tailwind and TS. Please click around
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Nuxt][Nuxt.js]][https://nuxtjs.org/]
-* [![Vue][Vue.js]][https://vuejs.org/]
-* [![Tailwind][Tailwindcss.com]][https://tailwindcss.com/]
+* [Nuxt]](https://nuxtjs.org/)
+* [Vue](https://vuejs.org/)
+* [Tailwind](https://tailwindcss.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
