@@ -1,4 +1,4 @@
-# danielyarzanavarro.me
+# [danielyn.ch](https://www.danielyn.ch/)
 <a name="readme-top"></a>
 
 
