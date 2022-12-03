@@ -15,7 +15,7 @@
     Here's my custom built portfolio
     <br />
      <br />
-    <a href="https://www.danielyarzanavarro.me/">View Live Site</a>
+    <a href="https://www.danielyn.ch/">View Live Site</a>
     ·
     <a href="https://github.com/dyarzanavarro/danielyarzanavarro.me/issues">Report Bug / Request something new</a>
     ·
