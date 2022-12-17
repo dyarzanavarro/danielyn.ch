@@ -107,11 +107,14 @@
           </div>
         </nuxt-link>
       </div>
-      <div class="lg:mt-0 lg:col-span-5 lg:flex pt-12 relative z-100">
-        <img
-          class="motion-safe:animate-bounce w-12/12"
+      <div class="lg:mt-0 lg:col-span-5 lg:flex relative z-100">
+        <nuxt-picture
           src="/img/floating_robot.svg"
-          alt="floating robot"
+          :imgAttrs="{
+            id: 'floating robot',
+            class: 'motion-safe:animate-bounce w-10/12',
+            loading: 'lazy',
+          }"
         />
       </div>
     </div>

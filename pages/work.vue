@@ -21,7 +21,7 @@
           py-4
         "
       >
-        Work I'm ok with
+        Work I'm Ok with
       </div>
     </div>
 

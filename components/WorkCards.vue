@@ -40,8 +40,8 @@
               hover:animate-pulse
             "
           >
-            <img
-              src="/img/yol_1-min.png"
+            <nuxt-picture
+              src="/yol_1-min.png"
               alt="Intro image for project yallo"
               class="w-full h-96 object-cover object-top rounded-xl"
             />
@@ -127,8 +127,8 @@
               hover:animate-pulse
             "
           >
-            <img
-              src="/img/sunrise_1-min.png"
+            <nuxt-picture
+              src="/sunrise_1-min.png"
               alt="Intro image for project Sunrise eShop"
               class="w-full w-full h-96 object-cover object-top rounded-xl"
             />
@@ -213,8 +213,8 @@
               hover:animate-pulse
             "
           >
-            <img
-              src="/img/citypop_Dan3-min.png"
+            <nuxt-picture
+              src="/citypop_Dan3-min.png"
               alt="Intro image for project psych"
               class="w-full w-full h-96 object-cover object-top rounded-xl"
             />
@@ -294,11 +294,15 @@
               hover:animate-pulse
             "
           >
-            <img
-              src="/img/psych_isometric-min.png"
-              alt="Intro image for project psych"
-              class="w-full w-full h-96 object-cover object-top rounded-xl"
+            <nuxt-picture
+              src="/psych_isometric-min.png"
+              :imgAttrs="{
+                id: 'Intro image for project psych',
+                class: 'w-full w-full h-96 object-cover object-top rounded-xl',
+                loading: 'lazy',
+              }"
             />
+
             <div class="p-6">
               <div class="flex items-center justify-between">
                 <div class="flex items-center">

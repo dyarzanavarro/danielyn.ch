@@ -16,15 +16,18 @@
       "
     >
       <div class="w-full lg:w-1/2">
-        <img
+        <nuxt-picture
           class="hidden lg:block"
           src="https://i.ibb.co/v30JLYr/Group-192-2.png"
         />
-        <img
+        <nuxt-picture
           class="hidden md:block lg:hidden"
           src="https://i.ibb.co/c1ggfn2/Group-193.png"
         />
-        <img class="md:hidden" src="https://i.ibb.co/8gTVH2Y/Group-198.png" />
+        <nuxt-picture
+          class="md:hidden"
+          src="https://i.ibb.co/8gTVH2Y/Group-198.png"
+        />
       </div>
       <div class="w-full lg:w-1/2">
         <h1
@@ -74,10 +77,7 @@
         >
           Sorry about that! Please visit home to get where you need to go.
         </p>
-        <nuxt-link
-          class="relative inline-flex mt-6 group"
-          to="/alternativeLanding"
-        >
+        <nuxt-link class="relative inline-flex mt-6 group" to="/">
           <div
             class="
               absolute

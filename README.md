@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/dyarzanavarro/danielyarzanavarro.me">
-    <img src="img/logo_dyn.png" alt="Logo" width="80" height="80">
+    <nuxt-picture src="img/logo_dyn.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Showcasing with NUXT3 and Tailwind</h3>

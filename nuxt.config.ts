@@ -1,16 +1,38 @@
-import { defineNuxtConfig } from 'nuxt'
-
+import path from 'path'
+import fs from 'fs'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default defineNuxtConfig({
+
+const config = {}
+
+if (process.env.NODE_ENV === "development") {
+    config.server = {
+        https: {
+            key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
+            cert: fs.readFileSync(path.resolve(__dirname, 'cert.pem'))
+        }
+    }
+}
+
+export default ({
+    ssr: false,
+    target: "static",
     app: {
         head: {
             charset: 'utf-16',
             title: 'Daniel is a human being',
             meta: [{ name: 'description', content: 'The personal page of Daniel Y.Navarro - Welcome' }],
+            htmlAttrs: {
+                lang: 'en'
+            }
 
         }
     },
-    modules: ['@nuxtjs/color-mode'],
+
+    image: {
+        dir: 'assets/img',
+    },
+
+    modules: ['@nuxtjs/color-mode', '@nuxt/image-edge'],
     colorMode: { classSuffix: '', preference: 'dark' },
     build: {
 
@@ -37,5 +59,4 @@ export default defineNuxtConfig({
         "~/assets/css/tailwind.css"
     ],
 
-    ssr: false
 })

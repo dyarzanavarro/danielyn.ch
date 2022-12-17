@@ -15,6 +15,7 @@
             hover:text-indigo-700 hover:animate-pulse
             focus:outline-none focus:shadow-outline
             pl-4
+            mb-4
           "
         >
           DyN
@@ -22,19 +23,31 @@
       </div>
 
       <div class="hidden sm:flex flex-row space-x-4">
-        <div class="object-bottom px-4 mt-1">
+        <div class="object-bottom px-4 py-2 mb-2">
           <button @click="toggle">
-            <img
+            <nuxt-picture
               v-if="$colorMode.value == 'dark'"
-              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
               src="/img/bulb-dark.svg"
-              alt="floating robot"
+              width="32px"
+              height="32px"
+              :imgAttrs="{
+                id: 'bulb-dark',
+                class:
+                  'h-8 object-bottom hover:animate-pulse cursor-pointer my-3',
+                loading: 'lazy',
+              }"
             />
-            <img
+            <nuxt-picture
               v-else
-              class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
               src="/img/bulb_light.svg"
-              alt="floating robot"
+              :imgAttrs="{
+                id: 'bulb-dark',
+                class:
+                  'h-8 object-bottom hover:animate-pulse cursor-pointer my-3',
+                loading: 'lazy',
+              }"
+              width="32px"
+              height="32px"
             />
           </button>
         </div>
@@ -109,11 +122,8 @@
         >
       </div>
 
-      <!-- For Small Screen -->
-
       <div
         class="
-          mt-4
           mx-auto
           flex
           justify-center
@@ -124,20 +134,34 @@
           right-16
           top-0
           m-4
+          px-4
+          py-2
+          mt-2
         "
       >
         <button @click="toggle">
-          <img
+          <nuxt-picture
             v-if="$colorMode.value == 'dark'"
-            class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
             src="/img/bulb-dark.svg"
-            alt="floating robot"
+            :imgAttrs="{
+              id: 'bulb-dark',
+              class: 'h-8 object-bottom hover:animate-pulse cursor-pointer ',
+              loading: 'lazy',
+            }"
+            width="32px"
+            height="32px"
           />
-          <img
+          <nuxt-picture
             v-else
-            class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
             src="/img/bulb_light.svg"
-            alt="floating robot"
+            :imgAttrs="{
+              id: 'bulb-light',
+              class:
+                'h-8 object-bottom hover:animate-pulse cursor-pointer my-3',
+              loading: 'lazy',
+            }"
+            width="32px"
+            height="32px"
           />
         </button>
       </div>
@@ -163,19 +187,29 @@
           m-4
         "
       >
-        <img
+        <nuxt-picture
           v-if="$colorMode.value == 'dark'"
-          class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
           src="/img/tool-front-clay.svg"
-          alt="floating robot"
+          width="32px"
+          height="32px"
+          :imgAttrs="{
+            id: 'tool-light',
+            class: 'h-8 object-bottom hover:animate-pulse cursor-pointer my-3',
+            loading: 'lazy',
+          }"
         />
-        <img
+        <nuxt-picture
           v-else
-          class="h-8 object-bottom hover:animate-pulse cursor-pointer my-3"
           src="/img/tool-front-color.svg"
-          alt="floating robot"
+          width="32px"
+          height="32px"
+          :imgAttrs="{
+            id: 'tool-color',
+            class: 'h-8 object-bottom hover:animate-pulse cursor-pointer my-3',
+            loading: 'lazy',
+          }"
         />
-        <img
+        <nuxt-picture
           v-if="$colorMode.value == 'dark'"
           class="
             hidden
@@ -187,8 +221,10 @@
           "
           src="/img/scissor-front-clay.svg"
           alt="floating robot"
+          width="32px"
+          height="32px"
         />
-        <img
+        <nuxt-picture
           v-else
           class="
             hidden
@@ -200,6 +236,8 @@
           "
           src="/img/scissor-front-color.svg"
           alt="floating robot"
+          width="32px"
+          height="32px"
         />
       </div>
     </div>

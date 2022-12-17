@@ -14,10 +14,13 @@
     <!-- Card code block start -->
     <div class="bg-slate-100 dark:bg-gray-800 shadow rounded">
       <div class="relative bg-slate-100 dark:bg-gray-800">
-        <img
-          class="h-56 shadow rounded-xl w-full object-cover object-center"
-          src="/img/citypop_mood-min.png"
-          alt=""
+        <nuxt-picture
+          src="/citypop_mood-min.png"
+          :imgAttrs="{
+            id: 'Mood profile image',
+            class: 'h-56 shadow rounded-xl w-full object-cover object-center',
+            loading: 'lazy',
+          }"
         />
         <div
           class="
@@ -36,10 +39,13 @@
             border-white
           "
         >
-          <img
-            class="w-full h-full overflow-hidden object-cover rounded"
-            src="/img/citypop_Dan4-min.png"
-            alt="Daniel profile image"
+          <nuxt-picture
+            src="/citypop_Dan4-min.png"
+            :imgAttrs="{
+              id: 'Daniel profile image',
+              class: 'w-full h-full overflow-hidden object-cover rounded',
+              loading: 'lazy',
+            }"
           />
         </div>
       </div>
@@ -220,11 +226,11 @@
               xl:w-1/3
             "
           >
-            <div class="mr-6 xl:mr-10">
+            <div class="mr-6 xl:mr-10 text-center">
               <a
                 :href="`mailto:'danielyarza1@gmail.com?subject=I found your website and I'd love to get to know you better!`"
               >
-                <img
+                <nuxt-picture
                   v-if="$colorMode.value == 'dark'"
                   class="
                     h-10
@@ -237,9 +243,12 @@
                     mx-auto
                   "
                   src="/img/chat-bubble-front-clay.svg"
+                  width="48px"
+                  height="48px"
                   alt="floating robot"
+                  :imgAttrs="{ style: 'margin:auto' }"
                 />
-                <img
+                <nuxt-picture
                   v-else
                   class="
                     h-10
@@ -252,7 +261,10 @@
                     mx-auto
                   "
                   src="/img/chat-bubble-front-color.svg"
+                  width="48px"
+                  height="48px"
                   alt="floating robot"
+                  :imgAttrs="{ style: 'margin:auto' }"
                 />
               </a>
               <p class="text-gray-800 dark:text-gray-100 text-sm xl:text-xl">

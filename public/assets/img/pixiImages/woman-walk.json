@@ -1,0 +1,135 @@
+{
+  "frames": {
+    "woman-walk-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 46
+      }
+    },
+    "woman-walk-1": {
+      "frame": {
+        "x": 37,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 46
+      }
+    },
+    "woman-walk-2": {
+      "frame": {
+        "x": 74,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 74,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 46
+      }
+    },
+    "woman-walk-3": {
+      "frame": {
+        "x": 111,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 111,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 46
+      }
+    },
+    "woman-walk-4": {
+      "frame": {
+        "x": 148,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 148,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 46
+      }
+    },
+    "woman-walk-5": {
+      "frame": {
+        "x": 185,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 185,
+        "y": 0,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 222,
+        "h": 46
+      }
+    }
+  },
+  "meta": {
+    "app": "sprite-sheet-to-json",
+    "version": "1.0.0",
+    "image": "woman-walk.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 222,
+      "h": 46
+    },
+    "scale": "1"
+  }
+}

@@ -66,24 +66,36 @@
           "
         >
           <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process2.jpg"
-              alt="Empathy process showing Daniel in a Group"
+            <nuxt-picture
+              src="/process2.jpg"
+              :imgAttrs="{
+                id: 'Empathy process showing Daniel in a Group',
+                class:
+                  'h-64 shadow rounded-t w-full object-cover object-center',
+                loading: 'lazy',
+              }"
             />
           </div>
           <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/fakeImg.jpg"
-              alt="Empathy process showing Daniel in a Group"
+            <nuxt-picture
+              src="/fakeImg.jpg"
+              :imgAttrs="{
+                id: 'Empathy process showing Daniel in a Group',
+                class:
+                  'h-64 shadow rounded-t w-full object-cover object-center',
+                loading: 'lazy',
+              }"
             />
           </div>
           <div class="rounded">
-            <img
-              class="h-64 shadow rounded-t w-full object-cover object-center"
-              src="/img/process3.jpeg"
-              alt="Empathy process showing Daniel in a Group"
+            <nuxt-picture
+              src="/process5.jpg"
+              :imgAttrs="{
+                id: 'Empathy process showing Daniel in a Group',
+                class:
+                  'h-64 shadow rounded-t w-full object-cover object-center',
+                loading: 'lazy',
+              }"
             />
           </div>
         </div>

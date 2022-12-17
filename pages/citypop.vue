@@ -11,18 +11,25 @@
         overflow-hidden
       "
     >
-      <img
-        class="rounded col-span-1 h-screen object-cover object-center"
+      <nuxt-picture
         src="/img/design_citypop.svg"
+        :imgAttrs="{
+          id: 'citypop design',
+          class: 'rounded col-span-1 h-screen object-cover object-center',
+          loading: 'lazy',
+        }"
       />
 
       <div class="rounded lg:col-span-4 col-span-2">
         <Transition name="fade" mode="out-in" false>
           <div>
-            <img
-              class="w-full h-screen object-cover object-center rounded"
+            <nuxt-picture
               :src="imgLoad[0]"
-              alt="Daniel profile image"
+              :imgAttrs="{
+                id: 'citypop design',
+                class: 'w-full h-screen object-cover object-center rounded',
+                loading: 'lazy',
+              }"
             /></div
         ></Transition>
       </div>
@@ -41,12 +48,12 @@ export default {
   data() {
     return {
       imgLoad: [
-        "/img/citypop_mood-min.png",
-        "/img/citypop_Dan1-min.png",
-        "/img/citypop_Dan3-min.png",
-        "/img/citypop_Dan4-min.png",
-        "/img/citypop_Dan5-min.png",
-        "/img/citypop_Dan6-min.png",
+        "/citypop_mood-min.png",
+        "/citypop_Dan1-min.png",
+        "/citypop_Dan3-min.png",
+        "/citypop_Dan4-min.png",
+        "/citypop_Dan5-min.png",
+        "/citypop_Dan6-min.png",
       ],
     };
   },
