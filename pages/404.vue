@@ -74,10 +74,7 @@
         >
           Sorry about that! Please visit home to get where you need to go.
         </p>
-        <nuxt-link
-          class="relative inline-flex mt-6 group"
-          to="/alternativeLanding"
-        >
+        <nuxt-link class="relative inline-flex mt-6 group" to="/">
           <div
             class="
               absolute
