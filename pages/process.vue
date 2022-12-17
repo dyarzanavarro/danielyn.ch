@@ -91,7 +91,7 @@
             <nuxt-picture
               src="/process5.jpg"
               :imgAttrs="{
-                id: 'Empathy process showing Daniel in a Group',
+                id: 'Empathy process showing Daniel working',
                 class:
                   'h-64 shadow rounded-t w-full object-cover object-center',
                 loading: 'lazy',
