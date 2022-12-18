@@ -32,7 +32,7 @@
             xl:text-6xl
           "
         >
-          Daniel is a UX Advocate working in B2C E-commerce in Zurich
+          {{ introMessage[i] }}
         </span>
         <p
           class="
@@ -110,7 +110,7 @@
       <div class="lg:mt-0 lg:col-span-5 lg:flex pt-12 relative z-100">
         <img
           class="motion-safe:animate-bounce w-12/12"
-          src="/img/floating_robot.svg"
+          :src="imgLoad[0]"
           alt="floating robot"
         />
       </div>
@@ -140,7 +140,45 @@
 
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      imgLoad: [
+        "/img/floating_robot.svg",
+        "/img/floating_robot1.png",
+        "/img/floating_robot2.png",
+        "/img/floating_robot3.png",
+        "/img/floating_robot4.png",
+        "/img/floating_robot5.png",
+        "/img/floating_robot6.png",
+        "/img/floating_robot7.png",
+      ],
+
+      introMessage: [
+        "Daniel is a UX Advocate working in B2C E-commerce in Zurich",
+        "Daniel is a guy that like good food",
+        "Daniel loves AI, XR, and UX - (all buzzwords in one)",
+        "Daniel in the third person is weirr",
+      ],
+      i: "",
+    };
+  },
+
+  mounted() {
+    window.setInterval(() => {
+      this.changeImg();
+      // Check if the textElement has been initialized
+      if (this.i < this.introMessage.length - 1) this.i++;
+      else this.i = 0;
+    }, 4000);
+  },
+  methods: {
+    changeImg() {
+      const first = this.imgLoad.shift();
+      this.imgLoad = this.imgLoad.concat(first);
+    },
+  },
+};
 </script>
 
 <style>

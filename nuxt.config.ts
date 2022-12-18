@@ -36,5 +36,5 @@ export default ({
     ],
 
     ssr: false,
-    plugins: ['@/plugins/vue-gtag.client.js']
+
 })
