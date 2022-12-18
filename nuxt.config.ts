@@ -35,5 +35,6 @@ export default ({
         "~/assets/css/tailwind.css"
     ],
 
-    ssr: false
+    ssr: false,
+    plugins: ['@/plugins/vue-gtag.client.js']
 })
