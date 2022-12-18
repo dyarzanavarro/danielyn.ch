@@ -1,7 +1,6 @@
-import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default defineNuxtConfig({
+export default ({
     app: {
         head: {
             charset: 'utf-16',
@@ -13,7 +12,6 @@ export default defineNuxtConfig({
     modules: ['@nuxtjs/color-mode'],
     colorMode: { classSuffix: '', preference: 'dark' },
     build: {
-
         postcss: {
             postcssOptions: {
                 plugins: {

@@ -206,7 +206,7 @@
             </p>
           </div>
 
-          <nuxt-link to="/village">
+          <a href="/village">
             <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200">
               <svg
                 class="mx-auto"
@@ -262,7 +262,7 @@
                 I've been fascinated with XR these last few years.
               </p>
             </div>
-          </nuxt-link>
+          </a>
 
           <div
             class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t"
