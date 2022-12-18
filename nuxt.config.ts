@@ -5,7 +5,7 @@ export default ({
         head: {
             charset: 'utf-16',
             title: 'Daniel is a human being',
-            meta: [{ name: 'description', content: 'The personal page of Daniel Y.Navarro - Welcome' }],
+            meta: [{ name: 'description', content: 'The personal page of Daniel Y.Navarro - Welcome' }, { name: "google-site-verification", content: "qsEjNkUNVTLfWJNyQsKZH-n7QB48GgOKQBVGsGFafBo" }],
 
         }
     },
