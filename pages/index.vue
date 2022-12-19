@@ -45,10 +45,10 @@
             dark:text-gray-400
           "
         >
-          Dipping my toes in SCRUM product ownership & creating intuitive user
-          journeys that drive up value and supports long-term growth. Get to
-          know me better by browsing my past work, what I do for fun or learn
-          about the process I use to improve any business.
+          Nowadays, I'm dipping my toes in SCRUM product ownership & creating
+          intuitive user journeys that drive up value and supports long-term
+          growth. Get to know me better by browsing my past work, what I do for
+          fun or learn about the process I use to improve any business.
         </p>
         <nuxt-link class="relative inline-flex mt-2 group" to="/process">
           <div
@@ -156,11 +156,14 @@ export default {
 
       introMessage: [
         "Daniel is a UX Advocate working in B2C E-commerce in Zurich",
-        "Daniel is a guy that like good food",
+        "Daniel is a guy that likes good food",
         "Daniel loves AI, XR, and UX - (all buzzwords in one)",
-        "Daniel in the third person is weirr",
+        "Daniel in the third person is weird",
+        "Daniel has a background in computer science and has been working in the tech industry for several years",
+        "Daniel is a problem-solver and loves to tackle challenges in both his personal and professional life",
+        "Daniel enjoys traveling and experiencing new cultures",
       ],
-      i: "",
+      i: "0",
     };
   },
 
@@ -170,7 +173,7 @@ export default {
       // Check if the textElement has been initialized
       if (this.i < this.introMessage.length - 1) this.i++;
       else this.i = 0;
-    }, 4000);
+    }, 6000);
   },
   methods: {
     changeImg() {
