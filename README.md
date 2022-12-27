@@ -5,7 +5,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/dyarzanavarro/danielyarzanavarro.me">
+  <a href="https://github.com/dyarzanavarro/danielyn.ch">
     <img src="img/logo_dyn.png" alt="Logo" width="80" height="80">
   </a>
 
