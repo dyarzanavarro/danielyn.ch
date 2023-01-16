@@ -144,12 +144,17 @@
     <div class="px-4 lg:pt-8 pt-6">
       <div class="text-gray-400 lg:text-2xl sm:text-4">
         The second biggest telecommunications provider with limited UX Process
-        and 0 Testing Workflow
+        and 0 Sales Testing Workflow
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        Integrated in a wider UX Team meant working on individual projects,
+        while keeping a Design System in mind. Due to my frontend Know-how, I
+        was able to help coordinate, ideate, iterate & analyse A/B tests, that
+        Business wanted to perform. Additional front-end development for
+        "QuickFixes" helped circumvent long dev cycles for small projects with
+        internal stakeholders and external agencies. Being able to assist in the
+        planning and follow-through of Design-Thinking Workshops and User
+        Testings helped keep our vision on actual important tasks.
       </div>
     </div>
     <div class="px-4 lg:pt-8 pt-6 flex justify-evenly">

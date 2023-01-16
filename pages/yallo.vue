@@ -143,13 +143,23 @@
 
     <div class="px-4 lg:pt-8 pt-6">
       <div class="text-gray-400 lg:text-2xl sm:text-4">
-        Dipping my toes in SCRUM product ownership & creating intuitive user
-        journeys that drive up value and supports long-term growth.
+        Part of the technical operational steering and digital decisions around
+        the brand yallo & Lebara. Trying to bridge the gap between Development
+        and Business priorities means having a clear approach to iterative
+        design and development. Keeping an end user in mind is the key to make
+        the right decisions.
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+      <div class="text-gray-400 lg:text-2xl sm:text-4 pt-6">
+        I also served as the product owner for several frontend applications,
+        including a legacy application and a new Angular team. My focus was on
+        driving transformation and operational excellence for these
+        applications. This involved working closely with both the development
+        and business teams to establish clear goals and objectives, as well as
+        facilitating communication and collaboration to ensure the successful
+        delivery of these applications. I also played a key role in identifying
+        and implementing process improvements to increase efficiency and
+        effectiveness, while also ensuring that the end-user remained at the
+        forefront of our decision making.
       </div>
     </div>
     <div class="px-4 lg:pt-8 pt-6 flex justify-evenly">
@@ -248,7 +258,7 @@
       <div class="flex items-center pb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="h-9 w-9 stroke-gray-700 dark:text-gray-200"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="2"
@@ -310,15 +320,40 @@
           pb-6
         "
       >
-        Project Purpose and Goal
+        Position purpose and key activities
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend. <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        As a product owner at Yallo & Lebara, my purpose was to drive the
+        development of new features while overseeing the transformation from
+        legacy stack to new frontend. My key activities included:
+        <ul>
+          <li>
+            Developing new features and functionalities for the frontend
+            applications, ensuring they were aligned with business objectives
+            and end-user needs.
+          </li>
+          <li>
+            Coordinating the hiring of engineers to support the development of
+            these new features, and providing guidance and mentorship to the
+            team.
+          </li>
+          <li>
+            Keeping UX as a priority throughout the development process, by
+            collaborating closely with the UX team to ensure that designs and
+            prototypes met the needs of end-users.
+          </li>
+          <li>
+            Keeping the transformation from legacy stack to new frontend on
+            track, by managing timelines, resources and dependencies, and
+            ensuring that all stakeholders were informed of progress and any
+            issues that arose.
+          </li>
+          <li>
+            Identifying and implementing process improvements to increase
+            efficiency and effectiveness throughout the development process, to
+            ensure the smooth delivery of new features and functionalities.
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -354,15 +389,17 @@
             pb-6
           "
         >
-          Workflow and Decisions
+          Workflow and decisions
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-          nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-          eleifend. <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-          nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-          eleifend.
+          As a product owner, I had to balance the needs of the business with
+          the needs of the end-users. To achieve this, I had to collaborate and
+          communicate closely with different stakeholders to ensure that new
+          features and functionalities aligned with both business objectives and
+          end-user needs. I had to manage timelines and resources carefully to
+          keep the development of new features and functionalities on track,
+          while also ensuring that I had the necessary resources and personnel
+          to complete them.
         </div>
       </div>
     </div>
@@ -381,12 +418,18 @@
         Thoughts & Hickups along the way
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend. <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        I had to transition from the legacy stack to a new frontend which
+        required a lot of time and effort to ensure a smooth transition. This
+        involved identifying and addressing technical debt, as well as training
+        existing team members on the new stack. I had to manage dependencies
+        between different parts of the project, which could be challenging,
+        depending on the size of the team and the complexity of the project. I
+        had to keep the team motivated throughout the development process,
+        especially if things didn't go as planned or if delays occurred, to
+        ensure that the project stayed on track. I had to make difficult
+        trade-offs and prioritize different aspects of the project to ensure
+        that the most important features and functionalities were completed on
+        time and on budget.
       </div>
     </div>
   </div>

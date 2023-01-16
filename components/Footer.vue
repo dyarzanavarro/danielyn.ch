@@ -54,7 +54,7 @@
 
         <div class="my-6 text-base text-color f-f-l"></div>
         <div class="text-sm text-color mb-10 f-f-l dark:text-gray-200">
-          <p>© 2022 - Made with ❤️</p>
+          <p>© {{ year }} - Made with ❤️</p>
         </div>
       </div>
     </div>
@@ -62,7 +62,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => {
+    return {
+      year: new Date().getFullYear(),
+    };
+  },
+};
 </script>
 
 <style>
