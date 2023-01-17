@@ -24,7 +24,6 @@ const scene = new THREE.Scene();
 const width = 1200;
 const height = 600;
 const camera = new THREE.PerspectiveCamera(75, aspectRatio.value, 0.1, 2000);
-camera.position.set(360, 300, -800);
 
 const bgColor = new THREE.Color("#E1F0C2");
 
@@ -111,14 +110,14 @@ document.body.addEventListener("keyup", function (e) {
 function animate() {
   requestAnimationFrame(animate);
 
-  if (keys.w) speed = 0.008;
-  else if (keys.s) speed = -0.008;
+  if (keys.w) speed = 0.01;
+  else if (keys.s) speed = -0.01;
 
   velocity += (speed - velocity) * 0.08;
   ship.translateZ(velocity);
 
-  if (keys.a) ship.rotateY(0.002);
-  else if (keys.d) ship.rotateY(-0.002);
+  if (keys.a) ship.rotateY(0.0005);
+  else if (keys.d) ship.rotateY(-0.0005);
 
   a.lerp(ship.position, 0.2);
   b.copy(goal.position);
@@ -146,6 +145,15 @@ function animate() {
   goal.position.addScaledVector(dir, dis);
   temp.setFromMatrixPosition(follow.matrixWorld);
   goal.position.lerp(temp, 0.02);
+
+  var offset = new THREE.Vector3(
+    ship.position.x + 20,
+    ship.position.y + 20,
+    ship.position.z
+  );
+
+  camera.position.set(30, 50, -190);
+  ship.add(camera);
 }
 
 //water
@@ -210,15 +218,16 @@ const clock = new THREE.Clock();
 
 function updateCamera() {
   camera.aspect = aspectRatio.value;
-  const oldObjectPosition = new THREE.Vector3();
-  ship.getWorldPosition(oldObjectPosition);
+  var offset = new THREE.Vector3(
+    ship.position.x + 20,
+    ship.position.y + 6,
+    ship.position.z
+  );
 
-  const newObjectPosition = new THREE.Vector3();
-  ship.getWorldPosition(newObjectPosition);
+  camera.position.lerp(offset, 0.2);
 
-  const delta = newObjectPosition.clone().sub(oldObjectPosition);
+  camera.lookAt(ship.position);
 
-  camera.position.add(delta);
   camera.updateProjectionMatrix();
 }
 function updateRenderer() {
