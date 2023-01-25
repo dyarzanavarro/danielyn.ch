@@ -11,9 +11,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { Water } from "three/examples/jsm/objects/Water.js";
 import { Sky } from "three/examples/jsm/objects/Sky.js";
 import { Ref } from "vue";
-import { useWindowSize } from "@vueuse/core";
-import { KeyDisplay } from "~~/composables/utils";
-import { CharacterControls } from "~~/composables/characterControls";
+import { ImprovedNoise } from "three/examples/jsm/math/ImprovedNoise.js";
 
 let renderer: THREE.WebGLRenderer;
 let controls: OrbitControls;
@@ -23,11 +21,9 @@ const aspectRatio = computed(() => window.innerWidth / window.innerHeight);
 const scene = new THREE.Scene();
 const width = 1200;
 const height = 600;
-const camera = new THREE.PerspectiveCamera(75, aspectRatio.value, 0.1, 2000);
+let camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
 
-const bgColor = new THREE.Color("#E1F0C2");
-
-const AmbientLight = new THREE.AmbientLight(0xffffff, 1.4);
+const AmbientLight = new THREE.AmbientLight(0xffffff, 1);
 const dirLight = new THREE.DirectionalLight(0xffffff, 1);
 dirLight.position.set(-60, 100, -10);
 dirLight.castShadow = true;
@@ -71,32 +67,11 @@ let keys = {
   d: false,
   w: false,
 };
-let time = 0;
-let newPosition = new THREE.Vector3();
-let matrix = new THREE.Matrix4();
 
-let stop = 1;
-let DEGTORAD = 0.01745327;
-let temp = new THREE.Vector3();
-let dir = new THREE.Vector3();
-let eye = new THREE.Vector3();
 let a = new THREE.Vector3();
-let b = new THREE.Vector3();
-let raycaster = new THREE.Raycaster();
-let mouse = new THREE.Vector2();
-let environment = [];
-let coronaSafetyDistance = 0.3;
-let goalDistance = coronaSafetyDistance;
+
 let velocity = 0.0;
 let speed = 0.0;
-
-let goal = new THREE.Object3D();
-let follow = new THREE.Object3D();
-
-document.body.addEventListener("mousemove", function (e) {
-  mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-});
 
 document.body.addEventListener("keydown", function (e) {
   let key = e.code.replace("Key", "").toLowerCase();
@@ -111,53 +86,147 @@ function animate() {
   requestAnimationFrame(animate);
 
   if (keys.w) speed = 0.01;
-  else if (keys.s) speed = -0.01;
+  else if (keys.s) speed = 0.005;
 
   velocity += (speed - velocity) * 0.08;
   ship.translateZ(velocity);
-
-  if (keys.a) ship.rotateY(0.0005);
-  else if (keys.d) ship.rotateY(-0.0005);
-
-  a.lerp(ship.position, 0.2);
-  b.copy(goal.position);
-
-  dir.copy(a).sub(b).normalize();
-
-  eye.copy(dir).negate();
-  raycaster.set(a, eye);
-  let intersects = raycaster.intersectObjects(environment);
-
-  let distance = coronaSafetyDistance;
-
-  if (intersects && intersects.length) {
-    let space = intersects[0].distance;
-    let radius = 0.2;
-
-    // Pick the shorter distance
-    distance = Math.min(distance, space - radius);
+  if (keys.a) {
+    ship.rotateY(0.0001);
+  } else if (keys.d) {
+    ship.rotateY(-0.0001);
   }
 
-  goalDistance += (distance - goalDistance) * 0.2;
+  a.lerp(ship.position, 0.2);
+  a.lerp(ship.rotation, 0.2);
 
-  let dis = a.distanceTo(b) - goalDistance;
-
-  goal.position.addScaledVector(dir, dis);
-  temp.setFromMatrixPosition(follow.matrixWorld);
-  goal.position.lerp(temp, 0.02);
-
-  var offset = new THREE.Vector3(
-    ship.position.x + 20,
-    ship.position.y + 20,
-    ship.position.z
-  );
-
-  camera.position.set(30, 50, -190);
+  camera.lookAt(ship.position);
+  camera.position.set(50, 100, -360);
+  camera.fov = 600 / ship.position.distanceTo(camera.position);
   ship.add(camera);
 }
 
-//water
-const waterGeometry = new THREE.PlaneGeometry(10000, 10000);
+// Generate a terrain
+let mesh, texture;
+
+const worldWidth = 256,
+  worldDepth = 256,
+  worldHalfWidth = worldWidth / 2,
+  worldHalfDepth = worldDepth / 2;
+
+const data = generateHeight(worldWidth, worldDepth);
+
+const geometry = new THREE.PlaneGeometry(
+  7500,
+  7500,
+  worldWidth - 1,
+  worldDepth - 1
+);
+geometry.rotateX(-Math.PI / 2);
+
+const vertices = geometry.attributes.position.array;
+
+for (let i = 0, j = 0, l = vertices.length; i < l; i++, j += 3) {
+  vertices[j + 1] = data[i] * 10;
+}
+
+//
+
+texture = new THREE.CanvasTexture(
+  generateTexture(data, worldWidth, worldDepth)
+);
+texture.wrapS = THREE.ClampToEdgeWrapping;
+texture.wrapT = THREE.ClampToEdgeWrapping;
+
+mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ map: texture }));
+scene.add(mesh);
+mesh.position.set(0, -800, 0);
+
+function generateHeight(width, height) {
+  const size = width * height,
+    data = new Uint8Array(size),
+    perlin = new ImprovedNoise(),
+    z = Math.random() * 100;
+
+  let quality = 1;
+
+  for (let j = 0; j < 4; j++) {
+    for (let i = 0; i < size; i++) {
+      const x = i % width,
+        y = ~~(i / width);
+      data[i] += Math.abs(
+        perlin.noise(x / quality, y / quality, z) * quality * 1.75
+      );
+    }
+
+    quality *= 5;
+  }
+
+  return data;
+}
+
+function generateTexture(data, width, height) {
+  // bake lighting into texture
+
+  let context, image, imageData, shade;
+
+  const vector3 = new THREE.Vector3(0, 0, 0);
+
+  const sun = new THREE.Vector3(1, 1, 1);
+  sun.normalize();
+
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+
+  context = canvas.getContext("2d");
+  context.fillStyle = "#000";
+  context.fillRect(0, 0, width, height);
+
+  image = context.getImageData(0, 0, canvas.width, canvas.height);
+  imageData = image.data;
+
+  for (let i = 0, j = 0, l = imageData.length; i < l; i += 4, j++) {
+    vector3.x = data[j - 2] - data[j + 2];
+    vector3.y = 2;
+    vector3.z = data[j - width * 2] - data[j + width * 2];
+    vector3.normalize();
+
+    shade = vector3.dot(sun);
+
+    imageData[i] = (96 + shade * 128) * (0.5 + data[j] * 0.007);
+    imageData[i + 1] = (32 + shade * 96) * (0.5 + data[j] * 0.007);
+    imageData[i + 2] = shade * 96 * (0.5 + data[j] * 0.007);
+  }
+
+  context.putImageData(image, 0, 0);
+
+  // Scaled 4x
+
+  const canvasScaled = document.createElement("canvas");
+  canvasScaled.width = width * 4;
+  canvasScaled.height = height * 4;
+
+  context = canvasScaled.getContext("2d");
+  context.scale(4, 4);
+  context.drawImage(canvas, 0, 0);
+
+  image = context.getImageData(0, 0, canvasScaled.width, canvasScaled.height);
+  imageData = image.data;
+
+  for (let i = 0, l = imageData.length; i < l; i += 4) {
+    const v = ~~(Math.random() * 5);
+
+    imageData[i] += v;
+    imageData[i + 1] += v;
+    imageData[i + 2] += v;
+  }
+
+  context.putImageData(image, 0, 0);
+
+  return canvasScaled;
+}
+
+const waterGeometry = new THREE.PlaneGeometry(150000, 150000);
 let sun = new THREE.Vector3();
 let water = new Water(waterGeometry, {
   textureWidth: 512,
@@ -170,13 +239,14 @@ let water = new Water(waterGeometry, {
   ),
   sunDirection: new THREE.Vector3(),
   sunColor: 0xffffff,
-
-  waterColor: 0x001e0f,
+  waterColor: "#1ec8ff",
+  transparent: true,
+  opacity: 0.99,
   distortionScale: 3.7,
   fog: scene.fog !== undefined,
 });
-water.rotation.x = -Math.PI / 2;
 
+water.rotation.x = -Math.PI / 2;
 scene.add(water);
 
 // Skybox
@@ -187,14 +257,14 @@ scene.add(sky);
 
 const skyUniforms = sky.material.uniforms;
 
-skyUniforms["turbidity"].value = 10;
+skyUniforms["turbidity"].value = 7;
 skyUniforms["rayleigh"].value = 2;
 skyUniforms["mieCoefficient"].value = 0.005;
 skyUniforms["mieDirectionalG"].value = 0.8;
 
 const parameters = {
-  elevation: 2,
-  azimuth: 120,
+  elevation: 3,
+  azimuth: 20,
 };
 
 let renderTarget;
@@ -213,28 +283,14 @@ function updateSun() {
 
 updateSun();
 
-const clock = new THREE.Clock();
 // ANIMATE
 
 function updateCamera() {
   camera.aspect = aspectRatio.value;
-  var offset = new THREE.Vector3(
-    ship.position.x + 20,
-    ship.position.y + 6,
-    ship.position.z
-  );
-
-  camera.position.lerp(offset, 0.2);
-
-  camera.lookAt(ship.position);
-
-  camera.updateProjectionMatrix();
 }
 function updateRenderer() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.render(scene, camera);
-
-  //water render
 
   water.material.uniforms["time"].value += 1.0 / 60.0;
 }
@@ -246,20 +302,11 @@ function setRenderer() {
       alpha: true,
     });
     renderer.setPixelRatio(window.devicePixelRatio);
-
-    //OrbitControls
-    controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = 1;
-    controls.minDistance = 45;
-    controls.maxDistance = 155;
-    controls.enablePan = false;
-    controls.maxPolarAngle = Math.PI / 0.1;
   }
 }
 
 watch(aspectRatio, () => {
   updateCamera();
-  updateRenderer();
 });
 onMounted(() => {
   setRenderer();
@@ -267,7 +314,6 @@ onMounted(() => {
 });
 const loop = () => {
   updateRenderer();
-
   requestAnimationFrame(loop);
   animate();
 };
