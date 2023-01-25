@@ -21,7 +21,12 @@ const aspectRatio = computed(() => window.innerWidth / window.innerHeight);
 const scene = new THREE.Scene();
 const width = 1200;
 const height = 600;
-let camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+let camera = new THREE.PerspectiveCamera(
+  45,
+  window.innerWidth / window.innerHeight,
+  1,
+  10000
+);
 
 const AmbientLight = new THREE.AmbientLight(0xffffff, 1);
 const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -66,6 +71,10 @@ let keys = {
   s: false,
   d: false,
   w: false,
+  forward: false,
+  backward: false,
+  left: false,
+  right: false,
 };
 
 let a = new THREE.Vector3();
@@ -82,17 +91,54 @@ document.body.addEventListener("keyup", function (e) {
   if (keys[key] !== undefined) keys[key] = false;
 });
 
+document.body.addEventListener("touchstart", function (e) {
+  let touch = e.touches[0];
+  let x = touch.clientX;
+  let y = touch.clientY;
+
+  // check if the touch is on the left or right side of the screen
+  if (x < window.innerWidth / 2) {
+    keys.left = true;
+  } else {
+    keys.right = true;
+  }
+});
+document.body.addEventListener("touchend", function (e) {
+  keys.left = false;
+  keys.right = false;
+});
+document.body.addEventListener("touchmove", function (e) {
+  let touch = e.touches[0];
+  let x = touch.clientX;
+  let y = touch.clientY;
+
+  // check if the user is swiping up or down
+  if (y < window.innerHeight / 2) {
+    keys.forward = true;
+  } else {
+    keys.backward = true;
+  }
+});
+
 function animate() {
   requestAnimationFrame(animate);
 
   if (keys.w) speed = 0.01;
   else if (keys.s) speed = 0.005;
 
+  if (keys.forward) speed = 0.01;
+  else if (keys.backward) speed = 0.005;
+
   velocity += (speed - velocity) * 0.08;
   ship.translateZ(velocity);
   if (keys.a) {
     ship.rotateY(0.0001);
   } else if (keys.d) {
+    ship.rotateY(-0.0001);
+  }
+  if (keys.left) {
+    ship.rotateY(0.0001);
+  } else if (keys.right) {
     ship.rotateY(-0.0001);
   }
 
@@ -301,7 +347,7 @@ function setRenderer() {
       canvas: experience.value,
       alpha: true,
     });
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
   }
 }
 
