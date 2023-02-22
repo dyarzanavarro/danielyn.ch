@@ -15,7 +15,9 @@
     "vue3-notion": "^0.1.36"
   },
   "dependencies": {
+    "@tresjs/core": "^1.6.3",
     "@tweenjs/tween.js": "^18.6.4",
+    "lunchboxjs": "^0.2.1020",
     "pixi.js": "^7.0.5",
     "three": "^0.148.0",
     "vue-gtag": "^2.0.1",

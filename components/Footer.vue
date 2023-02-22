@@ -52,7 +52,9 @@
           Let's. build. it.
         </h1>
 
-        <div class="my-6 text-base text-color f-f-l"></div>
+        <div class="my-6 text-base text-color f-f-l dark:text-gray-200">
+          Contact me
+        </div>
         <div class="text-sm text-color mb-10 f-f-l dark:text-gray-200">
           <p>© {{ year }} - Made with ❤️</p>
         </div>
