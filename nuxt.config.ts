@@ -12,7 +12,7 @@ export default ({
     colorMode: { classSuffix: '', preference: 'dark' },
     runtimeConfig: {
         public: {
-            apiKey: process.env.WEATHER_API_KEY
+            apiKey: process.env.NUXT_ENV_WEATHER_API_KEY
         }
     },
     build: {
