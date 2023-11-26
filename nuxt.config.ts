@@ -8,8 +8,13 @@ export default ({
 
         }
     },
-    modules: ['@nuxtjs/color-mode'],
+    modules: ['@nuxtjs/color-mode', '@tresjs/nuxt'],
     colorMode: { classSuffix: '', preference: 'dark' },
+    runtimeConfig: {
+        public: {
+            apiKey: process.env.WEATHER_API_KEY
+        }
+    },
     build: {
         postcss: {
             postcssOptions: {

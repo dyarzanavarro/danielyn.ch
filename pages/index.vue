@@ -1,49 +1,16 @@
 <template>
   <div>
     <div
-      class="
-        grid
-        max-w-screen-xl
-        px-4
-        py-2
-        mx-auto
-        lg:gap-8
-        xl:gap-0
-        lg:grid-cols-12
-      "
+      class="grid max-w-screen-xl px-4 py-2 pt-32 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12"
     >
       <div class="mr-auto place-self-center lg:col-span-7">
         <span
-          class="
-            bg-clip-text
-            text-transparent
-            bg-gradient-to-r
-            from-[#44BCFF]
-            via-[#FF44EC]
-            to-[#FF675E]
-            max-w-2xl
-            mb-4
-            text-4xl
-            font-bold
-            lg:text-7xl
-            leading-none
-            tracking-wide
-            md:text-5xl
-            xl:text-6xl
-          "
+          class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] max-w-2xl mb-4 text-4xl font-bold lg:text-7xl leading-none tracking-wide md:text-5xl xl:text-6xl"
         >
           {{ introMessage[i] }}
         </span>
         <p
-          class="
-            max-w-2xl
-            my-6
-            font-normal
-            md:text-xl
-            lg:text-2xl
-            text-gray-800
-            dark:text-gray-400
-          "
+          class="max-w-2xl my-6 font-normal md:text-xl lg:text-2xl text-gray-800 dark:text-gray-400"
         >
           Nowadays, I'm dipping my toes in SCRUM product ownership & creating
           intuitive user journeys that drive up value and supports long-term
@@ -52,44 +19,10 @@
         </p>
         <nuxt-link class="relative inline-flex mt-2 group" to="/process">
           <div
-            class="
-              absolute
-              transition-all
-              duration-1000
-              opacity-30
-              inset-0
-              bg-gradient-to-r
-              from-[#44BCFF]
-              via-[#FF44EC]
-              to-[#FF675E]
-              rounded-xl
-              blur-lg
-              filter
-              group-hover:opacity-100 group-hover:duration-300
-            "
+            class="absolute transition-all duration-1000 opacity-30 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-300"
           ></div>
           <div
-            class="
-              inline-flex
-              items-center
-              justify-center
-              mr-3
-              text-base
-              font-medium
-              text-center
-              rounded-lg
-              bg-primary-700
-              focus:ring-4 focus:ring-primary-300
-              text-gray-800
-              border border-transparent
-              rounded-lg
-              hover:bg-indigo-700
-              focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-indigo-600
-              dark:text-gray-200
-            "
+            class="inline-flex items-center justify-center mr-3 text-base font-medium text-center rounded-lg bg-primary-700 focus:ring-4 focus:ring-primary-300 text-gray-800 border border-transparent rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 dark:text-gray-200"
           >
             Learn more about me
             <svg
@@ -109,7 +42,7 @@
       </div>
       <div class="lg:mt-0 lg:col-span-5 lg:flex pt-12 relative z-100">
         <img
-          class="motion-safe:animate-bounce w-12/12"
+          class="w-12/12"
           :src="imgLoad[0]"
           alt="floating robot"
         />
@@ -130,9 +63,8 @@
       >
         Profile & Contact
       </div>
-      <div class="bg-slate-100 inset-x-0 bottom-0">
-        <profile-card />
-      </div>
+
+      <profile-card />
     </div>
   </div>
 </template>
@@ -143,24 +75,15 @@
 export default {
   data() {
     return {
-      imgLoad: [
-        "/img/floating_robot.svg",
-        "/img/floating_robot1.png",
-        "/img/floating_robot2.png",
-        "/img/floating_robot3.png",
-        "/img/floating_robot4.png",
-        "/img/floating_robot5.png",
-        "/img/floating_robot6.png",
-        "/img/floating_robot7.png",
-      ],
+      imgLoad: ["/img/dan_1.png"],
 
       introMessage: [
         "Daniel is a UX Advocate working in B2C E-commerce in Zurich",
         "Daniel is a guy that likes good food",
         "Daniel loves AI, XR, and UX - (all buzzwords in one)",
         "Daniel in the third person is weird",
-        "Daniel has a background in computer science and has been working in the tech industry for several years",
-        "Daniel is a problem-solver and loves to tackle challenges in both his personal and professional life",
+        "Daniel has a background in computer science",
+        "Daniel is a problem-solver",
         "Daniel enjoys traveling and experiencing new cultures",
       ],
       i: "0",

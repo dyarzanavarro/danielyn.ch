@@ -1,5 +1,5 @@
 <template>
-  <body class="overflow-hidden bg-slate-100 h-max dark:bg-slate-900">
+  <body class="overflow-hidden bg-slate-100  pt-16 h-max dark:bg-slate-900">
     <div
       class="
         flex

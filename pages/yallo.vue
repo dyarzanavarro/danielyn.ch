@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-screen-xl px-6 mx-auto">
-    <div class="px-4 w-full flex items-center justify-between">
+  <div class="max-w-screen-xl px-6 mx-auto  pt-16">
+    <div class="px-4 w-full flex items-center justify-between  pt-16">
       <div
         class="
           flex

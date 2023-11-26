@@ -1,16 +1,8 @@
 <template>
-  <div class="max-w-screen-xl px-6 mx-auto">
-    <div class="px-4 w-full flex items-center justify-between">
+  <div class="max-w-screen-xl px-6  pt-16 mx-auto">
+    <div class="px-4 w-full flex items-center justify-between  pt-16">
       <div
-        class="
-          flex
-          items-center
-          pt-3
-          text-gray-700
-          dark:text-gray-200 dark:text-gray-200
-          hover:text-indigo-700
-          cursor-pointer
-        "
+        class="flex items-center pt-3 text-gray-700 dark:text-gray-200 dark:text-gray-200 hover:text-indigo-700 cursor-pointer"
       >
         <svg
           width="14"
@@ -44,42 +36,18 @@
         </svg>
         <nuxt-link to="/yallo">
           <p
-            class="
-              text-sm
-              font-medium
-              leading-none
-              ml-3
-              text-gray-700
-              dark:text-gray-200
-              hover:text-indigo-700
-            "
+            class="text-sm font-medium leading-none ml-3 text-gray-700 dark:text-gray-200 hover:text-indigo-700"
           >
             Previous
           </p>
         </nuxt-link>
       </div>
       <div
-        class="
-          flex
-          items-center
-          pt-3
-          text-gray-700
-          dark:text-gray-200 dark:text-gray-200
-          hover:text-indigo-700
-          cursor-pointer
-        "
+        class="flex items-center pt-3 text-gray-700 dark:text-gray-200 dark:text-gray-200 hover:text-indigo-700 cursor-pointer"
       >
         <nuxt-link to="/portfolio">
           <p
-            class="
-              text-sm
-              font-medium
-              leading-none
-              mr-3
-              text-gray-700
-              dark:text-gray-200
-              hover:text-indigo-700
-            "
+            class="text-sm font-medium leading-none mr-3 text-gray-700 dark:text-gray-200 hover:text-indigo-700"
           >
             Next
           </p>
@@ -118,24 +86,7 @@
     </div>
     <div class="px-4 pt-6">
       <div
-        class="
-          bg-clip-text
-          text-transparent
-          bg-gradient-to-r
-          from-[#44BCFF]
-          via-[#FF44EC]
-          to-[#FF675E]
-          max-w-2xl
-          mb-4
-          text-4xl
-          font-bold
-          lg:text-7xl
-          leading-none
-          tracking-wide
-          md:text-5xl
-          xl:text-6xl
-          py-4
-        "
+        class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] max-w-2xl mb-4 text-4xl font-bold lg:text-7xl leading-none tracking-wide md:text-5xl xl:text-6xl py-4"
       >
         Sunrise
       </div>
@@ -176,27 +127,13 @@
           <div class="pl-3 w-full">
             <p
               tabindex="0"
-              class="
-                focus:outline-none
-                text-sm
-                font-medium
-                leading-5
-                text-gray-700
-                dark:text-gray-200
-              "
+              class="focus:outline-none text-sm font-medium leading-5 text-gray-700 dark:text-gray-200"
             >
               Type
             </p>
             <p
               tabindex="0"
-              class="
-                focus:outline-none
-                text-xs
-                leading-normal
-                pt-2
-                text-gray-700
-                dark:text-gray-200
-              "
+              class="focus:outline-none text-xs leading-normal pt-2 text-gray-700 dark:text-gray-200"
             >
               Employment
             </p>
@@ -221,27 +158,13 @@
           <div class="pl-3 w-full">
             <p
               tabindex="0"
-              class="
-                focus:outline-none
-                text-sm
-                font-medium
-                leading-5
-                text-gray-700
-                dark:text-gray-200
-              "
+              class="focus:outline-none text-sm font-medium leading-5 text-gray-700 dark:text-gray-200"
             >
               ToDos
             </p>
             <p
               tabindex="0"
-              class="
-                focus:outline-none
-                text-xs
-                leading-normal
-                pt-2
-                text-gray-700
-                dark:text-gray-200
-              "
+              class="focus:outline-none text-xs leading-normal pt-2 text-gray-700 dark:text-gray-200"
             >
               UX / UI Design | A/B Testing | E-Commerce | X-Sell | Jquery
             </p>
@@ -267,27 +190,13 @@
           <div class="pl-3 w-full">
             <p
               tabindex="0"
-              class="
-                focus:outline-none
-                text-sm
-                font-medium
-                leading-5
-                text-gray-700
-                dark:text-gray-200
-              "
+              class="focus:outline-none text-sm font-medium leading-5 text-gray-700 dark:text-gray-200"
             >
               Link
             </p>
             <p
               tabindex="0"
-              class="
-                focus:outline-none
-                text-xs
-                leading-normal
-                pt-2
-                text-gray-700
-                dark:text-gray-200
-              "
+              class="focus:outline-none text-xs leading-normal pt-2 text-gray-700 dark:text-gray-200"
             >
               <a target="_blank" href="https://sunrise.ch/">Website</a>
             </p>
@@ -298,105 +207,75 @@
 
     <div class="px-4 lg:pt-8 pt-6">
       <img
-        class="
-          h-96
-          rounded-t
-          w-full
-          lg:object-contain lg:object-top
-          object-cover object-left
-        "
-        src="/img/psych_01.png"
+        class="h-96 rounded-t w-full lg:object-contain lg:object-top object-cover object-left"
+        src="/img/sunrise_1-min.png"
         alt="Empathy process showing Daniel in a Group"
       />
     </div>
     <div class="px-4 lg:pt-8 pt-6">
       <div
-        class="
-          font-bold
-          text-gray-700
-          dark:text-gray-200
-          lg:text-3xl
-          text-2xl
-          pb-6
-        "
+        class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl pb-6"
       >
-        Project Purpose and Goal
+        Purpose and Goal
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend. <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        The purpose of this project was to enhance the user experience across
+        our digital platforms by identifying areas for improvement and
+        implementing data-driven design changes. Our goal was to streamline
+        individual components, simplify interfaces, and create a more intuitive
+        user journey, ultimately leading to increased user satisfaction and
+        conversion rates.<br />
+        By leveraging A/B testing and comprehensive UX research, we aimed to
+        establish a robust design system that not only meets but anticipates the
+        users' needs.
       </div>
     </div>
 
     <div
-      class="
-        mx-auto
-        grid
-        sm:grid-cols-2
-        md:grid-cols-2
-        lg:grid-cols-2
-        xl:grid-cols-2
-        px-4
-        lg:pt-8
-        pt-6
-        gap-8
-      "
+      class="mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 px-4 lg:pt-8 pt-6 gap-8"
     >
       <div class="rounded pb-6">
         <img
           class="h-96 rounded-t w-full object-contain object-center"
-          src="/img/psych_2.png"
+          src="/img/ab_select-new.png"
           alt="Empathy process showing Daniel in a Group"
         />
       </div>
       <div class="rounded">
         <div
-          class="
-            font-bold
-            text-gray-700
-            dark:text-gray-200
-            lg:text-3xl
-            text-2xl
-            pb-6
-          "
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl pb-6"
         >
           Workflow and Decisions
         </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-          nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-          eleifend. <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-          nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-          eleifend.
+          Our workflow was iterative and user-centered, beginning with in-depth
+          research to understand user behaviors, needs, and pain points.
+          Decisions were made through a collaborative process that integrated
+          insights from cross-functional teams, including development,
+          marketing, and customer support.<br />
+          A/B testing played a crucial role in validating our hypotheses,
+          allowing us to make informed decisions with quantifiable results. Each
+          design iteration was subjected to rigorous analysis to ensure that we
+          were moving in the right direction towards our strategic objectives.
         </div>
       </div>
     </div>
 
     <div class="px-4 lg:pt-8 pt-6 grid place-items-center pb-6">
       <div
-        class="
-          font-bold
-          text-gray-700
-          dark:text-gray-200
-          lg:text-3xl
-          text-2xl
-          pb-6
-        "
+        class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl pb-6"
       >
         Thoughts & Hickups along the way
       </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend. <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        Throughout the project, we encountered several challenges, including
+        aligning cross-departmental goals and adapting to shifting user
+        expectations. Some of our initial hypotheses were disproven during A/B
+        tests, requiring us to pivot and explore alternative solutions. <br />
+        These hiccups, while at times slowing our progress, provided valuable
+        learning experiences that enriched our understanding of the user
+        experience and informed our subsequent iterations, resulting in a more
+        resilient and adaptive design strategy. 
       </div>
     </div>
   </div>

@@ -1,12 +1,11 @@
 <template>
-  <div class="max-w-screen-xl px-6 mx-auto">
-    <div class="px-4 w-full flex items-center justify-between">
+  <div class="max-w-screen-xl px-6 mx-auto  pt-16">
+    <div class="px-4 w-full flex items-center justify-between  pt-16">
       <div
         class="
           flex
           items-center
-          pt-3
-          text-gray-700
+                   text-gray-700
           dark:text-gray-200 dark:text-gray-200
           hover:text-indigo-700
           cursor-pointer
@@ -352,18 +351,28 @@
             dark:text-gray-200
             lg:text-3xl
             text-2xl
-            pb-6
+            pb-2
+          
           "
         >
           Workflow and Decisions
         </div>
+        <div
+              tabindex="0"
+              class="
+                focus:outline-none
+                text-sm
+                font-medium
+                text-gray-700
+                dark:text-gray-200
+                pb-6
+              "
+            >
+            "From Blueprint to Digital Reality: The psyCH Project"
+            </div>
         <div class="text-gray-400 lg:text-2xl sm:text-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-          nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-          eleifend. <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-          nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-          eleifend.
+          Our workflow was a meticulous journey from ideation to execution. We started with a comprehensive needs analysis, followed by a strategic roadmap that balanced innovative design with psychological insights. Each decision was data-driven, from the selection of the tech stack to the user interface, ensuring a seamless experience for psychology students. <br />
+          We prioritized accessibility, responsive design, and intuitive navigation, making complex information approachable and engaging.
         </div>
       </div>
     </div>
@@ -376,18 +385,27 @@
           dark:text-gray-200
           lg:text-3xl
           text-2xl
-          pb-6
+          pb-2
         "
       >
-        Thoughts & Hickups along the way
+        Thoughts & Hiccups along the way
       </div>
+      <div
+              tabindex="0"
+              class="
+                focus:outline-none
+                text-sm
+                font-medium
+                text-gray-700
+                dark:text-gray-200
+                pb-6
+              "
+            >
+            "From Blueprint to Digital Reality: The psyCH Project"
+            </div>
       <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend. <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
-        nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
-        eleifend.
+        Every project teaches us valuable lessons, and psyCH was no exception. We encountered unexpected challenges, such as integrating complex content with a user-friendly CMS. Adapting to evolving user feedback during the development process was a hurdle that led to several pivots in our approach. <br />
+        Through it all, we maintained a focus on the project's vision, which allowed us to turn potential stumbling blocks into stepping stones for innovation and improvement.
       </div>
     </div>
   </div>

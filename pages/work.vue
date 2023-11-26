@@ -1,5 +1,5 @@
 <template>
-  <div class="justify-center w-full max-w-screen-xl px-6 mx-auto">
+  <div class="justify-center w-full max-w-screen-xl px-6 mx-auto  pt-16">
     <div class="justify-center w-full px-4 pt-12">
       <div
         class="

@@ -52,9 +52,13 @@
           Let's. build. it.
         </h1>
 
+        <a
+                :href="`mailto:'danielyarza1@gmail.com?subject=I found your website and I'd love to get to know you better!`"
+              >
         <div class="my-6 text-base text-color f-f-l dark:text-gray-200">
           Contact me
         </div>
+        </a>
         <div class="text-sm text-color mb-10 f-f-l dark:text-gray-200">
           <p>© {{ year }} - Made with ❤️</p>
         </div>

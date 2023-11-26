@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-slate-100 h-max dark:bg-slate-900">
-    <Nav />
-    <slot />
+  <div class="bg-beige h-max dark:bg-slate-900">
+    <Nav/>
+    <slot class/>
     <Footer />
   </div>
 </template>

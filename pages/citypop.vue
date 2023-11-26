@@ -8,6 +8,7 @@
         md:grid-cols-3
         lg:grid-cols-6
         h-4/5
+        pt-16
         overflow-hidden
       "
     >

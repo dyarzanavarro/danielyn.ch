@@ -18,7 +18,10 @@ module.exports = {
       animation: {
         bounce: 'bounce 6s ease infinite',
 
-      }
+      },
+      colors: {
+        'bg-beige': '#e9ddca',
+      },
     },
   },
   plugins: [],
