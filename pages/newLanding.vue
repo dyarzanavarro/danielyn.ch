@@ -29,13 +29,16 @@
       </div>
     </div>
   </div>
-  <div class="container"><div class="text-7xl">Hi</div></div>
-  <div class="container"><div class="text-7xl">Hi</div></div>
-  <div class="container"><div class="text-7xl">Hi</div></div>
+  <div class="container">
+
+     <work-cards/>
+  
+  </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+
+
 </script>
 
 <style>

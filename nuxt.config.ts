@@ -8,8 +8,9 @@ export default ({
 
         }
     },
-    modules: ['@nuxtjs/color-mode', '@tresjs/nuxt'],
+    modules: ['@nuxtjs/color-mode', '@tresjs/nuxt', 'nuxt-swiper'],
     colorMode: { classSuffix: '', preference: 'dark' },
+    swiper: {},
     runtimeConfig: {
         public: {
             apiKey: process.env.NUXT_ENV_WEATHER_API_KEY

@@ -19,6 +19,7 @@
     "@tresjs/cientos": "^3.6.0",
     "@tresjs/nuxt": "^1.2.2",
     "@tweenjs/tween.js": "^18.6.4",
+    "nuxt-swiper": "^1.2.2",
     "pixi.js": "^7.0.5",
     "three": "^0.148.0",
     "vue-gtag": "^2.0.1",
