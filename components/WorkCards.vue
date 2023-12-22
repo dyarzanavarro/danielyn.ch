@@ -88,3 +88,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.swiper-3d .swiper-slide-shadow{
+  background: none !important;
+}
+</style>
