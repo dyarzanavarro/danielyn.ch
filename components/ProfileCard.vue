@@ -25,7 +25,7 @@
         <div
           class="pt-3 xl:pt-5 flex flex-col xl:flex-row items-start xl:items-center justify-between"
         >
-          <div class="xl:pr-16 w-full xl:w-2/3">
+          <div class="xl:pr-16 w-full xl:w-2/5">
             <div
               class="text-center xl:text-left mb-3 xl:mb-0 flex flex-col xl:flex-row items-center justify-between xl:justify-start"
             >
@@ -49,12 +49,12 @@
             </p>
           </div>
           <div
-            class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-1/3"
+            class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-2/4"
           >
-          <WeatherCard/>
-             </div>
+            <WeatherCard />
+          </div>
           <div
-            class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-1/3"
+            class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-1/4"
           >
             <div class="mr-6 xl:mr-10">
               <a

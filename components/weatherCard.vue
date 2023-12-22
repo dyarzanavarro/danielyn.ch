@@ -47,13 +47,13 @@ onMounted(fetchWeather); // Fetch weather data when component is mounted
         <div class="flex items-center">
           <!-- Use SVG or IMG tag for weather icon -->
           <img
-            class="w-10 h-10"
+            class="w-8 h-8"
             :src="`https://cdn.weatherapi.com/weather/64x64/day/${weather.current.condition.icon
               .split('/')
               .pop()}`"
             alt="Weather Icon"
           />
-          <p class="ml-2 text-gray-700">{{ weather.current.condition.text }}</p>
+          <p class="mr-2 text-gray-700">{{ weather.current.condition.text }}</p>
         </div>
         <div class="text-right">
           <p class="text-sm text-gray-500">
