@@ -61,7 +61,6 @@
         class="
           flex
           items-center
-          pt-3
           text-gray-700
           dark:text-gray-200 dark:text-gray-200
           hover:text-indigo-700
@@ -141,11 +140,10 @@
     </div>
 
     <div class="px-4 lg:pt-8 pt-6">
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         Taking over an aging web presence & creating intuitive user journeys
         that drive up value and supports long-term growth.
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4"></div>
     </div>
     <div class="px-4 lg:pt-8 pt-6 flex justify-evenly">
       <div class="flex items-center pb-6">
@@ -313,7 +311,7 @@
       >
         Project Purpose and Goal
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         Ensuring customer-facing teams are aligned & equipped for success.
         Supporting and sharing best practices across the network. Being
         accountable for end-to-end project delivery & operations, spanning from
@@ -370,7 +368,7 @@
             >
             "From Blueprint to Digital Reality: The psyCH Project"
             </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           Our workflow was a meticulous journey from ideation to execution. We started with a comprehensive needs analysis, followed by a strategic roadmap that balanced innovative design with psychological insights. Each decision was data-driven, from the selection of the tech stack to the user interface, ensuring a seamless experience for psychology students. <br />
           We prioritized accessibility, responsive design, and intuitive navigation, making complex information approachable and engaging.
         </div>
@@ -401,9 +399,8 @@
                 pb-6
               "
             >
-            "From Blueprint to Digital Reality: The psyCH Project"
             </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         Every project teaches us valuable lessons, and psyCH was no exception. We encountered unexpected challenges, such as integrating complex content with a user-friendly CMS. Adapting to evolving user feedback during the development process was a hurdle that led to several pivots in our approach. <br />
         Through it all, we maintained a focus on the project's vision, which allowed us to turn potential stumbling blocks into stepping stones for innovation and improvement.
       </div>

@@ -143,11 +143,11 @@
     </div>
 
     <div class="px-4 lg:pt-8 pt-6">
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         Dipping my toes in SCRUM product ownership & creating intuitive user
         journeys that drive up value and supports long-term growth.
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
         nisi justo, ac rhoncus nibh malesuada a. Ut tempus ultricies ante id
         eleifend.
@@ -312,7 +312,7 @@
       >
         Project Purpose and Goal
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         The primary goal of this portfolio was to create a digital canvas that not only showcases my work but also reflects my expertise in web development. Utilizing Nuxt3, the aim was to build an SEO-friendly, high-performing platform that stands out in both speed and user experience. <br />
         The portfolio serves as a testament to my ability to blend modern design with functionality, all while adhering to the principles of clean code and maintainability.
       </div>
@@ -352,7 +352,7 @@
         >
           Workflow and Decisions
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           The iterative process of building this portfolio centered on a strategic workflow that embraced both design and development agility. Nuxt.js was chosen for its versatility and its server-side rendering capabilities, ensuring a robust foundation. Tailwind CSS was integrated for its utility-first approach, which significantly accelerated the styling process. <br />
           It allowed for rapid prototyping and iterative design enhancements, providing a scalable and customizable CSS framework that matched the evolving nature of the portfolio.
         </div>
@@ -372,7 +372,7 @@
       >
         Thoughts & Hickups along the way
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         Developing my portfolio was a journey marked by continuous learning and adaptation. Embracing Nuxt.js and Tailwind CSS was only the beginning. The real challenge was in refining the user experience and achieving a balance between aesthetic appeal and technical performance. <br />
         There were hiccups, notably in optimizing media content and ensuring a seamless responsive layout across devices. These challenges were invaluable lessons, highlighting the importance of iterative improvements and the relentless pursuit of excellence.
       </div>

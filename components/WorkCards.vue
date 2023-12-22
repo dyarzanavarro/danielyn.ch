@@ -1,4 +1,5 @@
 <template>
+  <div class = "pt-12">
     <Swiper
     :modules="[SwiperAutoplay, SwiperEffectCards]"
     :slides-per-view="1"
@@ -20,7 +21,7 @@
   >
     <SwiperSlide v-for="project in projects" :key="project.id" :style="`background-color: none; color: none`">
       <nuxt-link :to="project.link">
-        <div class="max-w-sm bg-stone-100 dark:bg-gray-700 dark:hover:shadow dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-white shadow-xl rounded-xl hover:text-gray-900 focus:text-gray-900 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 hover:animate-pulse mx-auto">
+        <div class="max-w-sm bg-stone-100 dark:bg-gray-700 dark:hover:shadow dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-white shadow-xl rounded-xl hover:text-gray-900 focus:text-gray-900 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300  mx-auto">
           <img :src="project.imageUrl" :alt="project.imageAlt" class="w-full h-96 object-cover object-top rounded-xl" />
           <div class="p-6">
             <div class="flex items-center justify-between">
@@ -36,6 +37,7 @@
       </nuxt-link>
     </SwiperSlide>
   </Swiper>
+</div>
 </template>
 
 <script>
@@ -51,7 +53,7 @@ export default {
           date: '22 may',
           readTime: '10 min read',
           title: 'yallo - Upgrading a brand to a new level',
-          description: 'Full migration of Legacy System, from moving to a new Design System to replatforming on new tech stack. Co-Design, strategy & implementation for new web representation. Establishing a holistic approach to product and user journey decisions & design Close Work with development team as SCRUM Product Owner of the Frontend of several applications.'
+          description: 'Full migration of Legacy System, from moving to a new Design System to replatforming on new tech stack.'
         },
         {
           id: 'Sunrise',
@@ -61,7 +63,7 @@ export default {
           date: '14 oct',
           readTime: '5 min read',
           title: 'Sunrise eShop - Selling digital products',
-          description: ' Part of a small and new UX team, Cowork in establishing a new Design System and establishing a Data first approach to requirements gathering. Setting up a an A/B Testing pipeline (Target), designing and developing ad-hoc for Sales related projects. Close interaction with the eCommerce Team in Design Thinking Workshops and qualitative User Research.'
+          description: ' Setting up a an A/B Testing pipeline (Target), designing and developing ad-hoc for Sales related projects. Close interaction with the eCommerce Team in Design Thinking Workshops and qualitative User Research.'
         },
         {
           id: 'portfolio',
@@ -71,7 +73,7 @@ export default {
           date: '04 mar',
           readTime: '8 min read',
           title: 'Showcase - Time for Nuxt3 and Tailwind',
-          description: '                In order to keep up to date with modern frameworks I built this page as a playground to showcase experiments and ideas'
+          description: 'In order to keep up to date with modern frameworks I built this page as a playground to showcase experiments and ideas'
         },
         {
           id: 'psych',
@@ -81,7 +83,7 @@ export default {
           date: '12 jan',
           readTime: '5 min read',
           title: 'Psychology Hub Redesign & Enhancement',
-          description: '              Delivering a fresh, user-friendly experience, we overhauled the design, implemented a robust backend, and integrated a content management system tailored for the dynamic needs of psychology students seeking knowledge and growth.'
+          description: 'Delivering a overhauled design, implemented a robust backend and content management system tailored for psychology students org.'
         },
       ]
     };

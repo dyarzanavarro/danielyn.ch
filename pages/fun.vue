@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="container px-4 lg:pt-8 pt-6">
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         Life can't be just about work. I like to spend my free time doing a
         bunch of different stuff. Learn more about my hobbies and interests.
       </div>
@@ -48,7 +48,7 @@
             >
               Boardgames
             </h3>
-            <p class="mt-5 text-base text-gray-600 font-pj">
+            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
               Boardgames are a great way to spend time with friends and family.
               I love playing games like House on the Haunted Hill, Ticket to
               Ride, and Pandemic. I've also enjoyed creating my own games that
@@ -62,7 +62,7 @@
             >
               Loved ones
             </h3>
-            <p class="mt-5 text-base text-gray-600 font-pj">
+            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
               I spend most of my time with my wonderful partner Vanessa and cute
               dog Boo. He's a Ratonero Analuz, which means he'll play fletch
               until he dies. I'll pay the dog tax over here with cute images
@@ -75,7 +75,7 @@
             >
               Reading
             </h3>
-            <p class="mt-5 text-base text-gray-600 font-pj">
+            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
               I switched to a Kindle a couple of years ago and won't go back I
               love devouring mostly science fiction and fantasy books. Now and
               again I pick up a psychology textbook to keep up to date with
@@ -96,7 +96,7 @@
               >
                 Game Design
               </h3>
-              <p class="mt-5 text-base text-gray-600 font-pj">
+              <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
                 I have a passion for the game industry and have used Unity in
                 the past to spin up small games and prototypes. Additionally,
                 I've been fascinated with XR these last few years.
@@ -112,7 +112,7 @@
             >
               Traveling
             </h3>
-            <p class="mt-5 text-base text-gray-600 font-pj">
+            <p class="mt-5 text-base text-gray-600 font-pj dark:text-gray-400">
               I love traveling and have been to 30+ countries. I'm always
               looking for new places to visit and new experiences to have.
             </p>
@@ -126,7 +126,7 @@
             >
               Cooking
             </h3>
-            <p class="mt-5 text-base text-gray-600 font-pj">
+            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
               Cooking is a passion of mine and I love trying new recipes and
               cuisines. I've been known to make some mean pasta and ramen bowls.
             </p>

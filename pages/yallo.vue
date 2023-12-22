@@ -142,14 +142,14 @@
     </div>
 
     <div class="px-4 lg:pt-8 pt-6">
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         Part of the technical operational steering and digital decisions around
         the brand yallo & Lebara. Trying to bridge the gap between Development
         and Business priorities means having a clear approach to iterative
         design and development. Keeping an end user in mind is the key to make
         the right decisions.
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pt-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pt-6">
         I also served as the product owner for several frontend applications,
         including a legacy application and a new Angular team. My focus was on
         driving transformation and operational excellence for these
@@ -322,7 +322,7 @@
       >
         Position purpose and key activities
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         As a product owner at Yallo & Lebara, my purpose was to drive the
         development of new features while overseeing the transformation from
         legacy stack to new frontend. My key activities included:
@@ -391,7 +391,7 @@
         >
           Workflow and decisions
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           As a product owner, I had to balance the needs of the business with
           the needs of the end-users. To achieve this, I had to collaborate and
           communicate closely with different stakeholders to ensure that new
@@ -417,7 +417,7 @@
       >
         Thoughts & Hickups along the way
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         I had to transition from the legacy stack to a new frontend which
         required a lot of time and effort to ensure a smooth transition. This
         involved identifying and addressing technical debt, as well as training

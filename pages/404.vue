@@ -56,7 +56,7 @@
             md:text-xl
             lg:text-2xl
             text-gray-800
-            dark:text-gray-400
+            dark:text-gray-800
           "
         >
           The content you’re looking for doesn’t exist. Either it was removed,
@@ -69,7 +69,7 @@
             md:text-xl
             lg:text-2xl
             text-gray-800
-            dark:text-gray-400
+            dark:text-gray-800
           "
         >
           Sorry about that! Please visit home to get where you need to go.

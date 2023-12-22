@@ -26,7 +26,7 @@
     </div>
 
     <div class="container px-4 lg:pt-8 pt-6">
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         The design thinking process are the guidelines I follow during the
         creation of a new solution. Adapting these steps to each different
         project and given requirements helps me to find the right solution. Here
@@ -45,7 +45,7 @@
         >
           Empathy and Understanding
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           A good design solution can never be carried out without a previous
           phase of analysis and research summed up into key insights to start
           the ideation phase. Together with my team, we have carried on user and
@@ -101,7 +101,7 @@
         >
           Inspiration & Structured Design
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           A good design solution can never be carried out without a previous
           phase of analysis and research summed up into key insights to start
           the ideation phase. Together with my team, we have carried on user and
@@ -122,7 +122,7 @@
         >
           UX in every detail
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           UX responsibility in projects and sales efforts on the E-commerce
           platforms yallo.ch; lebara.ch and swype.ch. Collaboration in design &
           development, improving/designing user journeys and mentoring an
@@ -142,7 +142,7 @@
         >
           A good product needs the best implementation
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           The most perfect design will be never good enough if there is no
           alignment between design and implementation. As part of the process, I
           have always worked in constant interaction with the devs team in order

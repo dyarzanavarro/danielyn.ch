@@ -1,10 +1,26 @@
 <template>
   <div>
-    <canvas ref="experience" />
+    <canvas ref="experience"></canvas>
+    <div
+      v-show="isPaused"
+      class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50"
+    >
+      {{ console.log("Pause menu should be visible:", isPaused) }}
+      <div class="text-center">
+        <h1 class="text-white text-4xl mb-4">Game Paused</h1>
+        <button
+          @click="togglePause"
+          class="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        >
+          Resume Game
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import * as THREE from "three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -13,6 +29,8 @@ import { Sky } from "three/examples/jsm/objects/Sky.js";
 import { Ref } from "vue";
 import { ImprovedNoise } from "three/examples/jsm/math/ImprovedNoise.js";
 import { setUncaughtExceptionCaptureCallback } from "process";
+
+const isPaused = ref(false);
 
 let renderer: THREE.WebGLRenderer;
 let controls: OrbitControls;
@@ -89,7 +107,22 @@ for (let i = 0, j = 0, l = vertices.length; i < l; i++, j += 3) {
   vertices[j + 1] = data[i] * 10;
 }
 
-//
+// Generate coins
+
+const coinGeometry = new THREE.SphereGeometry(6, 64, 64); // Adjust size as needed
+const coinMaterial = new THREE.MeshBasicMaterial({ color: 0xffd700 }); // Gold color for coins
+const coins = [];
+
+function generateCoins() {
+  const coin = new THREE.Mesh(coinGeometry, coinMaterial);
+  const offsetRange = 150; // Adjust the range around the boat where coins can appear
+  const x = ship.position.x + (Math.random() - 0.5) * 2 * offsetRange;
+  const z = ship.position.z + (Math.random() - 0.5) * 2 * offsetRange;
+  const y = 10; // Height above the water surface
+  coin.position.set(x, y, z);
+  scene.add(coin);
+  coins.push(coin);
+}
 
 texture = new THREE.CanvasTexture(
   generateTexture(data, worldWidth, worldDepth)
@@ -238,7 +271,13 @@ document.body.addEventListener("touchmove", function (e) {
   }
 });
 
+let coinSpawnTimer = 0;
+const coinSpawnInterval = 1; // Time in seconds between coin spawns
+let clock = new THREE.Clock();
+
 function animate() {
+  if (isPaused.value) return; // Stop the animation loop if paused
+
   requestAnimationFrame(animate);
 
   if (keys.w) speed = 0.01;
@@ -247,7 +286,7 @@ function animate() {
   if (keys.forward) speed = 0.01;
   else if (keys.backward) speed = 0.005;
 
-  velocity += (speed - velocity) * 0.08;
+  velocity += (speed - velocity) * 0.03;
   ship.translateZ(velocity);
   if (keys.a) {
     ship.rotateY(0.0001);
@@ -260,6 +299,25 @@ function animate() {
     ship.rotateY(-0.0001);
   }
 
+  const deltaTime = clock.getDelta(); // Assuming you have a THREE.Clock instance
+
+  // Coin generation
+  coinSpawnTimer += deltaTime;
+  if (coinSpawnTimer > coinSpawnInterval) {
+    generateCoins();
+    coinSpawnTimer = 0;
+  }
+
+  // Collision detection
+  coins.forEach((coin, index) => {
+    if (ship.position.distanceTo(coin.position) < 30) {
+      // Adjust collision distance as needed
+      scene.remove(coin);
+      coins.splice(index, 1);
+      // Increment score or perform other action on coin collection
+    }
+  });
+
   a.lerp(ship.position, 0.2);
   a.lerp(ship.rotation, 0.2);
 
@@ -269,6 +327,16 @@ function animate() {
   ship.add(camera);
 }
 
+function togglePause() {
+  console.log("Toggling pause. Current state:", isPaused.value);
+  isPaused.value = !isPaused.value;
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    togglePause();
+  }
+});
 // Water
 
 const waterGeometry = new THREE.PlaneGeometry(150000, 150000);

@@ -93,11 +93,11 @@
     </div>
 
     <div class="px-4 lg:pt-8 pt-6">
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         The second biggest telecommunications provider with limited UX Process
         and 0 Sales Testing Workflow
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
         Integrated in a wider UX Team meant working on individual projects,
         while keeping a Design System in mind. Due to my frontend Know-how, I
         was able to help coordinate, ideate, iterate & analyse A/B tests, that
@@ -218,7 +218,7 @@
       >
         Purpose and Goal
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         The purpose of this project was to enhance the user experience across
         our digital platforms by identifying areas for improvement and
         implementing data-driven design changes. Our goal was to streamline
@@ -247,7 +247,7 @@
         >
           Workflow and Decisions
         </div>
-        <div class="text-gray-400 lg:text-2xl sm:text-4">
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
           Our workflow was iterative and user-centered, beginning with in-depth
           research to understand user behaviors, needs, and pain points.
           Decisions were made through a collaborative process that integrated
@@ -267,7 +267,7 @@
       >
         Thoughts & Hickups along the way
       </div>
-      <div class="text-gray-400 lg:text-2xl sm:text-4 pb-6">
+      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4 pb-6">
         Throughout the project, we encountered several challenges, including
         aligning cross-departmental goals and adapting to shifting user
         expectations. Some of our initial hypotheses were disproven during A/B

@@ -1,7 +1,7 @@
 <template>
   <div class="pt-6 w-full max-w-screen-xl max-w-screen-xl dark:bg-slate-900">
     <!-- Card code block start -->
-    <div class="bg-stone-100 dark:bg-gray-800 shadow rounded">
+    <div class="bg-stone-100 dark:bg-gray-700 shadow rounded">
       <div class="relative bg-slate-100 dark:bg-gray-800">
         <img
           class="h-56 shadow rounded-xl w-full object-cover object-center"
