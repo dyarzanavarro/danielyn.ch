@@ -83,7 +83,6 @@ let ship;
 loadShip().then((loadedShip) => {
   ship = loadedShip;
 });
-console.log(ship);
 
 // Generate a terrain
 let mesh, texture;

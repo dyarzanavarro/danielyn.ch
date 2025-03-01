@@ -1,111 +1,152 @@
+<script setup>
+import { onMounted, ref } from "vue";
+const { $gsap } = useNuxtApp();
+
+// Refs for elements
+const heroText = ref(null);
+const button = ref(null);
+const workSection = ref(null);
+const profileSection = ref(null);
+
+// Data
+const introMessage = ref([
+  "Daniel is a UX Advocate working in B2C E-commerce in Zurich",
+  "Daniel is a guy that likes good food",
+  "Daniel loves AI, XR, and UX - (all buzzwords in one)",
+  "Daniel in the third person is weird",
+  "Daniel has a background in computer science",
+  "Daniel is a problem-solver",
+  "Daniel enjoys traveling and experiencing new cultures",
+]);
+const i = ref(0);
+
+// Animations
+onMounted(() => {
+  // Change intro message every 6s
+  setInterval(() => {
+    i.value = (i.value + 1) % introMessage.value.length;
+  }, 6000);
+
+  // Animate hero text
+  $gsap.fromTo(
+    heroText.value,
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+  );
+
+  // Button hover effect
+  $gsap.fromTo(
+    button.value,
+    { scale: 1 },
+    {
+      scale: 1.1,
+      duration: 0.3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      paused: true,
+    }
+  );
+
+  // Fade-in effect for "Selected Work" & "Profile & Contact" sections
+  $gsap.fromTo(
+    workSection.value,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: workSection.value,
+        start: "top 85%",
+      },
+    }
+  );
+
+  $gsap.fromTo(
+    profileSection.value,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: profileSection.value,
+        start: "top 85%",
+      },
+    }
+  );
+});
+</script>
+
 <template>
-  <div>
+  <div
+    class="min-h-screen bg-slate-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  >
+    <!-- Centered Hero Section -->
     <div
-      class="grid max-w-screen-xl px-4 py-2 pt-32 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12"
+      class="h-screen flex flex-col items-center justify-center text-center px-6"
     >
-      <div class="mr-auto place-self-center lg:col-span-7">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] max-w-2xl mb-4 text-4xl font-bold lg:text-7xl leading-none tracking-wide md:text-5xl xl:text-6xl"
-        >
-          {{ introMessage[i] }}
-        </span>
-        <p
-          class="max-w-2xl my-6 font-normal md:text-xl lg:text-2xl text-gray-800 dark:text-gray-400"
-        >
-          Nowadays, I'm dipping my toes in SCRUM product ownership & creating
-          intuitive user journeys that drive up value and supports long-term
-          growth. Get to know me better by browsing my past work, what I do for
-          fun or learn about the process I use to improve any business.
-        </p>
-        <nuxt-link class="relative inline-flex mt-2 group" to="/process">
-          <div
-            class="absolute transition-all duration-1000 opacity-30 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-300"
-          ></div>
-          <div
-            class="inline-flex items-center justify-center mr-3 text-base font-medium text-center rounded-lg bg-primary-700 focus:ring-4 focus:ring-primary-300 text-gray-800 border border-transparent rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 dark:text-gray-200"
-          >
-            Learn more about me
-            <svg
-              class="w-5 h-5 ml-2 -mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </div>
-        </nuxt-link>
-      </div>
-      <div class="lg:mt-0 lg:col-span-5 lg:flex pt-12 relative z-100">
-        <img
-          class="w-12/12"
-          :src="imgLoad[0]"
-          alt="floating robot"
-        />
-      </div>
-    </div>
-    <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-6">
-      <div
-        class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+      <h1
+        ref="heroText"
+        class="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] bg-clip-text text-transparent"
       >
-        Selected work
-      </div>
+        {{ introMessage[i] }}
+      </h1>
+      <p class="mt-4 text-lg lg:text-2xl opacity-80 max-w-3xl">
+        Nowadays, I'm dipping my toes in SCRUM product ownership & creating
+        intuitive user journeys that drive up value and support long-term
+        growth.
+      </p>
+
+      <!-- CTA Button -->
+      <nuxt-link
+        ref="button"
+        class="relative inline-flex mt-6 group"
+        to="/process"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-md opacity-30 transition-opacity duration-300 group-hover:opacity-100"
+        ></div>
+        <div
+          class="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg text-gray-800 dark:text-gray-200 border border-transparent transition-all hover:scale-105 backdrop-blur-lg bg-opacity-10"
+        >
+          Learn more about me
+          <svg
+            class="w-5 h-5 ml-2 -mr-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+      </nuxt-link>
+    </div>
+
+    <!-- Selected Work Section -->
+    <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-6">
+      <h2
+        ref="workTitle"
+        class="text-center text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]"
+      >
+        Selected Work
+      </h2>
       <work-cards />
     </div>
 
+    <!-- Profile & Contact Section -->
     <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-12">
-      <div
-        class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+      <h2
+        ref="profileTitle"
+        class="text-center text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]"
       >
         Profile & Contact
-      </div>
-
+      </h2>
       <profile-card />
     </div>
   </div>
 </template>
-
-
-
-<script>
-export default {
-  data() {
-    return {
-      imgLoad: ["/img/dan_1.png"],
-
-      introMessage: [
-        "Daniel is a UX Advocate working in B2C E-commerce in Zurich",
-        "Daniel is a guy that likes good food",
-        "Daniel loves AI, XR, and UX - (all buzzwords in one)",
-        "Daniel in the third person is weird",
-        "Daniel has a background in computer science",
-        "Daniel is a problem-solver",
-        "Daniel enjoys traveling and experiencing new cultures",
-      ],
-      i: "0",
-    };
-  },
-
-  mounted() {
-    window.setInterval(() => {
-      this.changeImg();
-      // Check if the textElement has been initialized
-      if (this.i < this.introMessage.length - 1) this.i++;
-      else this.i = 0;
-    }, 6000);
-  },
-  methods: {
-    changeImg() {
-      const first = this.imgLoad.shift();
-      this.imgLoad = this.imgLoad.concat(first);
-    },
-  },
-};
-</script>
-
-<style>
-</style>

@@ -1,100 +1,104 @@
+<script setup>
+import { onMounted, ref } from "vue";
+const { $gsap } = useNuxtApp();
+
+const profileCard = ref(null);
+const profileImage = ref(null);
+
+// GSAP Animations
+onMounted(() => {
+  // Fade-in effect on scroll
+  $gsap.fromTo(
+    profileCard.value,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: profileCard.value,
+        start: "top 85%",
+      },
+    }
+  );
+
+  // Parallax hover effect
+  profileCard.value.addEventListener("mousemove", (e) => {
+    const { width, height, left, top } =
+      profileCard.value.getBoundingClientRect();
+    const x = (e.clientX - left - width / 2) / 25;
+    const y = (e.clientY - top - height / 2) / 25;
+
+    $gsap.to(profileImage.value, {
+      x: x,
+      y: y,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  });
+
+  profileCard.value.addEventListener("mouseleave", () => {
+    $gsap.to(profileImage.value, { x: 0, y: 0, duration: 0.3 });
+  });
+});
+</script>
+
 <template>
-  <div class="pt-6 w-full max-w-screen-xl max-w-screen-xl dark:bg-slate-900">
-    <!-- Card code block start -->
-    <div class="bg-stone-100 dark:bg-gray-700 shadow rounded">
+  <div ref="profileCard" class="pt-6 w-full max-w-screen-xl dark:bg-slate-900">
+    <div
+      class="bg-stone-100 dark:bg-gray-700 shadow-lg rounded-xl overflow-hidden"
+    >
       <div class="relative bg-slate-100 dark:bg-gray-800">
         <img
-          class="h-56 shadow rounded-xl w-full object-cover object-center"
+          class="h-64 w-full object-cover shadow-lg"
           src="/img/citypop_mood-min.png"
-          alt=""
+          alt="Cover"
         />
+
+        <!-- Profile Image with Parallax -->
         <div
-          class="inset-0 m-auto w-24 h-24 absolute bottom-0 -mb-12 xl:ml-10 rounded border-2 shadow-xl rounded-xl border-white"
+          class="absolute inset-x-0 bottom-0 flex justify-center transform translate-y-1/2"
         >
           <img
-            class="w-full h-full overflow-hidden object-cover rounded"
+            ref="profileImage"
+            class="w-38 h-28 rounded-full border-4 border-white shadow-lg dark:border-gray-800"
             src="/img/citypop_Dan4-min.png"
             alt="Daniel profile image"
           />
         </div>
       </div>
-      <div class="px-5 xl:px-10 pb-10">
+
+      <div class="px-6 pt-14 pb-10 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">
+          Daniel Yarza Navarro
+        </h2>
         <div
-          class="flex justify-center xl:justify-end w-full pt-16 xl:pt-10"
-        ></div>
-        <div
-          class="pt-3 xl:pt-5 flex flex-col xl:flex-row items-start xl:items-center justify-between"
+          class="text-sm bg-indigo-600 text-white px-4 py-1 mt-2 inline-block rounded-full"
         >
-          <div class="xl:pr-16 w-full xl:w-2/5">
-            <div
-              class="text-center xl:text-left mb-3 xl:mb-0 flex flex-col xl:flex-row items-center justify-between xl:justify-start"
-            >
-              <h2
-                class="mb-3 xl:mb-0 xl:mr-4 text-2xl text-gray-800 dark:text-gray-100 font-medium tracking-normal"
-              >
-                Daniel Yarza Navarro
-              </h2>
-              <div
-                class="text-sm bg-indigo-700 dark:bg-indigo-600 text-white px-5 py-1 font-normal rounded-full"
-              >
-                Excited
-              </div>
-            </div>
-            <p
-              class="text-center xl:text-left mt-2 text-sm tracking-normal text-gray-700 dark:text-gray-200 dark:text-gray-400 leading-5"
-            >
-              Passionate problem solver in a digital environment - always open
-              to talk shop or brainstorm new ideas! PS: mention WebXR and I will
-              talk your ear full for at least an hour
-            </p>
-          </div>
-          <div
-            class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-2/4"
-          >
-            <WeatherCard />
-          </div>
-          <div
-            class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-1/4"
-          >
-            <div class="mr-6 xl:mr-10">
-              <a
-                :href="`mailto:'danielyarza1@gmail.com?subject=I found your website and I'd love to get to know you better!`"
-              >
-                <img
-                  v-if="$colorMode.value == 'dark'"
-                  class="h-10 object-bottom hover:animate-pulse cursor-pointer leading-6 mb-2 text-center mx-auto"
-                  src="/img/chat-bubble-front-clay.svg"
-                  alt="floating robot"
-                />
-                <img
-                  v-else
-                  class="h-10 object-bottom hover:animate-pulse cursor-pointer leading-6 mb-2 text-center mx-auto"
-                  src="/img/chat-bubble-front-color.svg"
-                  alt="floating robot"
-                />
-              </a>
-              <p class="text-gray-800 dark:text-gray-100 text-sm xl:text-xl">
-                Give me a shout!
-              </p>
-            </div>
-          </div>
+          Excited
         </div>
+
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+          Passionate problem solver in a digital environment - always open to
+          talk shop or brainstorm new ideas! PS: mention WebXR and I will talk
+          your ear off for at least an hour.
+        </p>
+
+        <a
+          ref="button"
+          class="relative inline-flex mt-6 group"
+          :href="`mailto:danielyarza1@gmail.com?subject=Let's connect!`"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-md opacity-30 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
+          <div
+            class="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg text-gray-800 dark:text-gray-200 border border-transparent transition-all hover:scale-105 backdrop-blur-lg bg-opacity-10"
+          >
+            Get in touch
+          </div>
+        </a>
       </div>
     </div>
-    <!-- Card code block end -->
   </div>
 </template>
-
-
-<script>
-export default {
-  data() {
-    return {
-      currentDate: new Date(),
-    };
-  },
-};
-</script>
-
-<style>
-</style>

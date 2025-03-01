@@ -1,5 +1,8 @@
 <template>
-  <div class="2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4 absolute top-0 left-0 right-0 z-50">    <!-- For large and Medium-sized Screen -->
+  <div
+    class="2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4 absolute top-0 left-0 right-0 z-50"
+  >
+    <!-- For large and Medium-sized Screen -->
     <div class="flex justify-between">
       <div class="hidden sm:flex flex-row items-center space-x-6">
         <nuxt-link
@@ -115,12 +118,9 @@
     </div>
     <!-- Mobile and small-screen devices (toggle Menu) -->
 
-    <div
-      id="MobileNavigation"
-      class="hidden sm:hidden mt-12 overscroll-none"
-    >
+    <div id="MobileNavigation" class="hidden sm:hidden mt-12 overscroll-none">
       <div
-        class="top-16 left-0 w-screen h-screen bg-beige dark:bg-gray-900 text-center"
+        class="top-16 left-0 w-screen h-screen bg-slate-100 dark:bg-gray-900 text-center"
       >
         <ul class="list-none">
           <li>
