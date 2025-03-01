@@ -9,12 +9,12 @@
           to="/"
           class="text-4xl font-semibold tracking-widest text-gray-700 dark:text-gray-200 rounded-lg hover:text-indigo-700 hover:animate-pulse focus:outline-none focus:shadow-outline pl-4"
         >
-          DyN
+          dyn
         </nuxt-link>
       </div>
 
       <div class="hidden sm:flex flex-row space-x-4">
-        <div class="object-bottom px-4 mt-1">
+        <div class="object-bottom px-4 mt-2">
           <button @click="toggle">
             <img
               v-if="$colorMode.value == 'dark'"
@@ -33,21 +33,21 @@
 
         <nuxt-link to="/work"
           ><div
-            class="px-4 py-2 mt-2 text-4xl font-semibold bg-transparent rounded-lg dark:bg-transparent dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:animate-pulse text-gray-700 dark:text-gray-200 focus:outline-none focus:shadow-outline"
+            class="px-4 py-4 mt-2 text-4xl font-semibold bg-transparent rounded-lg dark:bg-transparent dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:animate-pulse text-gray-700 dark:text-gray-200 focus:outline-none focus:shadow-outline"
           >
             work
           </div></nuxt-link
         >
         <nuxt-link to="/process"
           ><div
-            class="px-4 py-2 mt-2 text-4xl font-semibold bg-transparent rounded-lg dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white d text-gray-700 dark:text-gray-200 md:mt-0 md:ml-4 hover:animate-pulse focus:text-gray-900 focus:outline-none focus:shadow-outline"
+            class="px-4 py-4 mt-2 text-4xl font-semibold bg-transparent rounded-lg dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white d text-gray-700 dark:text-gray-200 md:mt-0 md:ml-4 hover:animate-pulse focus:text-gray-900 focus:outline-none focus:shadow-outline"
           >
             process
           </div></nuxt-link
         >
         <nuxt-link to="/fun"
           ><div
-            class="px-4 py-2 mt-2 text-4xl font-semibold bg-transparent rounded-lg dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white text-gray-700 dark:text-gray-200 md:mt-0 md:ml-4 hover:animate-pulse focus:text-gray-900 focus:outline-none focus:shadow-outline"
+            class="px-4 py-4 mt-2 text-4xl font-semibold bg-transparent rounded-lg dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white text-gray-700 dark:text-gray-200 md:mt-0 md:ml-4 hover:animate-pulse focus:text-gray-900 focus:outline-none focus:shadow-outline"
           >
             fun
           </div></nuxt-link
@@ -113,7 +113,7 @@
         to="/"
         class="text-4xl font-semibold tracking-widest text-gray-700 dark:text-gray-200 rounded-lg hover:text-indigo-700 hover:animate-pulse focus:outline-none focus:shadow-outline"
       >
-        DyN
+        dyn
       </nuxt-link>
     </div>
     <!-- Mobile and small-screen devices (toggle Menu) -->
@@ -126,7 +126,7 @@
           <li>
             <nuxt-link to="/work" @click="toggleMenu"
               ><div
-                class="text-4xl uppercase font-semibold tracking-widest text-gray-700 dark:text-gray-200 rounded-lg focus:outline-none focus:shadow-outline hover:animate-pulse pl-4 px-4 rounded-lg"
+                class="text-4xl font-semibold tracking-widest text-gray-700 dark:text-gray-200 rounded-lg focus:outline-none focus:shadow-outline hover:animate-pulse pl-4 px-4 rounded-lg"
               >
                 work
               </div></nuxt-link
@@ -135,7 +135,7 @@
           <li>
             <nuxt-link to="/process" @click="toggleMenu"
               ><div
-                class="text-4xl py-6 uppercase font-semibold tracking-widest rounded-lg text-gray-700 dark:text-gray-200 hover:animate-pulse focus:outline-none focus:shadow-outline pl-4"
+                class="text-4xl py-6 font-semibold tracking-widest rounded-lg text-gray-700 dark:text-gray-200 hover:animate-pulse focus:outline-none focus:shadow-outline pl-4"
               >
                 process
               </div></nuxt-link
@@ -144,7 +144,7 @@
           <li>
             <nuxt-link to="/fun" @click="toggleMenu"
               ><div
-                class="text-4xl uppercase font-semibold tracking-widest text-gray-700 dark:text-gray-200 rounded-lg hover:animate-pulse focus:outline-none focus:shadow-outline pl-4"
+                class="text-4xl font-semibold tracking-widest text-gray-700 dark:text-gray-200 rounded-lg hover:animate-pulse focus:outline-none focus:shadow-outline pl-4"
               >
                 fun
               </div></nuxt-link

@@ -8,18 +8,6 @@ const button = ref(null);
 const workSection = ref(null);
 const profileSection = ref(null);
 
-// Data
-const introMessage = ref([
-  "Daniel is a UX Advocate working in B2C E-commerce in Zurich",
-  "Daniel is a guy that likes good food",
-  "Daniel loves AI, XR, and UX - (all buzzwords in one)",
-  "Daniel in the third person is weird",
-  "Daniel has a background in computer science",
-  "Daniel is a problem-solver",
-  "Daniel enjoys traveling and experiencing new cultures",
-]);
-const i = ref(0);
-
 // Animations
 onMounted(() => {
   // Change intro message every 6s
@@ -91,12 +79,12 @@ onMounted(() => {
         ref="heroText"
         class="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] bg-clip-text text-transparent"
       >
-        {{ introMessage[i] }}
+        Daniel is a UX advocate crafting seamless digital experiences in B2C
+        e-commerce, based in Zurich
       </h1>
       <p class="mt-4 text-lg lg:text-2xl opacity-80 max-w-3xl">
-        Nowadays, I'm dipping my toes in SCRUM product ownership & creating
-        intuitive user journeys that drive up value and support long-term
-        growth.
+        Focusing on SCRUM product ownership & creating intuitive user journeys
+        that drive up value and support long-term growth.
       </p>
 
       <!-- CTA Button -->

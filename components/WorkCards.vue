@@ -67,13 +67,27 @@
 </template>
 
 <script>
+import gsap from "gsap";
 export default {
   data() {
     return {
       projects: [
         {
+          id: "Preppal",
+          link: "projects/preppal",
+          imageUrl: "/img/preppal6-min.png",
+          imageAlt: "Intro image for project Preppal",
+          date: "28 dec",
+          readTime: "10 min read",
+          title:
+            "Preppal - Manage your recipes, plan your weekly meals & shop smarter",
+          description:
+            "Web-app to manage recipes, mealprep and manage your shared shopping list. Built with Nuxt, Auth, Tailwind and Firebase.",
+        },
+
+        {
           id: "yallo",
-          link: "yallo",
+          link: "projects/yallo",
           imageUrl: "/img/yol_1-min.png",
           imageAlt: "Intro image for project yallo",
           date: "22 may",
@@ -84,8 +98,8 @@ export default {
         },
         {
           id: "kollektivkitzeln",
-          link: "kollektivkitzeln",
-          imageUrl: "/img/kollektivkitzeln_1-min.png",
+          link: "projects/kollektivkitzeln",
+          imageUrl: "/img/kollektiv1.png",
           imageAlt: "Intro image for project kollektivkitzeln",
           date: "24 nov",
           readTime: "3 min read",
@@ -95,8 +109,8 @@ export default {
         },
         {
           id: "hundeschule-oberthaler",
-          link: "hundeschule",
-          imageUrl: "/img/hundeschule-oberthaler.png",
+          link: "projects/hundeschule",
+          imageUrl: "/img/hundeschule1.png",
           imageAlt: "Intro image for project Hundeschule Oberthaler",
           date: "01 jul",
           readTime: "5 min read",
@@ -106,7 +120,7 @@ export default {
         },
         {
           id: "Sunrise",
-          link: "sunrise",
+          link: "projects/sunrise",
           imageUrl: "/img/sunrise_1-min.png",
           imageAlt: "Intro image for project Sunrise eShop",
           date: "14 oct",
@@ -117,7 +131,7 @@ export default {
         },
         {
           id: "portfolio",
-          link: "portfolio",
+          link: "projects/portfolio",
           imageUrl: "/img/citypop_Dan3-min.png",
           imageAlt: "Intro image for project Portfolio",
           date: "04 mar",
@@ -128,7 +142,7 @@ export default {
         },
         {
           id: "psych",
-          link: "psych",
+          link: "projects/psych",
           imageUrl: "/img/psych_isometric-min.png",
           imageAlt: "Intro image for project psych",
           date: "12 jan",
