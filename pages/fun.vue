@@ -1,139 +1,162 @@
 <template>
-  <div class="justify-center w-full max-w-screen-xl px-6 mx-auto  pt-16">
-    <div class="justify-center w-full px-4 pt-12">
-      <div
-        class="
-          bg-clip-text
-          text-transparent
-          bg-gradient-to-r
-          from-[#44BCFF]
-          via-[#FF44EC]
-          to-[#FF675E]
-          max-w-2xl
-          mb-4
-          text-4xl
-          font-bold
-          lg:text-7xl
-          tracking-wide
-          md:text-5xl
-          xl:text-6xl
-          py-4
-        "
-      >
-        Fun is subjective
-      </div>
-    </div>
-    <div class="container px-4 lg:pt-8 pt-6">
-      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
-        Life can't be just about work. I like to spend my free time doing a
-        bunch of different stuff. Learn more about my hobbies and interests.
-      </div>
-    </div>
-
-    <section class="py-2 sm:py-8">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-2">
-        <div
-          class="
-            grid grid-cols-1
-            text-center
-            sm:mt-16 sm:grid-cols-2 sm:gap-x-12
-            gap-y-12
-            md:grid-cols-3 md:gap-0
-            xl:mt-4
-          "
+  <div
+    class="min-h-screen bg-slate-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  >
+    <!-- Page Heading -->
+    <div class="pt-6 lg:pt-8 max-w-screen-xl mx-auto px-4">
+      <div class="justify-center w-full px-4 pt-32 text-center">
+        <h1
+          class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] text-5xl lg:text-7xl font-bold"
         >
-          <div class="md:p-8 lg:p-14">
-            <h3
-              class="mt-12 text-2xl font-bold text-gray-700 dark:text-gray-200"
-            >
-              Boardgames
-            </h3>
-            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
-              Boardgames are a great way to spend time with friends and family.
-              I love playing games like House on the Haunted Hill, Ticket to
-              Ride, and Pandemic. I've also enjoyed creating my own games that
-              I've played with friends.
-            </p>
-          </div>
+          Fun is subjective
+        </h1>
+        <p
+          class="mt-4 text-gray-800 dark:text-gray-400 text-lg lg:text-2xl max-w-2xl mx-auto"
+        >
+          Life’s not all about sprints, standups, and story points. I make it a
+          priority to stay creative, stay curious, and stay connected. Here's a
+          glimpse at how I recharge, explore, and experiment outside of the
+          professional sphere.
+        </p>
+      </div>
 
-          <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200">
-            <h3
-              class="mt-12 text-2xl font-bold text-gray-700 dark:text-gray-200"
-            >
-              Loved ones
-            </h3>
-            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
-              I spend most of my time with my wonderful partner Vanessa and cute
-              dog Boo. He's a Ratonero Analuz, which means he'll play fletch
-              until he dies. I'll pay the dog tax over here with cute images
-            </p>
-          </div>
-
-          <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200">
-            <h3
-              class="mt-12 text-2xl font-bold text-gray-700 dark:text-gray-200"
-            >
-              Reading
-            </h3>
-            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
-              I switched to a Kindle a couple of years ago and won't go back I
-              love devouring mostly science fiction and fantasy books. Now and
-              again I pick up a psychology textbook to keep up to date with
-              interesting topics!
-            </p>
-          </div>
-
-          <a href="/adventure">
-            <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200">
-              <h3
-                class="
-                  mt-12
-                  text-2xl
-                  font-bold
-                  text-gray-700
-                  dark:text-gray-200
-                "
-              >
-                Game Design
-              </h3>
-              <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
-                I have a passion for the game industry and have used Unity in
-                the past to spin up small games and prototypes. Additionally,
-                I've been fascinated with XR these last few years.
-              </p>
-            </div>
-          </a>
-
-          <div
-            class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t"
-          >
-            <h3
-              class="mt-12 text-2xl font-bold text-gray-700 dark:text-gray-200"
-            >
-              Traveling
-            </h3>
-            <p class="mt-5 text-base text-gray-600 font-pj dark:text-gray-400">
-              I love traveling and have been to 30+ countries. I'm always
-              looking for new places to visit and new experiences to have.
-            </p>
-          </div>
-
-          <div
-            class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t"
-          >
-            <h3
-              class="mt-12 text-2xl font-bold text-gray-700 dark:text-gray-200"
-            >
-              Cooking
-            </h3>
-            <p class="mt-5 text-base text-gray-600 dark:text-gray-400 font-pj">
-              Cooking is a passion of mine and I love trying new recipes and
-              cuisines. I've been known to make some mean pasta and ramen bowls.
-            </p>
-          </div>
+      <!-- Section: Boardgames -->
+      <div class="justify-center w-full pt-12">
+        <div
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+        >
+          Boardgames & Analog Fun
+        </div>
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
+          Whether it's the chaos of Betrayal at House on the Hill or the
+          storytelling of DnD, boardgames are a go-to for connection and
+          challenge. I’ve even prototyped & ran a few of my own — play-tested
+          with friends, fueled by snacks.
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Boardgame.jpg"
+            alt="Boardgame moment"
+          />
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Boardgame1.jpg"
+            alt="Boardgame moment"
+          />
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Boardgame3.jpg"
+            alt="Boardgame moment"
+          />
         </div>
       </div>
-    </section>
+
+      <!-- Section: Loved Ones -->
+      <div class="justify-center w-full pt-12">
+        <div
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+        >
+          Time Well Spent
+        </div>
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
+          My wife and our high-energy sidekick Boo (a fetch-obsessed Ratonero
+          Andaluz) make life better daily. Whether we’re hiking, chilling, or
+          cooking together, they’re the heartbeat of my off-screen time.
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Boo1.jpg"
+            alt="Vanessa and Boo"
+          />
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Boo2.jpg"
+            alt="Daniel with Boo"
+          />
+        </div>
+      </div>
+
+      <!-- Section: Reading -->
+      <div class="justify-center w-full pt-12">
+        <div
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+        >
+          Books, Worlds, and Ideas
+        </div>
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
+          Reading keeps me sharp. My Kindle’s loaded with sci-fi and fantasy,
+          with the occasional UX or psychology deep-dive to keep my inner
+          researcher happy. Bonus points for a good world map at the start of a
+          book.
+        </div>
+      </div>
+
+      <!-- Section: Game Design -->
+      <div class="justify-center w-full pt-12">
+        <div
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+        >
+          Game Design Experiments
+        </div>
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
+          I’ve explored Unity and XR in my free time — often spinning up small,
+          weird prototypes for the sake of curiosity. One of them turned into a
+          little browser game that lives
+          <a
+            href="/adventure"
+            class="underline font-semibold hover:text-indigo-500"
+            >here</a
+          >.
+        </div>
+      </div>
+
+      <!-- Section: Travel -->
+      <div class="justify-center w-full pt-12">
+        <div
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+        >
+          Wanderlust Mode
+        </div>
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
+          I've visited 30+ countries — from wreck diving to close and personal
+          with wallabies. Travel is how I reset, get inspired, and remember how
+          big (and beautifully weird) the world really is.
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Travel1.jpg"
+            alt="Travel shot"
+          />
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Travel2.jpg"
+            alt="Travel shot"
+          />
+          <img
+            class="h-64 w-full object-cover rounded-xl shadow"
+            src="/img/Travel3.jpg"
+            alt="Travel shot"
+          />
+        </div>
+      </div>
+
+      <!-- Section: Cooking -->
+      <div class="justify-center w-full pt-12 pb-20">
+        <div
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
+        >
+          In the Kitchen
+        </div>
+        <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
+          Cooking is how I unwind — part creative expression, part science
+          experiment. I’ve been known to over-engineer poke bowls and host vegan
+          dinner dates. (No regrets.)
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -143,7 +166,8 @@ export default {
   props: ["title"],
   data() {
     return {
-      description: "A blog post about some stuff",
+      description:
+        "A collection of personal interests, creative experiments, and ways I unwind.",
     };
   },
   metaInfo() {
@@ -161,4 +185,4 @@ export default {
 .checkbox:checked + .check-icon {
   display: flex;
 }
-</style>    
+</style>

@@ -22,35 +22,41 @@ const projectList = ref(Object.entries(projects));
         journeys that drive up value and support long-term growth.
       </p>
     </div>
-
     <!-- Project Cards Grid -->
-    <div class="container px-4 lg:pt-8 pt-6">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="pt-6 lg:pt-8">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto px-4"
+      >
         <nuxt-link
           v-for="[slug, project] in projectList"
           :key="slug"
           :to="`/projects/${slug}`"
+          class="flex justify-center"
         >
           <div
-            class="group bg-stone-100 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl"
+            class="w-72 h-[30rem] group bg-stone-100 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl flex flex-col"
           >
             <!-- Project Image -->
             <img
               :src="project.heroImage"
               :alt="project.title"
-              class="w-full h-64 object-cover rounded-t-xl group-hover:opacity-80 transition-opacity"
+              class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity"
             />
 
             <!-- Project Details -->
-            <div class="p-6">
-              <h2
-                class="text-2xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-indigo-500 transition-colors"
-              >
-                {{ project.title }}
-              </h2>
-              <p class="mt-2 text-gray-700 dark:text-gray-300 text-lg">
-                {{ project.summary }}
-              </p>
+            <div class="flex-1 p-6 flex flex-col justify-between">
+              <div>
+                <h2
+                  class="text-2xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-indigo-500 transition-colors"
+                >
+                  {{ project.title }}
+                </h2>
+                <p
+                  class="mt-2 text-gray-700 dark:text-gray-300 text-lg overflow-hidden text-ellipsis"
+                >
+                  {{ project.summary }}
+                </p>
+              </div>
             </div>
           </div>
         </nuxt-link>

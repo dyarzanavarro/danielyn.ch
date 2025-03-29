@@ -1,69 +1,41 @@
 <template>
-  <div class="justify-center w-full max-w-screen-xl px-6 mx-auto  pt-16">
-    <div class="justify-center w-full px-4 pt-12">
-      <div
-        class="
-          bg-clip-text
-          text-transparent
-          bg-gradient-to-r
-          from-[#44BCFF]
-          via-[#FF44EC]
-          to-[#FF675E]
-          max-w-2xl
-          mb-4
-          text-4xl
-          font-bold
-          lg:text-7xl
-          leading-none
-          tracking-wide
-          md:text-5xl
-          xl:text-6xl
-          py-4
-        "
+  <div
+    class="min-h-screen bg-slate-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  >
+    <div class="justify-center w-full px-4 pt-32 text-center">
+      <h1
+        class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] text-5xl lg:text-7xl font-bold"
       >
         Process is everything
-      </div>
+      </h1>
+      <p
+        class="mt-4 text-gray-800 dark:text-gray-400 text-lg lg:text-2xl max-w-2xl mx-auto"
+      >
+        As a Product Owner in a Scrum team, I bridge strategy, design, and
+        development — shaping solutions that are both user-centered and
+        technically feasible. I adapt agile principles and UX best practices to
+        meet the unique challenges of each project, always aiming for high
+        impact and continuous delivery.
+      </p>
     </div>
 
-    <div class="container px-4 lg:pt-8 pt-6">
-      <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
-        The design thinking process are the guidelines I follow during the
-        creation of a new solution. Adapting these steps to each different
-        project and given requirements helps me to find the right solution. Here
-        you can have a look at my approach of different phases and
-        methodologies.
-      </div>
+    <div class="pt-6 lg:pt-8 max-w-screen-xl mx-auto px-4">
+      <!-- Empathy Section -->
       <div class="justify-center w-full pt-12">
         <div
-          class="
-            font-bold
-            text-gray-700
-            lg:text-3xl
-            text-2xl
-            dark:text-gray-200
-          "
+          class="font-bold text-gray-700 lg:text-3xl text-2xl dark:text-gray-200"
         >
           Empathy and Understanding
         </div>
         <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
-          A good design solution can never be carried out without a previous
-          phase of analysis and research summed up into key insights to start
-          the ideation phase. Together with my team, we have carried on user and
-          product research workshop followed by ideation and brainstorming
-          sessions which will help us define the design solution.
+          Great products start with understanding — users, context, and
+          constraints. I lead workshops, conduct stakeholder interviews, and
+          support product discovery initiatives to extract valuable insights.
+          These insights drive ideation and prioritization, ensuring the roadmap
+          aligns with actual user needs and business goals.
         </div>
         <div
-          class="
-            container
-            mx-auto
-            grid
-            sm:grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-3
-            xl:grid-cols-3
-            pt-6
-            gap-8
-          "
+          class="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-6 gap-8"
         >
           <div class="rounded">
             <img
@@ -88,65 +60,55 @@
           </div>
         </div>
       </div>
+
+      <!-- Structured Design Section -->
       <div class="justify-center w-full pt-12">
         <div
-          class="
-            font-bold
-            text-gray-700
-            dark:text-gray-200
-            lg:text-3xl
-            text-2xl
-            dark:text-gray-200
-          "
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
         >
           Inspiration & Structured Design
         </div>
         <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
-          A good design solution can never be carried out without a previous
-          phase of analysis and research summed up into key insights to start
-          the ideation phase. Together with my team, we have carried on user and
-          product research workshop followed by ideation and brainstorming
-          sessions which will help us define the design solution.
+          Turning research into action requires structure. I guide the design
+          phase with clear goals, iterative feedback loops, and user testing. My
+          product ownership includes shaping MVP definitions, refining backlog
+          items, and aligning UX deliverables with sprint goals — always
+          balancing speed with quality.
         </div>
       </div>
+
+      <!-- Implementation Section -->
       <div class="justify-center w-full pt-12">
         <div
-          class="
-            font-bold
-            text-gray-700
-            dark:text-gray-200
-            lg:text-3xl
-            text-2xl
-            dark:text-gray-200
-          "
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
         >
-          UX in every detail
+          A Good Product Needs the Best Implementation
         </div>
         <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
-          UX responsibility in projects and sales efforts on the E-commerce
-          platforms yallo.ch; lebara.ch and swype.ch. Collaboration in design &
-          development, improving/designing user journeys and mentoring an
-          apprentice.
+          A product is only as good as its delivery. I've led a frontend team
+          delivering Angular and legacy AngularJS apps, and worked closely with
+          developers to ensure value-driven implementation. I define technical
+          acceptance criteria, support development teams, and drive alignment
+          between UX, code, and stakeholder expectations. From incident intake
+          to sprint planning, I structure processes that scale — including
+          requirements engineering, agile roadmapping, and continuous
+          improvement cycles.
         </div>
       </div>
+      <!-- UX Execution Section -->
       <div class="justify-center w-full pt-12">
         <div
-          class="
-            font-bold
-            text-gray-700
-            dark:text-gray-200
-            lg:text-3xl
-            text-2xl
-            dark:text-gray-200
-          "
+          class="font-bold text-gray-700 dark:text-gray-200 lg:text-3xl text-2xl"
         >
-          A good product needs the best implementation
+          UX in Every Detail
         </div>
         <div class="text-gray-800 dark:text-gray-400 lg:text-2xl sm:text-4">
-          The most perfect design will be never good enough if there is no
-          alignment between design and implementation. As part of the process, I
-          have always worked in constant interaction with the devs team in order
-          to verify and help with the best implementation of the solution.
+          I’ve led UX initiatives across E-commerce platforms like
+          <strong>yallo.ch</strong>, <strong>lebara.ch</strong>, and
+          <strong>swype.ch</strong>. From mapping end-to-end journeys to driving
+          conversion optimization, I ensure the experience is seamless across
+          platforms. I also mentored apprentices and collaborate
+          cross-functionally to keep UX at the heart of every sprint.
         </div>
       </div>
     </div>

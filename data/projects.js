@@ -17,6 +17,23 @@ export default {
             "Received 5-star reviews from early adopters",
         ],
     },
+    kollektivkitzeln: {
+        title: "Kollektiv Kitzeln - A Feminist Collective Hub",
+        heroImage: "/img/kollektiv1.png",
+        summary:
+            "A digital space for a feminist collective, focusing on inclusivity and artistic collaboration.",
+        uxChallenge:
+            "Creating a platform that reflects the collective's vision while being accessible and interactive.",
+        solution:
+            "Developed a brand-aligned website with event management, blogging, and a members-only space.",
+        development: "Built with Nuxt3, a CMS, and deployed on Vercel.",
+        images: ["/img/kollektiv_1.png", "/img/kollektiv_2.png"],
+        takeaways: [
+            "Community engagement boosted",
+            "Seamless event management",
+            "Scalable & maintainable",
+        ],
+    },
     yallo: {
         title: "Yallo - Upgrading a Brand to a New Level",
         heroImage: "/img/yol_1-min.png",
@@ -104,23 +121,6 @@ export default {
             "Higher client engagement",
             "Strong online presence",
             "Improved conversion rates",
-        ],
-    },
-    kollektivkitzeln: {
-        title: "Kollektiv Kitzeln - A Feminist Collective Hub",
-        heroImage: "/img/kollektiv1.png",
-        summary:
-            "A digital space for a feminist collective, focusing on inclusivity and artistic collaboration.",
-        uxChallenge:
-            "Creating a platform that reflects the collective's vision while being accessible and interactive.",
-        solution:
-            "Developed a brand-aligned website with event management, blogging, and a members-only space.",
-        development: "Built with Nuxt3, a CMS, and deployed on Vercel.",
-        images: ["/img/kollektiv_1.png", "/img/kollektiv_2.png"],
-        takeaways: [
-            "Community engagement boosted",
-            "Seamless event management",
-            "Scalable & maintainable",
         ],
     },
 }
