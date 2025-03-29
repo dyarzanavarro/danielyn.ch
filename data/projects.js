@@ -10,7 +10,7 @@ export default {
             "We designed a minimal, easy-to-use UI with an AI-powered meal suggestion system.",
         development:
             "Built with Nuxt.js, Firebase Auth, Tailwind CSS, and a Headless CMS for content management.",
-        images: ["/img/preppal1.png", "/img/preppal2.png", "/img/preppal3.png"],
+        images: ["/img/preppal3-min.png", "/img/preppal4-min.png", "/img/preppal5-min.png"],
         takeaways: [
             "Improved user engagement by 35%",
             "Reduced meal planning time by 50%",
@@ -26,8 +26,8 @@ export default {
             "Creating a platform that reflects the collective's vision while being accessible and interactive.",
         solution:
             "Developed a brand-aligned website with event management, blogging, and a members-only space.",
-        development: "Built with Nuxt3, a CMS, and deployed on Vercel.",
-        images: ["/img/kollektiv_1.png", "/img/kollektiv_2.png"],
+        development: "Built with Framer, a Builder tool, and deployed on a swiss hosting company.",
+        images: ["/img/kollektiv2.png", "/img/kollektiv3.png", "/img/kollektiv4.png"],
         takeaways: [
             "Community engagement boosted",
             "Seamless event management",
@@ -45,7 +45,7 @@ export default {
             "We implemented a new design system, improved UX, and optimized the tech stack.",
         development:
             "Angular-based frontend, Tailwind UI, integrated APIs, and a headless CMS.",
-        images: ["/img/yol_1-min.png", "/img/yol_2-min.png", "/img/yallo3.png"],
+        images: ["/img/yol_1-min.png", "/img/yol_2-min.png"],
         takeaways: [
             "Increased conversions by 20%",
             "Higher customer retention",
@@ -98,8 +98,8 @@ export default {
         solution:
             "Implemented iterative A/B tests, refined UI components, and improved navigation clarity.",
         development:
-            "Used Tailwind for quick styling updates and conducted real-time performance monitoring.",
-        images: ["/img/sunrise_1.png", "/img/sunrise_2.png"],
+            "Used Adobe Target for quick development updates and conducted real-time performance monitoring.",
+        images: [],
         takeaways: [
             "20% higher conversion rate",
             "Reduced bounce rate",
@@ -116,7 +116,7 @@ export default {
         solution:
             "Developed a visually engaging website with strong branding and intuitive navigation.",
         development: "Used Vue.js, Tailwind CSS, and Netlify for hosting.",
-        images: ["/img/hundeschule_1.png", "/img/hundeschule_2.png"],
+        images: ["/img/hundeschule2.png", "/img/hundeschule6.png", "/img/hundeschule5.png"],
         takeaways: [
             "Higher client engagement",
             "Strong online presence",

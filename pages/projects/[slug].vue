@@ -52,7 +52,7 @@ onMounted(() => {
         {{ project.summary }}
       </p>
       <img
-        class="image-animate rounded-xl shadow-lg w-full object-cover mt-8"
+        class="image-animate rounded-xl shadow-lg w-full h-auto max-w-2xl lg:max-w-2xl mx-auto mt-8"
         :src="project.heroImage"
         alt="Project preview"
       />
