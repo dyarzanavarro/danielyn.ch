@@ -116,7 +116,9 @@ onMounted(() => {
     </div>
 
     <!-- Selected Work Section -->
-    <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-6">
+    <div
+      class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-6 overflow-hidden"
+    >
       <h2
         ref="workTitle"
         class="text-center text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]"
