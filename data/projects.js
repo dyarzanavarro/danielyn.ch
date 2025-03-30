@@ -115,7 +115,7 @@ export default {
             "Designing a user-friendly platform that communicates trust, expertise, and accessibility.",
         solution:
             "Developed a visually engaging website with strong branding and intuitive navigation.",
-        development: "Used Vue.js, Tailwind CSS, and Netlify for hosting.",
+        development: "Built with Framer, a Builder tool, and deployed on a swiss hosting company.",
         images: ["/img/hundeschule2.png", "/img/hundeschule6.png", "/img/hundeschule5.png"],
         takeaways: [
             "Higher client engagement",
