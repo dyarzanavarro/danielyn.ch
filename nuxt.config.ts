@@ -23,16 +23,11 @@ export default ({
       }
   },
 
-  build: {
-      postcss: {
-          postcssOptions: {
-              plugins: {
-                  tailwindcss: {},
-                  autoprefixer: {},
-              },
-          },
+  postcss: {
+      plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
       },
-
   },
   vite: {
       vue: {
