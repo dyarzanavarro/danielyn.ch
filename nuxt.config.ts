@@ -34,6 +34,15 @@ export default ({
       },
 
   },
+  vite: {
+      vue: {
+          template: {
+              transformAssetUrls: {
+                  includeAbsolute: false,
+              },
+          },
+      },
+  },
 
   extend(config, ctx) {
       config.module.rules.push({
