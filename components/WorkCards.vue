@@ -1,164 +1,68 @@
-<template>
-  <div class="pt-12">
-    <Swiper
-      :modules="[SwiperAutoplay, SwiperEffectCards]"
-      :slides-per-view="1"
-      :loop="true"
-      :effect="'cards'"
-      :autoplay="{
-        delay: 8000,
-        disableOnInteraction: true,
-      }"
-      :creative-effect="{
-        prev: {
-          shadow: false,
-          translate: ['-20%', 0, -1],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }"
-    >
-      <SwiperSlide
-        v-for="project in projects"
-        :key="project.id"
-        :style="`background-color: none; color: none`"
-      >
-        <nuxt-link :to="project.link">
-          <div
-            class="max-w-sm bg-stone-100 dark:bg-gray-700 dark:hover:shadow dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-white shadow-xl rounded-xl hover:text-gray-900 focus:text-gray-900 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 mx-auto"
-          >
-            <img
-              :src="project.imageUrl"
-              :alt="project.imageAlt"
-              class="w-full h-96 object-cover object-top rounded-xl"
-            />
-            <div class="p-6">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                  <p
-                    class="text-base leading-4 text-gray-500 dark:text-gray-200"
-                  >
-                    {{ project.date }}
-                  </p>
-                  <p
-                    class="text-base leading-none text-gray-500 ml-12 dark:text-gray-200"
-                  >
-                    {{ project.readTime }}
-                  </p>
-                </div>
-              </div>
-              <h1
-                class="text-2xl font-semibold leading-6 my-4 text-gray-800 dark:text-gray-100"
-              >
-                {{ project.title }}
-              </h1>
-              <p
-                class="text-base leading-6 text-gray-700 dark:text-gray-200 mt-2 dark:text-gray-300"
-              >
-                {{ project.description }}
-              </p>
-            </div>
-          </div>
-        </nuxt-link>
-      </SwiperSlide>
-    </Swiper>
-  </div>
-</template>
+<script setup>
+import { computed } from "vue";
+import projects from "@/data/projects.js";
 
-<script>
-import gsap from "gsap";
-export default {
-  data() {
-    return {
-      projects: [
-        {
-          id: "Preppal",
-          link: "projects/preppal",
-          imageUrl: "/img/preppal6-min.png",
-          imageAlt: "Intro image for project Preppal",
-          date: "28 dec",
-          readTime: "10 min read",
-          title:
-            "Preppal - Manage your recipes, plan your weekly meals & shop smarter",
-          description:
-            "Web-app to manage recipes, mealprep and manage your shared shopping list. Built with Nuxt, Auth, Tailwind and Firebase.",
-        },
+const featuredOrder = [
+  "preppal",
+  "yallo",
+  "kollektivkitzeln",
+  "portfolio",
+  "psych",
+  "hundeschule",
+];
 
-        {
-          id: "yallo",
-          link: "projects/yallo",
-          imageUrl: "/img/yol_1-min.png",
-          imageAlt: "Intro image for project yallo",
-          date: "22 may",
-          readTime: "10 min read",
-          title: "yallo - Upgrading a brand to a new level",
-          description:
-            "Full migration of Legacy System, from moving to a new Design System to replatforming on new tech stack.",
-        },
-        {
-          id: "kollektivkitzeln",
-          link: "projects/kollektivkitzeln",
-          imageUrl: "/img/kollektiv1.png",
-          imageAlt: "Intro image for project kollektivkitzeln",
-          date: "24 nov",
-          readTime: "3 min read",
-          title: "Kollektiv Kitzeln - A home for a feminist collective",
-          description:
-            "I designed and developed a website for a feminist collective, including a calendar and a brand recognition section.",
-        },
-        {
-          id: "hundeschule-oberthaler",
-          link: "projects/hundeschule",
-          imageUrl: "/img/hundeschule1.png",
-          imageAlt: "Intro image for project Hundeschule Oberthaler",
-          date: "01 jul",
-          readTime: "5 min read",
-          title: "Hundeschule Oberthaler - A dog training school",
-          description:
-            "I designed and developed a website for a dog training school, with a focus on the specific qualities of the owner, a way to contact & a breakdown of services.",
-        },
-        {
-          id: "Sunrise",
-          link: "projects/sunrise",
-          imageUrl: "/img/sunrise_1-min.png",
-          imageAlt: "Intro image for project Sunrise eShop",
-          date: "14 oct",
-          readTime: "5 min read",
-          title: "Sunrise eShop - Selling digital products",
-          description:
-            " Setting up a an A/B Testing pipeline (Target), designing and developing ad-hoc for Sales related projects. Close interaction with the eCommerce Team in Design Thinking Workshops and qualitative User Research.",
-        },
-        {
-          id: "portfolio",
-          link: "projects/portfolio",
-          imageUrl: "/img/citypop_Dan3-min.png",
-          imageAlt: "Intro image for project Portfolio",
-          date: "04 mar",
-          readTime: "8 min read",
-          title: "Showcase - Time for Nuxt3 and Tailwind",
-          description:
-            "In order to keep up to date with modern frameworks I built this page as a playground to showcase experiments and ideas",
-        },
-        {
-          id: "psych",
-          link: "projects/psych",
-          imageUrl: "/img/psych_isometric-min.png",
-          imageAlt: "Intro image for project psych",
-          date: "12 jan",
-          readTime: "5 min read",
-          title: "Psychology Hub Redesign & Enhancement",
-          description:
-            "Delivering a overhauled design, implemented a robust backend and content management system tailored for psychology students org.",
-        },
-      ],
-    };
-  },
+const featuredProjects = computed(() =>
+  featuredOrder
+    .map((key) => ({ slug: key, ...projects[key] }))
+    .filter((project) => project.title)
+);
+
+const cardClass = (index) => {
+  if (index === 0) return "xl:col-span-2 xl:row-span-2";
+  if (index === 3) return "md:col-span-2";
+  return "";
 };
 </script>
 
-<style>
-.swiper-3d .swiper-slide-shadow {
-  background: none !important;
-}
-</style>
+<template>
+  <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <NuxtLink
+      v-for="(project, index) in featuredProjects"
+      :key="project.slug"
+      :to="`/projects/${project.slug}`"
+      class="group relative overflow-hidden rounded-3xl glass-panel lift-hover"
+      :class="cardClass(index)"
+    >
+      <div class="absolute inset-0">
+        <img
+          :src="project.heroImage"
+          :alt="project.title"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"
+        ></div>
+      </div>
+
+      <div class="relative z-10 p-6 md:p-8 min-h-[18rem] flex flex-col justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-white/70">
+            Case Study
+          </p>
+          <h3 class="text-2xl md:text-3xl font-bold text-white mt-3">
+            {{ project.title }}
+          </h3>
+          <p class="mt-4 text-sm md:text-base text-white/80 max-w-xl">
+            {{ project.summary }}
+          </p>
+        </div>
+        <span
+          class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/80"
+        >
+          View project
+          <span class="text-lg leading-none">-&gt;</span>
+        </span>
+      </div>
+    </NuxtLink>
+  </div>
+</template>

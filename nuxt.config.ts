@@ -9,6 +9,11 @@ export default ({
   },
 
   modules: ['@nuxtjs/color-mode', '@tresjs/nuxt', 'nuxt-swiper'],
+  
+  plugins: [
+    '~/plugins/gsap.client.js'
+    // '~/plugins/smooth-scroll.client.js' // Disabled temporarily
+  ],
   colorMode: { classSuffix: '', preference: 'dark' },
   swiper: {},
 
@@ -41,7 +46,8 @@ export default ({
   },
 
   css: [
-      "~/assets/css/tailwind.css"
+      "~/assets/css/tailwind.css",
+      "~/assets/css/global.css"
   ],
 
   ssr: false,

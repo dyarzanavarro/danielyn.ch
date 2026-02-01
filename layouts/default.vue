@@ -1,7 +1,11 @@
 <template>
-  <div class="bg-slate-100 h-max dark:bg-slate-900">
+  <div class="app-shell min-h-screen">
+    <div class="grain"></div>
+    <MagneticCursor />
     <Nav />
-    <slot class />
+    <main class="relative z-10">
+      <slot />
+    </main>
     <Footer />
   </div>
 </template>

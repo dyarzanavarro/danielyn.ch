@@ -1,63 +1,52 @@
 <script setup>
 import { ref } from "vue";
 import projects from "@/data/projects.js";
+
 const projectList = ref(Object.entries(projects));
 </script>
 
 <template>
-  <div
-    class="min-h-screen bg-slate-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
-  >
-    <!-- Page Header -->
-    <div class="justify-center w-full px-4 pt-32 text-center">
-      <h1
-        class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] text-5xl lg:text-7xl font-bold"
-      >
-        Work I'm OK With
-      </h1>
-      <p
-        class="mt-4 text-gray-800 dark:text-gray-400 text-lg lg:text-2xl max-w-2xl mx-auto"
-      >
-        Dipping my toes in SCRUM product ownership & creating intuitive user
-        journeys that drive up value and support long-term growth.
-      </p>
-    </div>
-    <!-- Project Cards Grid -->
-    <div class="pt-6 lg:pt-8">
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto px-4"
-      >
+  <div class="snap-section pt-24 sm:pt-28 lg:pt-32 pb-20 px-6">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.4em] text-muted">Work</p>
+        <h1 class="text-4xl sm:text-5xl font-black mt-4 break-words">
+          Projects that balance clarity, craft, and measurable impact.
+        </h1>
+        <p class="mt-6 text-lg text-muted">
+          From design systems to full product migrations, these case studies
+          show how I collaborate, de-risk, and deliver with velocity.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <nuxt-link
           v-for="[slug, project] in projectList"
           :key="slug"
           :to="`/projects/${slug}`"
-          class="flex justify-center"
+          class="group rounded-3xl glass-panel overflow-hidden lift-hover"
         >
-          <div
-            class="w-72 h-[30rem] group bg-stone-100 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl flex flex-col"
-          >
-            <!-- Project Image -->
+          <div class="relative h-56">
             <img
               :src="project.heroImage"
               :alt="project.title"
-              class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-
-            <!-- Project Details -->
-            <div class="flex-1 p-6 flex flex-col justify-between">
-              <div>
-                <h2
-                  class="text-2xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-indigo-500 transition-colors"
-                >
-                  {{ project.title }}
-                </h2>
-                <p
-                  class="mt-2 text-gray-700 dark:text-gray-300 text-lg overflow-hidden text-ellipsis"
-                >
-                  {{ project.summary }}
-                </p>
-              </div>
-            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6">
+            <h2 class="text-2xl font-bold text-ink">{{ project.title }}</h2>
+            <p class="mt-3 text-sm text-muted">
+              {{ project.summary }}
+            </p>
+            <span
+              class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted"
+            >
+              Explore case study
+              <span class="text-lg leading-none">-&gt;</span>
+            </span>
           </div>
         </nuxt-link>
       </div>

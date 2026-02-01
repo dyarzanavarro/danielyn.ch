@@ -1,47 +1,40 @@
 <template>
-  <div class="pb-6">
-    <div
-      class="mx-auto container lg:pt-12 pt-12 flex flex-col items-center justify-center"
-    >
-      <div>
-        <nuxt-link
+  <footer class="px-6 pb-12">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="glass-subtle rounded-3xl px-8 py-10 flex flex-col gap-6 items-start">
+        <NuxtLink
           to="/"
-          class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg uppercase dark:text-white focus:outline-none focus:shadow-outline"
+          class="text-lg font-bold tracking-[0.35em] uppercase text-ink"
         >
           dyn
-        </nuxt-link>
-      </div>
-      <div class="flex flex-col md:items-center f-f-l pt-3">
-        <h1
-          class="bg-clip-text text-transparent bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] max-w-2xl mb-4 text-4xl font-bold lg:text-7xl leading-none tracking-wide md:text-5xl xl:text-6xl py-4"
-        >
-          Let's. build. it.
-        </h1>
-
-        <a
-          :href="`mailto:'danielyarza1@gmail.com?subject=I found your website and I'd love to get to know you better!`"
-        >
-          <div class="my-6 text-base text-color f-f-l dark:text-gray-200">
-            Contact me
-          </div>
-        </a>
-        <div class="text-sm text-color mb-10 f-f-l dark:text-gray-200">
-          <p>© {{ year }} - Made with ❤️</p>
+        </NuxtLink>
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-black">
+            Lets build something that feels inevitable.
+          </h2>
+          <p class="mt-4 text-muted max-w-2xl">
+            Open to collaborations, product strategy chats, and experimental UX
+            ideas.
+          </p>
         </div>
+        <a
+          class="inline-flex items-center justify-center rounded-full bg-accent-2 text-white px-6 py-3 text-xs uppercase tracking-[0.3em] shadow-glow-coral lift-hover"
+          :href="`mailto:danielyarza1@gmail.com?subject=Lets%20connect`"
+        >
+          Contact me
+        </a>
+        <p class="text-xs uppercase tracking-[0.3em] text-muted">
+          (C) {{ year }} Daniel Yarza Navarro
+        </p>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
 export default {
-  data: () => {
-    return {
-      year: new Date().getFullYear(),
-    };
-  },
+  data: () => ({
+    year: new Date().getFullYear(),
+  }),
 };
 </script>
-
-<style>
-</style>

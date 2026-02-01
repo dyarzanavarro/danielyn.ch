@@ -1,16 +1,23 @@
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import { Draggable } from 'gsap/Draggable'
 
-export default defineNuxtPlugin((nuxtApp) => {
-    if (process.client) {
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Draggable)
-
-        return {
-            provide: {
-                gsap,
-            },
-        }
+export default defineNuxtPlugin(() => {
+  if (process.client) {
+    // Global GSAP configuration
+    gsap.config({
+      force3D: true,
+      nullTargetWarn: false
+    })
+    
+    // Set default ease
+    gsap.defaults({
+      ease: "power2.out",
+      duration: 0.8
+    })
+    
+    return {
+      provide: {
+        gsap
+      }
     }
+  }
 })

@@ -8,6 +8,9 @@ html,
 body,
 #__nuxt,
 #__layout {
-    height: 100vh;
-    background-color: #e9ddca;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--bg);
 }

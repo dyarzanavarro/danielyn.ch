@@ -1,0 +1,294 @@
+/* Global styles for modern portfolio */
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f4f1ea;
+  --bg-2: #fff7ec;
+  --surface: #ffffff;
+  --surface-2: #f0ede6;
+  --ink: #151515;
+  --muted: #5f615f;
+  --accent-1: #1b7df5;
+  --accent-2: #ff6b4a;
+  --accent-3: #9cff57;
+  --accent-4: #ffd166;
+  --ring: rgba(27, 125, 245, 0.5);
+  --shadow: 0 30px 80px rgba(16, 24, 40, 0.15);
+  --font-body: "Satoshi", "Segoe UI", sans-serif;
+  --font-display: "Satoshi", "Segoe UI", sans-serif;
+}
+
+.dark {
+  --bg: #0b0d10;
+  --bg-2: #0f141b;
+  --surface: #151a22;
+  --surface-2: #10151d;
+  --ink: #e8edf2;
+  --muted: #a9b1bc;
+  --accent-1: #5ab1ff;
+  --accent-2: #ff916f;
+  --accent-3: #b7ff7a;
+  --accent-4: #ffd166;
+  --ring: rgba(90, 177, 255, 0.5);
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--ink);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  scroll-snap-type: y proximity;
+}
+
+.app-shell {
+  background: var(--bg);
+  color: var(--ink);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: -10vh;
+  background:
+    radial-gradient(40% 40% at 10% 10%, rgba(27, 125, 245, 0.15), transparent 60%),
+    radial-gradient(50% 50% at 90% 15%, rgba(255, 107, 74, 0.18), transparent 65%),
+    radial-gradient(45% 45% at 20% 80%, rgba(156, 255, 87, 0.15), transparent 65%),
+    radial-gradient(40% 40% at 80% 85%, rgba(255, 209, 102, 0.12), transparent 60%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+  background-size: 120px 120px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass-panel {
+  background: rgba(16, 20, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.dark .glass-subtle {
+  background: rgba(15, 20, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.2'/%3E%3C/svg%3E");
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Hide default cursor on desktop */
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
+  
+  /* Exception for text inputs */
+  input, textarea {
+    cursor: text !important;
+  }
+}
+
+/* Smooth scrolling fallback */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-margin-top: 120px;
+}
+
+/* Enhanced selection colors */
+::selection {
+  background: rgba(27, 125, 245, 0.3);
+  color: inherit;
+}
+
+::-moz-selection {
+  background: rgba(27, 125, 245, 0.3);
+  color: inherit;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #1b7df5, #ff6b4a);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff6b4a, #ffd166);
+}
+
+/* Prevent text selection on interactive elements */
+button, a, [data-magnetic] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Enhanced focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-1);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Magnetic hover effects */
+[data-magnetic] {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Subtle hover lift */
+.lift-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lift-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(10, 18, 32, 0.18);
+}

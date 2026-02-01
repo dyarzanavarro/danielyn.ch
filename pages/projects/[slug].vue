@@ -4,119 +4,107 @@ import { ref, onMounted } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import projects from "@/data/projects.js";
+
 gsap.registerPlugin(ScrollTrigger);
 
-// Fetch project based on slug
 const route = useRoute();
 const project = ref(projects[route.params.slug] || null);
-// GSAP animations
+
 onMounted(() => {
   gsap.fromTo(
     ".fade-in",
-    { opacity: 0, y: 50 },
+    { opacity: 0, y: 40 },
     {
       opacity: 1,
       y: 0,
       duration: 1,
-      stagger: 0.3,
+      stagger: 0.2,
       ease: "power2.out",
       scrollTrigger: ".fade-in",
-    }
-  );
-  gsap.fromTo(
-    ".image-animate",
-    { opacity: 0, scale: 0.9 },
-    {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: ".image-animate",
     }
   );
 });
 </script>
 
 <template>
-  <div class="max-w-screen-xl px-6 mx-auto pt-32">
-    <!-- Hero Section -->
-    <div class="relative text-center">
-      <h1
-        class="fade-in text-6xl font-extrabold bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] bg-clip-text text-transparent"
-      >
-        {{ project.title }}
-      </h1>
-      <p
-        class="fade-in text-gray-700 dark:text-gray-300 text-lg mt-4 max-w-3xl mx-auto"
-      >
-        {{ project.summary }}
-      </p>
-      <img
-        class="image-animate rounded-xl shadow-lg w-full h-auto max-w-2xl lg:max-w-2xl mx-auto mt-8"
-        :src="project.heroImage"
-        alt="Project preview"
-      />
-    </div>
+  <div class="pt-24 sm:pt-28 lg:pt-32 pb-20 px-6">
+    <div v-if="project" class="max-w-screen-xl mx-auto">
+      <div class="snap-section grid gap-10 lg:grid-cols-[1.1fr,0.9fr] items-center">
+        <div>
+          <p class="fade-in text-xs uppercase tracking-[0.4em] text-muted">
+            Case study
+          </p>
+          <h1 class="fade-in text-4xl sm:text-5xl font-black mt-4 break-words">
+            {{ project.title }}
+          </h1>
+          <p class="fade-in mt-6 text-lg text-muted max-w-2xl">
+            {{ project.summary }}
+          </p>
+        </div>
+        <div class="fade-in rounded-3xl overflow-hidden glass-panel">
+          <img
+            class="w-full h-full object-cover"
+            :src="project.heroImage"
+            alt="Project preview"
+          />
+        </div>
+      </div>
 
-    <!-- UX Challenge & Solution -->
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="fade-in text-4xl font-bold text-gray-800 dark:text-gray-100">
-          The UX Challenge
-        </h2>
-        <p class="fade-in text-lg text-gray-700 dark:text-gray-300 mt-4">
-          {{ project.uxChallenge }}
+      <div class="snap-section mt-14 grid gap-6 md:grid-cols-2">
+        <div class="fade-in glass-panel rounded-3xl p-6">
+          <p class="text-xs uppercase tracking-[0.3em] text-muted">
+            The UX challenge
+          </p>
+          <p class="mt-4 text-lg text-muted">
+            {{ project.uxChallenge }}
+          </p>
+        </div>
+        <div class="fade-in glass-panel rounded-3xl p-6">
+          <p class="text-xs uppercase tracking-[0.3em] text-muted">
+            The solution
+          </p>
+          <p class="mt-4 text-lg text-muted">
+            {{ project.solution }}
+          </p>
+        </div>
+      </div>
+
+      <div class="snap-section mt-14 fade-in glass-subtle rounded-3xl p-8">
+        <p class="text-xs uppercase tracking-[0.3em] text-muted">
+          How it was built
+        </p>
+        <p class="mt-4 text-lg text-muted max-w-3xl">
+          {{ project.development }}
         </p>
       </div>
-      <div>
-        <h2 class="fade-in text-4xl font-bold text-gray-800 dark:text-gray-100">
-          The Solution
-        </h2>
-        <p class="fade-in text-lg text-gray-700 dark:text-gray-300 mt-4">
-          {{ project.solution }}
+
+      <div
+        v-if="project.images && project.images.length"
+        class="snap-section mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <img
+          v-for="image in project.images"
+          :key="image"
+          :src="image"
+          class="fade-in rounded-2xl shadow-lg"
+          alt="Project screenshot"
+        />
+      </div>
+
+      <div class="snap-section mt-14 fade-in glass-panel rounded-3xl p-8">
+        <p class="text-xs uppercase tracking-[0.3em] text-muted">
+          Key takeaways
         </p>
+        <ul class="mt-4 space-y-3 text-muted">
+          <li v-for="takeaway in project.takeaways" :key="takeaway">
+            - {{ takeaway }}
+          </li>
+        </ul>
       </div>
     </div>
 
-    <!-- Development Section -->
-    <div class="mt-12">
-      <h2
-        class="fade-in text-4xl font-bold text-gray-800 dark:text-gray-100 text-center"
-      >
-        How It Was Built
-      </h2>
-      <p
-        class="fade-in text-lg text-gray-700 dark:text-gray-300 mt-4 max-w-3xl mx-auto text-center"
-      >
-        {{ project.development }}
-      </p>
-    </div>
-
-    <!-- Image Gallery -->
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <img
-        v-for="image in project.images"
-        :key="image"
-        :src="image"
-        class="image-animate rounded-lg shadow-lg"
-        alt="Project screenshot"
-      />
-    </div>
-
-    <!-- Key Takeaways -->
-    <div class="mt-12">
-      <h2
-        class="fade-in text-4xl font-bold text-gray-800 dark:text-gray-100 text-center"
-      >
-        Key Takeaways
-      </h2>
-      <ul
-        class="fade-in mt-4 space-y-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto"
-      >
-        <li v-for="takeaway in project.takeaways" :key="takeaway">
-          ✅ {{ takeaway }}
-        </li>
-      </ul>
+    <div v-else class="max-w-screen-xl mx-auto">
+      <p class="text-muted">Project not found.</p>
     </div>
   </div>
 </template>

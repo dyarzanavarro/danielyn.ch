@@ -1,142 +1,222 @@
-<script setup>
-import { onMounted, ref } from "vue";
-const { $gsap } = useNuxtApp();
-
-// Refs for elements
-const heroText = ref(null);
-const button = ref(null);
-const workSection = ref(null);
-const profileSection = ref(null);
-
-// Animations
-onMounted(() => {
-  // Change intro message every 6s
-  setInterval(() => {
-    i.value = (i.value + 1) % introMessage.value.length;
-  }, 6000);
-
-  // Animate hero text
-  $gsap.fromTo(
-    heroText.value,
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
-  );
-
-  // Button hover effect
-  $gsap.fromTo(
-    button.value,
-    { scale: 1 },
-    {
-      scale: 1.1,
-      duration: 0.3,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-      paused: true,
-    }
-  );
-
-  // Fade-in effect for "Selected Work" & "Profile & Contact" sections
-  $gsap.fromTo(
-    workSection.value,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: workSection.value,
-        start: "top 85%",
-      },
-    }
-  );
-
-  $gsap.fromTo(
-    profileSection.value,
-    { opacity: 0, y: 50 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: profileSection.value,
-        start: "top 85%",
-      },
-    }
-  );
-});
-</script>
-
 <template>
-  <div
-    class="min-h-screen bg-slate-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
-  >
-    <!-- Centered Hero Section -->
-    <div
-      class="h-screen flex flex-col items-center justify-center text-center px-6"
+  <div class="relative min-h-screen">
+    <section
+      ref="heroSection"
+      class="snap-section relative overflow-hidden pt-10 sm:pt-24 lg:pt-14 pb-16 px-6"
     >
-      <h1
-        ref="heroText"
-        class="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] bg-clip-text text-transparent"
-      >
-        Daniel is a UX advocate crafting seamless digital experiences in B2C
-        e-commerce, based in Zurich
-      </h1>
-      <p class="mt-4 text-lg lg:text-2xl opacity-80 max-w-3xl">
-        Focusing on SCRUM product ownership & creating intuitive user journeys
-        that drive up value and support long-term growth.
-      </p>
+      <HeroBackground />
+      <div class="max-w-screen-xl mx-auto relative z-10">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] items-center min-w-0">
+          <div class="min-w-0 w-full">
+            <TextReveal>
+              <p class="text-xs uppercase tracking-[0.4em] text-muted mb-6">
+                Product + UX - Zurich
+              </p>
+            </TextReveal>
+            <TextReveal :delay="0.1">
+              <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-ink max-w-3xl break-words"
+              >
+                I craft calm, conversion-ready experiences for modern
+                e-commerce. Human, fast, and a little unexpected.
+              </h1>
+            </TextReveal>
+            <TextReveal :delay="0.2">
+              <p class="mt-6 text-lg text-muted max-w-2xl">
+                I work at the intersection of product strategy, UX, and
+                engineering to ship experiences that feel inevitable -- clear
+                flows, modular systems, and intentional motion.
+              </p>
+            </TextReveal>
 
-      <!-- CTA Button -->
-      <nuxt-link
-        ref="button"
-        class="relative inline-flex mt-6 group"
-        to="/process"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-md opacity-30 transition-opacity duration-300 group-hover:opacity-100"
-        ></div>
-        <div
-          class="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-lg text-gray-800 dark:text-gray-200 border border-transparent transition-all hover:scale-105 backdrop-blur-lg bg-opacity-10"
-        >
-          Learn more about me
-          <svg
-            class="w-5 h-5 ml-2 -mr-1"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <nuxt-link
+                ref="primaryCta"
+                class="inline-flex items-center justify-center rounded-full bg-accent-1 text-white px-6 py-3 text-xs uppercase tracking-[0.3em] shadow-glow-blue lift-hover"
+                to="/work"
+                data-magnetic
+              >
+                View case studies
+              </nuxt-link>
+              <nuxt-link
+                class="inline-flex items-center justify-center rounded-full border border-black/10 dark:border-white/10 px-6 py-3 text-xs uppercase tracking-[0.3em] text-muted hover:text-ink transition"
+                to="/process"
+              >
+                How I work
+              </nuxt-link>
+            </div>
+
+            <div class="mt-12 marquee">
+              <div class="marquee-track text-sm uppercase tracking-[0.3em] text-muted">
+                <span class="mr-10">Design systems</span>
+                <span class="mr-10">Product discovery</span>
+                <span class="mr-10">Growth experiments</span>
+                <span class="mr-10">Rapid prototyping</span>
+                <span class="mr-10">WebXR explorations</span>
+                <span class="mr-10">Service design</span>
+                <span class="mr-10">Design systems</span>
+                <span class="mr-10">Product discovery</span>
+                <span class="mr-10">Growth experiments</span>
+                <span class="mr-10">Rapid prototyping</span>
+                <span class="mr-10">WebXR explorations</span>
+                <span class="mr-10">Service design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid gap-6 min-w-0 w-full">
+            <div class="glass-panel rounded-3xl p-6 lift-hover max-w-full">
+              <p class="text-xs uppercase tracking-[0.3em] text-muted">
+                What I bring
+              </p>
+              <h2 class="text-2xl font-bold mt-4">
+                Systems-first product design
+              </h2>
+              <p class="mt-4 text-muted">
+                I build reusable patterns, design ops rituals, and lean delivery
+                loops so teams can ship faster without losing quality.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-muted">
+                <span class="px-3 py-1 rounded-full bg-black/5 dark:bg-white/10">
+                  UX Strategy
+                </span>
+                <span class="px-3 py-1 rounded-full bg-black/5 dark:bg-white/10">
+                  Roadmapping
+                </span>
+                <span class="px-3 py-1 rounded-full bg-black/5 dark:bg-white/10">
+                  UX Ops
+                </span>
+              </div>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2 min-w-0">
+              <div class="glass-subtle rounded-3xl p-6 lift-hover max-w-full">
+                <p class="text-xs uppercase tracking-[0.3em] text-muted">
+                  Industries
+                </p>
+                <p class="mt-4 text-lg font-semibold">E-commerce, SaaS</p>
+                <p class="mt-2 text-sm text-muted">
+                  From telecom to niche collectives and consumer products.
+                </p>
+              </div>
+              <div class="glass-subtle rounded-3xl p-6 lift-hover max-w-full">
+                <p class="text-xs uppercase tracking-[0.3em] text-muted">
+                  Approach
+                </p>
+                <p class="mt-4 text-lg font-semibold">Lean + Craft</p>
+                <p class="mt-2 text-sm text-muted">
+                  Quick iterations with purposeful polish and accessibility.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </nuxt-link>
-    </div>
+      </div>
+    </section>
 
-    <!-- Selected Work Section -->
-    <div
-      class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-6 overflow-hidden"
-    >
-      <h2
-        ref="workTitle"
-        class="text-center text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]"
-      >
-        Selected Work
-      </h2>
-      <work-cards />
-    </div>
+    <section ref="workSection" class="snap-section relative px-6 pb-20">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
+          <div>
+            <p class="text-xs uppercase tracking-[0.4em] text-muted">
+              Selected work
+            </p>
+            <h2 class="text-3xl sm:text-4xl font-black mt-3">
+              Case studies that show range
+            </h2>
+          </div>
+          <nuxt-link
+            class="inline-flex items-center justify-center rounded-full border border-black/10 dark:border-white/10 px-5 py-2 text-xs uppercase tracking-[0.3em] text-muted hover:text-ink transition"
+            to="/work"
+          >
+            See all work
+          </nuxt-link>
+        </div>
+        <work-cards />
+      </div>
+    </section>
 
-    <!-- Profile & Contact Section -->
-    <div class="justify-center max-w-screen-xl px-4 py-8 mx-auto pt-12">
-      <h2
-        ref="profileTitle"
-        class="text-center text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]"
-      >
-        Profile & Contact
-      </h2>
-      <profile-card />
-    </div>
+    <section ref="profileSection" class="snap-section relative px-6 pb-20">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="mb-12">
+          <p class="text-xs uppercase tracking-[0.4em] text-muted">
+            Profile
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-black mt-3">
+            Meet the maker
+          </h2>
+        </div>
+        <profile-card />
+      </div>
+    </section>
   </div>
 </template>
+
+<script setup>
+import { onMounted, ref, nextTick } from "vue";
+
+const { $gsap } = useNuxtApp();
+
+const heroSection = ref(null);
+const workSection = ref(null);
+const profileSection = ref(null);
+const primaryCta = ref(null);
+
+onMounted(async () => {
+  await nextTick();
+
+  if (process.client && $gsap) {
+    const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+    $gsap.registerPlugin(ScrollTrigger);
+
+    $gsap.fromTo(
+      heroSection.value,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+    );
+
+    [workSection.value, profileSection.value].forEach((section) => {
+      if (!section) return;
+      $gsap.fromTo(
+        section,
+        { opacity: 0, y: 80 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    if (primaryCta.value) {
+      primaryCta.value.addEventListener("mousemove", (e) => {
+        const rect = primaryCta.value.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        $gsap.to(primaryCta.value, {
+          x: x * 0.1,
+          y: y * 0.1,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      });
+
+      primaryCta.value.addEventListener("mouseleave", () => {
+        $gsap.to(primaryCta.value, {
+          x: 0,
+          y: 0,
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      });
+    }
+  }
+});
+</script>
