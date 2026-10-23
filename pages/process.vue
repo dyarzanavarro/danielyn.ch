@@ -1,8 +1,8 @@
 <template>
-  <div class="pt-24 sm:pt-28 lg:pt-32 pb-20 px-6">
+  <div class="pt-14 sm:pt-20 pb-20 px-6">
     <div class="max-w-screen-xl mx-auto">
       <header class="snap-section max-w-3xl">
-        <p class="text-xs uppercase tracking-[0.4em] text-muted">Process</p>
+        <p class="eyebrow">Process</p>
         <h1 class="text-4xl sm:text-5xl font-black mt-4">
           Process is everything. It keeps the work human and shippable.
         </h1>

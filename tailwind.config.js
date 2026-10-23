@@ -4,6 +4,8 @@ module.exports = {
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
+    "./data/**/*.js",
+    "./app.vue",
 
   ],
   darkMode: 'class',
@@ -39,6 +41,9 @@ module.exports = {
         ink: "var(--ink)",
         muted: "var(--muted)",
         surface: "var(--surface)",
+        line: "var(--line)",
+        mise: "var(--mise)",
+        shelfie: "var(--shelfie)",
         accent: {
           1: "var(--accent-1)",
           2: "var(--accent-2)",

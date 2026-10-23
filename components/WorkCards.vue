@@ -1,68 +1,33 @@
 <script setup>
-import { computed } from "vue";
-import projects from "@/data/projects.js";
+import { work } from "@/data/projects.js";
 
-const featuredOrder = [
-  "preppal",
-  "yallo",
-  "kollektivkitzeln",
-  "portfolio",
-  "psych",
-  "hundeschule",
-];
-
-const featuredProjects = computed(() =>
-  featuredOrder
-    .map((key) => ({ slug: key, ...projects[key] }))
-    .filter((project) => project.title)
-);
-
-const cardClass = (index) => {
-  if (index === 0) return "xl:col-span-2 xl:row-span-2";
-  if (index === 3) return "md:col-span-2";
-  return "";
-};
+const projects = Object.entries(work).map(([slug, project]) => ({ slug, ...project }));
 </script>
 
 <template>
-  <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-    <NuxtLink
-      v-for="(project, index) in featuredProjects"
-      :key="project.slug"
-      :to="`/projects/${project.slug}`"
-      class="group relative overflow-hidden rounded-3xl glass-panel lift-hover"
-      :class="cardClass(index)"
-    >
-      <div class="absolute inset-0">
-        <img
-          :src="project.heroImage"
-          :alt="project.title"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"
-        ></div>
-      </div>
-
-      <div class="relative z-10 p-6 md:p-8 min-h-[18rem] flex flex-col justify-between">
-        <div>
-          <p class="text-xs uppercase tracking-[0.3em] text-white/70">
-            Case Study
-          </p>
-          <h3 class="text-2xl md:text-3xl font-bold text-white mt-3">
-            {{ project.title }}
-          </h3>
-          <p class="mt-4 text-sm md:text-base text-white/80 max-w-xl">
-            {{ project.summary }}
-          </p>
+  <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <li v-for="project in projects" :key="project.slug">
+      <NuxtLink
+        :to="`/projects/${project.slug}`"
+        class="group card overflow-hidden flex flex-col h-full lift-hover"
+      >
+        <div class="aspect-[16/10] overflow-hidden" style="background: var(--surface-2)">
+          <img
+            :src="project.heroImage"
+            :alt="`${project.title} project preview`"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          />
         </div>
-        <span
-          class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/80"
-        >
-          View project
-          <span class="text-lg leading-none">-&gt;</span>
-        </span>
-      </div>
-    </NuxtLink>
-  </div>
+        <div class="p-5 flex flex-col gap-2 flex-1">
+          <h3 class="text-xl font-bold">{{ project.title }}</h3>
+          <p class="text-muted">{{ project.tagline }}</p>
+          <div class="mt-auto pt-3 flex flex-wrap gap-1.5">
+            <span v-for="tag in project.tags" :key="tag" class="chip">{{ tag }}</span>
+          </div>
+        </div>
+      </NuxtLink>
+    </li>
+  </ul>
 </template>

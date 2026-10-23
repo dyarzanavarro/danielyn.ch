@@ -1,40 +1,31 @@
 <template>
-  <footer class="px-6 pb-12">
+  <footer class="relative z-10 px-4 sm:px-6 pb-10 mt-8">
     <div class="max-w-screen-xl mx-auto">
-      <div class="glass-subtle rounded-3xl px-8 py-10 flex flex-col gap-6 items-start">
-        <NuxtLink
-          to="/"
-          class="text-lg font-bold tracking-[0.35em] uppercase text-ink"
-        >
-          dyn
-        </NuxtLink>
+      <div class="card px-6 sm:px-10 py-10 grid gap-8 md:grid-cols-[1.4fr,1fr] md:items-end">
         <div>
-          <h2 class="text-3xl sm:text-4xl font-black">
-            Lets build something that feels inevitable.
-          </h2>
-          <p class="mt-4 text-muted max-w-2xl">
-            Open to collaborations, product strategy chats, and experimental UX
-            ideas.
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Let's build something useful.</h2>
+          <p class="mt-3 text-muted max-w-xl">
+            Open to product and UX roles, collaborations, and feedback on Mise or Shelfie.
           </p>
+          <a class="btn btn-primary mt-6 max-w-full break-all" href="mailto:danielyarza1@gmail.com?subject=Hi%20Daniel">
+            danielyarza1@gmail.com
+          </a>
         </div>
-        <a
-          class="inline-flex items-center justify-center rounded-full bg-accent-2 text-white px-6 py-3 text-xs uppercase tracking-[0.3em] shadow-glow-coral lift-hover"
-          :href="`mailto:danielyarza1@gmail.com?subject=Lets%20connect`"
-        >
-          Contact me
-        </a>
-        <p class="text-xs uppercase tracking-[0.3em] text-muted">
-          (C) {{ year }} Daniel Yarza Navarro
-        </p>
+        <nav aria-label="Footer" class="grid grid-cols-2 gap-x-6 gap-y-2 text-[0.9375rem] md:justify-self-end">
+          <NuxtLink class="text-muted hover:text-ink py-1" to="/#projects">Projects</NuxtLink>
+          <a class="text-muted hover:text-ink py-1" href="https://github.com/dyarzanavarro" rel="me">GitHub</a>
+          <NuxtLink class="text-muted hover:text-ink py-1" to="/work">Client work</NuxtLink>
+          <a class="text-muted hover:text-ink py-1" href="https://betterplan.ch">Mise</a>
+          <NuxtLink class="text-muted hover:text-ink py-1" to="/process">Process</NuxtLink>
+          <NuxtLink class="text-muted hover:text-ink py-1" to="/projects/shelfie">Shelfie</NuxtLink>
+          <NuxtLink class="text-muted hover:text-ink py-1" to="/fun">Off-screen</NuxtLink>
+        </nav>
       </div>
+      <p class="mt-6 px-2 text-sm text-muted">© {{ year }} Daniel Yarza Navarro · Zurich</p>
     </div>
   </footer>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    year: new Date().getFullYear(),
-  }),
-};
+<script setup>
+const year = new Date().getFullYear();
 </script>

@@ -1,8 +1,8 @@
 <template>
-  <div class="pt-24 sm:pt-28 lg:pt-32 pb-20 px-6">
+  <div class="pt-14 sm:pt-20 pb-20 px-6">
     <div class="max-w-screen-xl mx-auto">
       <header class="snap-section max-w-3xl">
-        <p class="text-xs uppercase tracking-[0.4em] text-muted">Fun</p>
+        <p class="eyebrow">Fun</p>
         <h1 class="text-4xl sm:text-5xl font-black mt-4">
           Fun is subjective, but curiosity is not.
         </h1>
@@ -72,12 +72,7 @@
           <h2 class="text-2xl font-bold">Game design experiments</h2>
           <p class="mt-4 text-muted">
             I explore Unity and XR in my free time, often spinning up small
-            prototypes just to see what might be possible. One of them turned
-            into a browser game that lives
-            <a href="/adventure" class="underline font-semibold text-ink">
-              here
-            </a>
-            .
+            prototypes just to see what might be possible.
           </p>
         </section>
 

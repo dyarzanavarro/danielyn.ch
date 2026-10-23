@@ -1,58 +1,61 @@
-export default ({
-  app: {
-      head: {
-          charset: 'utf-16',
-          title: 'Daniel is a human being',
-          meta: [{ name: 'description', content: 'The personal page of Daniel Y.Navarro - Welcome' }, { name: "google-site-verification", content: "qsEjNkUNVTLfWJNyQsKZH-n7QB48GgOKQBVGsGFafBo" }],
+const siteUrl = 'https://www.danielyn.ch';
+const description =
+  'Daniel Yarza Navarro: product and UX lead in Zurich who also builds his own products, like the Mise meal planner and the Shelfie ebook library for Windows.';
 
-      }
+export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: { lang: 'en' },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: 'Daniel Yarza Navarro: Product, UX & things I build',
+      meta: [
+        { name: 'description', content: description },
+        { name: 'google-site-verification', content: 'qsEjNkUNVTLfWJNyQsKZH-n7QB48GgOKQBVGsGFafBo' },
+        { name: 'theme-color', content: '#0b0d10' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'danielyn.ch' },
+        { property: 'og:title', content: 'Daniel Yarza Navarro: Product, UX & things I build' },
+        { property: 'og:description', content: description },
+        { property: 'og:url', content: siteUrl },
+        { property: 'og:image', content: `${siteUrl}/og/home.png` },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+      link: [{ rel: 'icon', href: '/favicon.ico' }],
+    },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
-  modules: ['@nuxtjs/color-mode', '@tresjs/nuxt', 'nuxt-swiper'],
-  
-  plugins: [
-    '~/plugins/gsap.client.js'
-    // '~/plugins/smooth-scroll.client.js' // Disabled temporarily
-  ],
-  colorMode: { classSuffix: '', preference: 'dark' },
-  swiper: {},
+  modules: ['@nuxtjs/color-mode'],
 
-  runtimeConfig: {
-      public: {
-          apiKey: process.env.NUXT_ENV_WEATHER_API_KEY
-      }
+  colorMode: { classSuffix: '', preference: 'dark', fallback: 'dark' },
+
+  // Prerender every page to static HTML so crawlers and link previews see real content.
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
   },
 
   postcss: {
-      plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-      },
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
+
   vite: {
-      vue: {
-          template: {
-              transformAssetUrls: {
-                  includeAbsolute: false,
-              },
-          },
+    vue: {
+      template: {
+        transformAssetUrls: {
+          includeAbsolute: false,
+        },
       },
+    },
   },
 
-  extend(config, ctx) {
-      config.module.rules.push({
-          test: /\.(ogg|mp3|wav|mpe?g)$/i,
-          loader: 'file-loader',
-          options: {
-              name: '[path][name].[ext]'
-          }
-      })
-  },
+  css: ['~/assets/css/tailwind.css', '~/assets/css/global.css'],
 
-  css: [
-      "~/assets/css/tailwind.css",
-      "~/assets/css/global.css"
-  ],
-
-  ssr: false,
+  compatibilityDate: '2025-08-31',
 });
