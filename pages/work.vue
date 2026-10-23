@@ -1,9 +1,12 @@
 <script setup>
-useSeoMeta({
-  title: "Client work · Daniel Yarza Navarro",
-  ogTitle: "Client work · Daniel Yarza Navarro",
-  description: "Design systems, re-platformings, A/B testing and brand sites for Swiss companies and collectives.",
-  ogDescription: "Design systems, re-platformings, A/B testing and brand sites for Swiss companies and collectives.",
+usePageSeo({
+  title: "Client work: UX, design systems and A/B testing · Daniel Yarza Navarro",
+  description:
+    "Product and UX case studies by Daniel Yarza Navarro: design systems and re-platforming for Yallo, A/B testing for Sunrise, and brand sites for Swiss businesses.",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "Client work", path: "/work" },
+  ],
 });
 </script>
 

@@ -1,5 +1,13 @@
 <script setup>
 import { products } from "@/data/projects.js";
+import { SITE_DESCRIPTION, SITE_TITLE } from "~/utils/site.js";
+
+usePageSeo({
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  pageType: "ProfilePage",
+  imageAlt: "Daniel Yarza Navarro: I shape products by day and build my own by night.",
+});
 </script>
 
 <template>
@@ -14,8 +22,8 @@ import { products } from "@/data/projects.js";
           I shape products by day and build my own by night.
         </h1>
         <p class="fade-up mt-6 text-lg sm:text-xl text-muted max-w-2xl" style="animation-delay: 120ms">
-          Product and UX lead for Swiss e-commerce. Lately: a meal planner for the whole household,
-          and an open-source ebook library for Windows.
+          Product and UX lead for Swiss e-commerce. Lately: Mise, a meal planner for the whole
+          household, and Shelfie, a free ebook library for Windows.
         </p>
         <div class="fade-up mt-8 flex flex-wrap gap-3" style="animation-delay: 180ms">
           <NuxtLink to="/#projects" class="btn btn-primary">See what I'm building</NuxtLink>

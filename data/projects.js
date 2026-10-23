@@ -8,6 +8,13 @@ export const products = {
         title: "Mise",
         formerly: "Preppal",
         tagline: "Plan the week. Shop in one tap.",
+        seoTitle: "Mise: free household meal planner with a shared shopping list",
+        seoDescription:
+            "Mise (formerly Preppal) is a free meal planner for households: weekly planner, recipe import from any URL and a shopping list that syncs live for everyone.",
+        ogImage: "/og/mise.png",
+        url: "https://betterplan.ch",
+        category: "LifestyleApplication",
+        os: "Web browser (installable PWA)",
         summary:
             "A household meal planner: build a recipe library, plan every meal of the week and get a shared shopping list that stays in sync with everyone you cook with.",
         status: "Live",
@@ -43,15 +50,44 @@ export const products = {
                 body: "I'm experimenting with sending the shopping list straight into a Coop.ch basket, so planning to ordering is one step.",
             },
         ],
+        faq: [
+            {
+                q: "What is Mise?",
+                a: "Mise is a free household meal planner at betterplan.ch. You keep a recipe library, plan breakfast, lunch and dinner for the week, and get a shared shopping list generated from the plan. It was previously called Preppal.",
+            },
+            {
+                q: "Is Mise free?",
+                a: "Yes. Mise is free for your household and signing up does not need a credit card.",
+            },
+            {
+                q: "Can several people in a household use Mise together?",
+                a: "Yes. You invite your partner, flatmates or family with a 6-character code, and everyone shares the same planner, recipes and shopping list, synced in real time.",
+            },
+            {
+                q: "Can Mise import recipes from other websites?",
+                a: "Yes. Paste a recipe URL and Mise reads the recipe's structured data to import it. You can also enter your own recipes.",
+            },
+            {
+                q: "Does Mise work on my phone?",
+                a: "Yes. Mise runs in any modern browser and can be installed on the home screen as a progressive web app.",
+            },
+        ],
     },
     shelfie: {
         title: "Shelfie",
         tagline: "A lean ebook library for Windows.",
+        seoTitle: "Shelfie: free ebook library for Windows, MOBI/AZW3 to EPUB and Kindle transfer",
+        seoDescription:
+            "Shelfie is a free Windows ebook manager: import EPUB, MOBI, AZW3, PDF or a Calibre library, convert MOBI/AZW3 to EPUB without Calibre and send books to a Kindle.",
+        ogImage: "/og/shelfie.png",
+        url: SHELFIE_DOWNLOAD,
+        category: "UtilitiesApplication",
+        os: "Windows 10, Windows 11",
         summary:
             "Import EPUB, MOBI, AZW3 and PDF files or whole Calibre libraries, convert between formats and get books onto your Kindle over USB or email. No Calibre required.",
         status: `v${SHELFIE_VERSION}`,
         year: "2026",
-        role: "Open source: design and code",
+        role: "Free, source on GitHub: design and code",
         accent: "shelfie",
         highlights: [
             "MOBI/AZW3 to EPUB and EPUB to AZW3, entirely in TypeScript",
@@ -82,6 +118,28 @@ export const products = {
             "Download Shelfie-Setup.exe (Windows 10 or 11).",
             "The installer isn't code-signed yet, so Windows SmartScreen may warn you. Click “More info”, then “Run anyway”.",
             "Shelfie installs and opens. Drag books in, or import a whole Calibre library.",
+        ],
+        faq: [
+            {
+                q: "Does Shelfie need Calibre installed?",
+                a: "No. Shelfie converts MOBI and AZW3 to EPUB, and EPUB to AZW3, with its own TypeScript code. It can import an existing Calibre library, but Calibre itself is not required.",
+            },
+            {
+                q: "Which ebook formats does Shelfie support?",
+                a: "Shelfie imports EPUB, MOBI, AZW3 and PDF files. It converts MOBI and AZW3 to EPUB, and EPUB to AZW3 for Kindle devices.",
+            },
+            {
+                q: "How do I get books onto my Kindle with Shelfie?",
+                a: "Connect the Kindle by USB and Shelfie copies the books, including the cover thumbnails the Kindle needs, or use Send to Kindle to deliver them by email.",
+            },
+            {
+                q: "Why does Windows show a warning when I install Shelfie?",
+                a: "The installer is not code-signed yet, so Windows SmartScreen shows a warning. Click “More info”, then “Run anyway” to install it.",
+            },
+            {
+                q: "Is Shelfie free? Does it run on macOS?",
+                a: "Shelfie is free and its source code is on GitHub. It currently runs on Windows 10 and 11 only.",
+            },
         ],
     },
 };
@@ -116,22 +174,6 @@ export const work = {
             "Iterative A/B tests, refined UI components and clearer navigation.",
         development: "Adobe Target for fast test delivery, with ongoing performance monitoring.",
         images: [],
-        outcomes: [],
-    },
-    kollektivkitzeln: {
-        title: "Kollektiv Kitzeln",
-        tagline: "A hub for a feminist collective",
-        heroImage: "/img/work/kollektiv-1.webp",
-        summary:
-            "A digital space for a feminist collective, focused on inclusivity and artistic collaboration.",
-        client: "Kollektiv Kitzeln",
-        tags: ["Brand", "Website", "Community"],
-        challenge:
-            "Create a platform that reflects the collective's vision while being accessible and interactive.",
-        solution:
-            "A brand-aligned website with event management, a blog and a members-only space.",
-        development: "Built with Framer and hosted in Switzerland.",
-        images: ["/img/work/kollektiv-2.webp", "/img/work/kollektiv-3.webp", "/img/work/kollektiv-4.webp"],
         outcomes: [],
     },
     hundeschule: {

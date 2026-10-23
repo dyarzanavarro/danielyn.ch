@@ -1,3 +1,15 @@
+<script setup>
+usePageSeo({
+  title: "How I work: product discovery, UX and delivery · Daniel Yarza Navarro",
+  description:
+    "Daniel Yarza Navarro's product process: discovery workshops, structured design, close collaboration with engineers and UX in every sprint.",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "Process", path: "/process" },
+  ],
+});
+</script>
+
 <template>
   <div class="pt-14 sm:pt-20 pb-20 px-6">
     <div class="max-w-screen-xl mx-auto">
@@ -24,17 +36,17 @@
           <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/process2.jpg"
+              src="/img/life/process2.webp" loading="lazy" decoding="async"
               alt="Empathy workshop snapshot"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/fakeImg.jpg"
+              src="/img/life/fakeimg.webp" loading="lazy" decoding="async"
               alt="Discovery session snapshot"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/process3.jpeg"
+              src="/img/life/process3.webp" loading="lazy" decoding="async"
               alt="Team collaboration snapshot"
             />
           </div>

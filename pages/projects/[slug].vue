@@ -1,5 +1,6 @@
 <script setup>
-import { products, work } from "@/data/projects.js";
+import { products, work, SHELFIE_DOWNLOAD, SHELFIE_VERSION } from "@/data/projects.js";
+import { PERSON_ID, absoluteUrl } from "~/utils/site.js";
 
 const route = useRoute();
 const slug = route.params.slug;
@@ -15,12 +16,50 @@ const isMise = product?.accent === "mise";
 const accentText = isMise ? "text-mise" : "text-shelfie";
 const accentBg = isMise ? "bg-mise" : "bg-shelfie";
 
-const title = `${item.title}: ${item.tagline.replace(/\.$/, "")}`;
-useSeoMeta({
-  title: `${title} · Daniel Yarza Navarro`,
-  ogTitle: title,
-  description: item.summary,
-  ogDescription: item.summary,
+const pageUrl = absoluteUrl(route.path);
+const schema = [];
+
+if (product) {
+  schema.push({
+    "@type": "SoftwareApplication",
+    "@id": `${pageUrl}#software`,
+    name: product.title,
+    ...(product.formerly ? { alternateName: product.formerly } : {}),
+    description: product.seoDescription,
+    applicationCategory: product.category,
+    operatingSystem: product.os,
+    url: slug === "mise" ? product.url : pageUrl,
+    ...(slug === "shelfie" ? { downloadUrl: SHELFIE_DOWNLOAD, softwareVersion: SHELFIE_VERSION, installUrl: SHELFIE_DOWNLOAD } : {}),
+    image: absoluteUrl(product.ogImage),
+    offers: { "@type": "Offer", price: "0", priceCurrency: "CHF" },
+    author: { "@id": PERSON_ID },
+    sameAs: product.links.filter((l) => l.href.includes("github.com")).map((l) => l.href),
+    featureList: product.highlights.join(", "),
+  });
+  schema.push({
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: product.faq.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  });
+}
+
+usePageSeo({
+  title: product
+    ? product.seoTitle
+    : `${project.title}: ${project.tagline} · Daniel Yarza Navarro case study`,
+  description: product ? product.seoDescription : `${project.summary} ${project.solution}`,
+  image: product?.ogImage,
+  type: product ? "website" : "article",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    product ? { name: "Projects", path: "/#projects" } : { name: "Client work", path: "/work" },
+    { name: item.title, path: route.path },
+  ],
+  schema,
 });
 </script>
 
@@ -85,6 +124,16 @@ useSeoMeta({
                 Release notes and older versions are on
                 <a class="underline underline-offset-2 hover:text-ink" href="https://github.com/dyarzanavarro/shelfie/releases">GitHub Releases</a>.
               </p>
+            </section>
+
+            <section id="faq" aria-labelledby="faq-title">
+              <h2 id="faq-title" class="text-2xl font-black tracking-tight">Questions</h2>
+              <div class="mt-4 grid gap-3">
+                <div v-for="entry in product.faq" :key="entry.q" class="card p-5 sm:p-6">
+                  <h3 class="font-bold text-lg">{{ entry.q }}</h3>
+                  <p class="mt-2 text-muted leading-relaxed">{{ entry.a }}</p>
+                </div>
+              </div>
             </section>
           </div>
 

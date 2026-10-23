@@ -1,6 +1,4 @@
-const siteUrl = 'https://www.danielyn.ch';
-const description =
-  'Daniel Yarza Navarro: product and UX lead in Zurich who also builds his own products, like the Mise meal planner and the Shelfie ebook library for Windows.';
+import { SITE_DESCRIPTION, SITE_TITLE } from './utils/site.js';
 
 export default defineNuxtConfig({
   app: {
@@ -8,20 +6,19 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Daniel Yarza Navarro: Product, UX & things I build',
+      // Defaults only; every page sets its own title, description, canonical and social tags via usePageSeo().
+      title: SITE_TITLE,
       meta: [
-        { name: 'description', content: description },
+        { name: 'description', content: SITE_DESCRIPTION },
         { name: 'google-site-verification', content: 'qsEjNkUNVTLfWJNyQsKZH-n7QB48GgOKQBVGsGFafBo' },
         { name: 'theme-color', content: '#0b0d10' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'danielyn.ch' },
-        { property: 'og:title', content: 'Daniel Yarza Navarro: Product, UX & things I build' },
-        { property: 'og:description', content: description },
-        { property: 'og:url', content: siteUrl },
-        { property: 'og:image', content: `${siteUrl}/og/home.png` },
-        { name: 'twitter:card', content: 'summary_large_image' },
       ],
-      link: [{ rel: 'icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', href: '/favicon.ico' },
+        { rel: 'preload', href: '/fonts/Satoshi-Black.woff2', as: 'font', type: 'font/woff2', crossorigin: '' },
+        { rel: 'preload', href: '/fonts/Satoshi-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: '' },
+        { rel: 'sitemap', type: 'application/xml', href: '/sitemap.xml' },
+      ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
@@ -34,7 +31,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/'],
+      routes: ['/', '/sitemap.xml', '/llms.txt'],
     },
   },
 

@@ -1,3 +1,15 @@
+<script setup>
+usePageSeo({
+  title: "Off-screen: board games, travel and side experiments · Daniel Yarza Navarro",
+  description:
+    "What Daniel Yarza Navarro does away from sprints: board games and DnD, hiking and cooking with family, travel, and small Unity and XR prototypes.",
+  breadcrumbs: [
+    { name: "Home", path: "/" },
+    { name: "Off-screen", path: "/fun" },
+  ],
+});
+</script>
+
 <template>
   <div class="pt-14 sm:pt-20 pb-20 px-6">
     <div class="max-w-screen-xl mx-auto">
@@ -23,17 +35,17 @@
           <div class="mt-6 grid gap-6 md:grid-cols-3">
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Boardgame.jpg"
+              src="/img/life/boardgame.webp" loading="lazy" decoding="async"
               alt="Boardgame moment"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Boardgame1.jpg"
+              src="/img/life/boardgame1.webp" loading="lazy" decoding="async"
               alt="Boardgame moment"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Boardgame3.jpg"
+              src="/img/life/boardgame3.webp" loading="lazy" decoding="async"
               alt="Boardgame moment"
             />
           </div>
@@ -49,12 +61,12 @@
           <div class="mt-6 grid gap-6 md:grid-cols-2">
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Boo1.jpg"
+              src="/img/life/boo1.webp" loading="lazy" decoding="async"
               alt="Vanessa and Boo"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Boo2.jpg"
+              src="/img/life/boo2.webp" loading="lazy" decoding="async"
               alt="Daniel with Boo"
             />
           </div>
@@ -85,17 +97,17 @@
           <div class="mt-6 grid gap-6 md:grid-cols-3">
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Travel1.jpg"
+              src="/img/life/travel1.webp" loading="lazy" decoding="async"
               alt="Travel shot"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Travel2.jpg"
+              src="/img/life/travel2.webp" loading="lazy" decoding="async"
               alt="Travel shot"
             />
             <img
               class="h-56 w-full object-cover rounded-2xl"
-              src="/img/Travel3.jpg"
+              src="/img/life/travel3.webp" loading="lazy" decoding="async"
               alt="Travel shot"
             />
           </div>
