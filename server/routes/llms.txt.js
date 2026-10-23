@@ -1,5 +1,5 @@
 import { products, work, SHELFIE_DOWNLOAD, SHELFIE_VERSION } from "../../data/projects.js";
-import { AUTHOR, GITHUB_URL, SITE_DESCRIPTION, absoluteUrl } from "../../utils/site.js";
+import { AUTHOR, GITHUB_URL, LINKEDIN_URL, SITE_DESCRIPTION, absoluteUrl } from "../../utils/site.js";
 
 // llms.txt (https://llmstxt.org): a plain-language summary for AI assistants and answer engines.
 export default defineEventHandler((event) => {
@@ -37,6 +37,7 @@ ${workLines.join("\n")}
 
 - [How I work](${absoluteUrl("/process")}): product discovery, structured design and delivery with engineers
 - [GitHub](${GITHUB_URL})
+- [LinkedIn](${LINKEDIN_URL})
 - Contact: danielyarza1@gmail.com
 `;
 

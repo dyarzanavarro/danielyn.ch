@@ -14,6 +14,7 @@
         <nav aria-label="Footer" class="grid grid-cols-2 gap-x-6 gap-y-2 text-[0.9375rem] md:justify-self-end">
           <NuxtLink class="text-muted hover:text-ink py-1" to="/#projects">Projects</NuxtLink>
           <a class="text-muted hover:text-ink py-1" href="https://github.com/dyarzanavarro" rel="me">GitHub</a>
+          <a class="text-muted hover:text-ink py-1" href="https://ch.linkedin.com/in/dyarzanavarro" rel="me">LinkedIn</a>
           <NuxtLink class="text-muted hover:text-ink py-1" to="/work">Client work</NuxtLink>
           <a class="text-muted hover:text-ink py-1" href="https://betterplan.ch">Mise</a>
           <NuxtLink class="text-muted hover:text-ink py-1" to="/process">Process</NuxtLink>

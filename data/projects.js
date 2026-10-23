@@ -28,6 +28,13 @@ export const products = {
             "Households share everything live via a 6-character invite code",
         ],
         stack: ["Nuxt 3 (SSR + PWA)", "Firebase Auth", "Firestore", "Pinia", "Tailwind CSS"],
+        hero: { src: "/img/work/mise-planner.webp", width: 1110, height: 615, alt: "Mise weekly planner for 19 to 25 October with lunch and dinner recipes for every day, a Suggest week button and Generate Shopping List" },
+        screenshots: [
+            { src: "/img/work/mise-recipes.webp", width: 1144, height: 897, alt: "Mise recipe library with search, tag filters, Import URL and recipe cards showing prep time, cook time and source site" },
+            { src: "/img/work/mise-shopping.webp", width: 1127, height: 600, alt: "Mise shopping list for the week grouped by category, with each item linked to its recipe and a Send to Coop button" },
+            // Invite code replaced with the placeholder code from the betterplan.ch landing page.
+            { src: "/img/work/mise-household.webp", width: 1105, height: 836, alt: "Mise household screen with a 6-character invite code and steps for inviting housemates" },
+        ],
         links: [
             { label: "Open betterplan.ch", href: "https://betterplan.ch", primary: true },
             { label: "Source on GitHub", href: "https://github.com/dyarzanavarro/Preppal_Mise" },
@@ -78,16 +85,16 @@ export const products = {
         tagline: "A lean ebook library for Windows.",
         seoTitle: "Shelfie: free ebook library for Windows, MOBI/AZW3 to EPUB and Kindle transfer",
         seoDescription:
-            "Shelfie is a free Windows ebook manager: import EPUB, MOBI, AZW3, PDF or a Calibre library, convert MOBI/AZW3 to EPUB without Calibre and send books to a Kindle.",
+            "Shelfie is a free, open-source Windows ebook manager: import EPUB, MOBI, AZW3 and PDF, convert MOBI/AZW3 to EPUB and EPUB to AZW3, and send books to a Kindle.",
         ogImage: "/og/shelfie.png",
         url: SHELFIE_DOWNLOAD,
         category: "UtilitiesApplication",
         os: "Windows 10, Windows 11",
         summary:
-            "Import EPUB, MOBI, AZW3 and PDF files or whole Calibre libraries, convert between formats and get books onto your Kindle over USB or email. No Calibre required.",
+            "Import EPUB, MOBI, AZW3 and PDF files or whole folders, convert between formats and get books onto your Kindle over USB or email. Nothing else to install.",
         status: `v${SHELFIE_VERSION}`,
         year: "2026",
-        role: "Free, source on GitHub: design and code",
+        role: "Open source (MIT): design and code",
         accent: "shelfie",
         highlights: [
             "MOBI/AZW3 to EPUB and EPUB to AZW3, entirely in TypeScript",
@@ -96,6 +103,12 @@ export const products = {
             "Books grouped by author in series order, with bulk actions",
         ],
         stack: ["Electron", "React", "TypeScript", "SQLite"],
+        // Real app screenshots. The Kindle address in shelfie-send is redacted.
+        hero: { src: "/img/work/shelfie-library.webp", width: 1258, height: 700, alt: "Shelfie library window showing a grid of book covers with search, sort, Kindle settings and Add books controls" },
+        screenshots: [
+            { src: "/img/work/shelfie-detail.webp", width: 319, height: 712, alt: "Shelfie book detail panel with cover, format and size, Send to Kindle and Convert to EPUB buttons, and metadata" },
+            { src: "/img/work/shelfie-send.webp", width: 524, height: 646, alt: "Shelfie Send to Kindle settings dialog with Kindle email, approved sender and SMTP settings" },
+        ],
         links: [
             { label: "Download for Windows", href: SHELFIE_DOWNLOAD, primary: true, download: true },
             { label: "Source on GitHub", href: "https://github.com/dyarzanavarro/shelfie" },
@@ -103,26 +116,26 @@ export const products = {
         sections: [
             {
                 heading: "Why I built it",
-                body: "Calibre can do everything, which is exactly the problem when all you want is a tidy library and books on your Kindle. Shelfie does the handful of things I actually need, quickly, in an interface that stays out of the way.",
+                body: "All I wanted was a tidy library and an easy way to get books onto my Kindle. Shelfie does that handful of things quickly, in an interface that stays out of the way.",
             },
             {
                 heading: "What it does",
-                body: "Drop in EPUB, MOBI, AZW3 or PDF files, or point it at an existing Calibre library to import everything at once. Books are grouped by author and ordered by series, and you can select several to convert, send or delete together.",
+                body: "Drop in EPUB, MOBI, AZW3 or PDF files, or add a whole folder to import everything at once. Books are grouped by author and ordered by series, and you can select several to convert, send or delete together.",
             },
             {
-                heading: "No Calibre inside",
+                heading: "Conversion built in",
                 body: "Format conversion is written from scratch in TypeScript: MOBI and AZW3 become EPUB for reading anywhere, and EPUB becomes AZW3 for the Kindle. Copying over USB also writes the cover thumbnails the Kindle expects, so your library doesn't turn into grey placeholders.",
             },
         ],
         install: [
             "Download Shelfie-Setup.exe (Windows 10 or 11).",
             "The installer isn't code-signed yet, so Windows SmartScreen may warn you. Click “More info”, then “Run anyway”.",
-            "Shelfie installs and opens. Drag books in, or import a whole Calibre library.",
+            "Shelfie installs and opens. Click Add books, or Add folder to import a whole folder at once.",
         ],
         faq: [
             {
-                q: "Does Shelfie need Calibre installed?",
-                a: "No. Shelfie converts MOBI and AZW3 to EPUB, and EPUB to AZW3, with its own TypeScript code. It can import an existing Calibre library, but Calibre itself is not required.",
+                q: "Does Shelfie need any other software to convert ebooks?",
+                a: "No. Shelfie converts MOBI and AZW3 to EPUB, and EPUB to AZW3, with its own built-in TypeScript code, so there is nothing else to install.",
             },
             {
                 q: "Which ebook formats does Shelfie support?",
@@ -137,8 +150,8 @@ export const products = {
                 a: "The installer is not code-signed yet, so Windows SmartScreen shows a warning. Click “More info”, then “Run anyway” to install it.",
             },
             {
-                q: "Is Shelfie free? Does it run on macOS?",
-                a: "Shelfie is free and its source code is on GitHub. It currently runs on Windows 10 and 11 only.",
+                q: "Is Shelfie free and open source? Does it run on macOS?",
+                a: "Yes, Shelfie is free and open source under the MIT license, with the code on GitHub. It currently runs on Windows 10 and 11 only.",
             },
         ],
     },

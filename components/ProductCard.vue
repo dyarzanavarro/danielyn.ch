@@ -89,8 +89,7 @@ const isMise = props.product.accent === "mise";
     </div>
 
     <div class="relative" :class="{ 'lg:order-1': reverse }">
-      <MisePlannerMock v-if="isMise" />
-      <ShelfieLibraryMock v-else />
+      <AppScreenshot :shot="product.hero" />
     </div>
   </article>
 </template>

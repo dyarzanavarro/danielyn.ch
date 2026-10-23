@@ -23,7 +23,7 @@ usePageSeo({
         </h1>
         <p class="fade-up mt-6 text-lg sm:text-xl text-muted max-w-2xl" style="animation-delay: 120ms">
           Product and UX lead for Swiss e-commerce. Lately: Mise, a meal planner for the whole
-          household, and Shelfie, a free ebook library for Windows.
+          household, and Shelfie, an open-source ebook library for Windows.
         </p>
         <div class="fade-up mt-8 flex flex-wrap gap-3" style="animation-delay: 180ms">
           <NuxtLink to="/#projects" class="btn btn-primary">See what I'm building</NuxtLink>

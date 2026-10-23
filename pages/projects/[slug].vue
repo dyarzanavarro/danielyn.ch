@@ -31,6 +31,7 @@ if (product) {
     url: slug === "mise" ? product.url : pageUrl,
     ...(slug === "shelfie" ? { downloadUrl: SHELFIE_DOWNLOAD, softwareVersion: SHELFIE_VERSION, installUrl: SHELFIE_DOWNLOAD } : {}),
     image: absoluteUrl(product.ogImage),
+    screenshot: [product.hero, ...(product.screenshots || [])].map((s) => absoluteUrl(s.src)),
     offers: { "@type": "Offer", price: "0", priceCurrency: "CHF" },
     author: { "@id": PERSON_ID },
     sameAs: product.links.filter((l) => l.href.includes("github.com")).map((l) => l.href),
@@ -96,9 +97,24 @@ usePageSeo({
               </a>
             </div>
           </div>
-          <MisePlannerMock v-if="isMise" />
-          <ShelfieLibraryMock v-else />
+          <AppScreenshot :shot="product.hero" eager />
         </header>
+
+        <section v-if="product.screenshots?.length" class="mt-12" aria-label="Screenshots">
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 items-start">
+            <a
+              v-for="shot in product.screenshots"
+              :key="shot.src"
+              :href="shot.src"
+              target="_blank"
+              rel="noopener"
+              class="block lift-hover rounded-2xl"
+              :aria-label="`Open full-size screenshot: ${shot.alt}`"
+            >
+              <AppScreenshot :shot="shot" />
+            </a>
+          </div>
+        </section>
 
         <div class="mt-14 grid gap-10 lg:grid-cols-[1.6fr,1fr]">
           <div class="grid gap-8">

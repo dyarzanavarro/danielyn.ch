@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
     "Daniel Yarza Navarro is a product and UX lead in Zurich and the maker of Mise, a household meal planner, and Shelfie, an ebook library for Windows.";
 export const DEFAULT_OG_IMAGE = "/og/home.png";
 export const GITHUB_URL = "https://github.com/dyarzanavarro";
+export const LINKEDIN_URL = "https://ch.linkedin.com/in/dyarzanavarro";
 
 export const absoluteUrl = (path = "/") => {
     if (path === "/" || path === "") return `${SITE_URL}/`;
@@ -37,7 +38,7 @@ export const personSchema = {
         "TypeScript",
         "Electron",
     ],
-    sameAs: [GITHUB_URL],
+    sameAs: [GITHUB_URL, LINKEDIN_URL],
 };
 
 export const websiteSchema = {
